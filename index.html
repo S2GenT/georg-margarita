@@ -358,7 +358,7 @@
   <!-- Форма RSVP -->
 
 <section id="survey" 
-         style="padding:80px 20px; background:#fdf6f0; text-align:center; overflow:hidden;
+         style="padding:80px 20px; background:#fdf6f0; text-align:center; overflow:hidden; 
                 opacity:0; transform:translateY(40px); transition:0.8s ease-out;">
   <h2 style="font-family:'Great Vibes',cursive; font-size:46px; color:#2c3e50; margin-bottom:25px;">Присутствие</h2>
 
@@ -401,27 +401,26 @@
   </form>
 </section>
 
-<!-- AOS JS -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init({ duration: 1000, once: true });
 
   // Плавное появление всего блока survey
   window.addEventListener("load", () => {
-    const survey = document.getElementById("survey");
+    const surveyBlock = document.getElementById("survey");
     setTimeout(() => {
-      survey.style.opacity = "1";
-      survey.style.transform = "translateY(0)";
+      surveyBlock.style.opacity = "1";
+      surveyBlock.style.transform = "translateY(0)";
     }, 300);
   });
 
-  // Сообщение после отправки
+  // Сообщение после отправки формы
   document.getElementById("rsvp-form").addEventListener("submit", function() {
     setTimeout(() => { alert("Спасибо! Мы вас ждем!"); }, 300);
   });
 </script>
 
-
 </body>
 </html>
+
 
