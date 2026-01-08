@@ -336,14 +336,12 @@
     <i>*Заполните форму для каждого гостя отдельно</i>
   </p>
 
-  <form id="rsvp-form" action="https://formsubmit.co/25d9790756ad80a193163b4d31c3a2d" method="POST"
-        style="display:flex; flex-direction:column; gap:16px; max-width:420px; margin:0 auto; opacity:0; transform:translateY(40px);">
+  <form id="rsvp-form" action="https://formsubmit.co" method="POST">
+  <input type="hidden" name="_form_id" value="25d9790756ad80a193163b4d31c3a2d">
+  <input type="hidden" name="_subject" value="RSVP Опрос — свадьба Георг и Маргарита">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://georg-margarita.vercel.app/">
 
-    <!-- служебные настройки отправки -->
-    <input type="hidden" name="_subject" value="RSVP Опрос — свадьба Георг и Маргарита">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="https://example.com/thanks.html">
 
     <input type="text" name="Имя и фамилия" placeholder="Имя и фамилия" required
            style="padding:14px; font-size:16px; border:1px solid #e0d6d1; border-radius:10px;">
