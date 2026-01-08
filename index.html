@@ -258,7 +258,7 @@
       <span>М</span>
     </div>
     <div class="names">Георг + Маргарита</div>
-    <div class="date">7 июля 2026</div>
+    <div class="names">14 июля 2026</div>
   </div>
 
   <!-- Календарь -->
@@ -325,6 +325,56 @@
       </div>
     </div>
   </section>
+
+<section id="survey" style="padding:60px 20px; background:#fdf6f0; text-align:center;">
+  <h2 style="font-family:'Great Vibes',cursive; font-size:42px; color:#2c3e50; margin-bottom:20px;">Присутствие</h2>
+
+  <p style="font-size:18px; max-width:650px; margin:0 auto 30px; line-height:1.5;">
+    Пожалуйста, подтвердите ваше присутствие на нашем празднике до <b>02 июня 2026</b> любым удобным способом<br>
+    или заполните форму ниже.<br><br>
+    Чтобы всё прошло идеально и этот день запомнился надолго — ответьте на несколько вопросов.<br>
+    <i>*Заполните форму для каждого гостя отдельно</i>
+  </p>
+
+  <form action="mailto:georg_rykunov@mail.ru" method="POST" enctype="text/plain"
+        style="display:flex; flex-direction:column; gap:15px; max-width:400px; margin:0 auto;">
+
+    <input type="text" name="Имя и фамилия" placeholder="Имя и фамилия" required
+           style="padding:12px; font-size:16px; border:1px solid #ddd; border-radius:8px;">
+
+    <select name="Предпочтения по еде" required
+            style="padding:12px; font-size:16px; border:1px solid #ddd; border-radius:8px; background:#fff;">
+      <option value="">Предпочтения по еде</option>
+      <option>Курица</option>
+      <option>Рыба</option>
+      <option>Мясо</option>
+      <option>Вегетарианское меню</option>
+    </select>
+
+    <input type="text" name="Пожелания по алкоголю" placeholder="Пожелания по алкоголю"
+           style="padding:12px; font-size:16px; border:1px solid #ddd; border-radius:8px;">
+
+    <select name="Будете с парой?" required
+            style="padding:12px; font-size:16px; border:1px solid #ddd; border-radius:8px; background:#fff;">
+      <option value="">Будете с парой?</option>
+      <option>Да</option>
+      <option>Нет</option>
+    </select>
+
+    <input type="text" name="Есть ли аллергии / ограничения?" placeholder="Аллергии или ограничения по еде"
+           style="padding:12px; font-size:16px; border:1px solid #ddd; border-radius:8px;">
+
+    <textarea name="Пожелания для молодожёнов" placeholder="Пожелания для молодожёнов"
+              style="padding:12px; font-size:16px; border:1px solid #ddd; border-radius:8px; min-height:80px;"></textarea>
+
+    <button type="submit"
+            style="padding:14px; font-size:18px; font-weight:500; background:#e74c3c; color:#fff;
+                   border:none; border-radius:8px; cursor:pointer; transition:0.3s;">
+      Отправить
+    </button>
+  </form>
+</section>
+
 
   <!-- AOS JS -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
