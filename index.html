@@ -357,7 +357,9 @@
 
   <!-- Форма RSVP -->
 
-<section id="survey" style="padding:80px 20px; background:#fdf6f0; text-align:center; overflow:hidden;">
+<section id="survey" 
+         style="padding:80px 20px; background:#fdf6f0; text-align:center; overflow:hidden;
+                opacity:0; transform:translateY(40px); transition:0.8s ease-out;">
   <h2 style="font-family:'Great Vibes',cursive; font-size:46px; color:#2c3e50; margin-bottom:25px;">Присутствие</h2>
 
   <p style="font-size:18px; max-width:700px; margin:0 auto 40px; line-height:1.6; color:#34495e;">
@@ -368,7 +370,7 @@
   </p>
 
   <form id="rsvp-form" action="https://formsubmit.co/georg_rykunov@mail.ru" method="POST"
-        style="display:flex; flex-direction:column; gap:16px; max-width:420px; margin:0 auto; opacity:0; transform:translateY(40px);">
+        style="display:flex; flex-direction:column; gap:16px; max-width:420px; margin:0 auto;">
 
     <!-- служебные настройки отправки -->
     <input type="hidden" name="_subject" value="RSVP Опрос — свадьба Георг и Маргарита">
@@ -399,25 +401,27 @@
   </form>
 </section>
 
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
 
-    // Плавное появление формы
-    window.addEventListener("load", () => {
-      const form = document.getElementById("rsvp-form");
-      setTimeout(() => {
-        form.style.opacity = "1";
-        form.style.transform = "translateY(0)";
-      }, 300);
-    });
+  // Плавное появление всего блока survey
+  window.addEventListener("load", () => {
+    const survey = document.getElementById("survey");
+    setTimeout(() => {
+      survey.style.opacity = "1";
+      survey.style.transform = "translateY(0)";
+    }, 300);
+  });
 
-    // Сообщение после отправки
-    document.getElementById("rsvp-form").addEventListener("submit", function() {
-      setTimeout(() => { alert("Спасибо! Мы вас ждем!"); }, 300);
-    });
-  </script>
+  // Сообщение после отправки
+  document.getElementById("rsvp-form").addEventListener("submit", function() {
+    setTimeout(() => { alert("Спасибо! Мы вас ждем!"); }, 300);
+  });
+</script>
+
 
 </body>
 </html>
+
