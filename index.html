@@ -326,24 +326,30 @@
     </div>
   </section>
 
-<section id="survey" style="padding:60px 20px; background:#fdf6f0; text-align:center;">
-  <h2 style="font-family:'Great Vibes',cursive; font-size:42px; color:#2c3e50; margin-bottom:20px;">Присутствие</h2>
+<section id="survey" style="padding:80px 20px; background:#fdf6f0; text-align:center; overflow:hidden;">
+  <h2 style="font-family:'Great Vibes',cursive; font-size:46px; color:#2c3e50; margin-bottom:25px;">Присутствие</h2>
 
-  <p style="font-size:18px; max-width:650px; margin:0 auto 30px; line-height:1.5;">
+  <p style="font-size:18px; max-width:700px; margin:0 auto 40px; line-height:1.6; color:#34495e;">
     Пожалуйста, подтвердите ваше присутствие на нашем празднике до <b>02 июня 2026</b> любым удобным способом<br>
     или заполните форму ниже.<br><br>
     Чтобы всё прошло идеально и этот день запомнился надолго — ответьте на несколько вопросов.<br>
     <i>*Заполните форму для каждого гостя отдельно</i>
   </p>
 
-  <form action="mailto:georg_rykunov@mail.ru" method="POST" enctype="text/plain"
-        style="display:flex; flex-direction:column; gap:15px; max-width:400px; margin:0 auto;">
+  <form id="rsvp-form" action="https://formsubmit.co/georg_rykunov@mail.ru" method="POST"
+        style="display:flex; flex-direction:column; gap:16px; max-width:420px; margin:0 auto; opacity:0; transform:translateY(40px);">
+
+    <!-- служебные настройки отправки -->
+    <input type="hidden" name="_subject" value="RSVP Опрос — свадьба Георг и Маргарита">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://example.com/thanks.html">
 
     <input type="text" name="Имя и фамилия" placeholder="Имя и фамилия" required
-           style="padding:12px; font-size:16px; border:1px solid #ddd; border-radius:8px;">
+           style="padding:14px; font-size:16px; border:1px solid #e0d6d1; border-radius:10px;">
 
     <select name="Предпочтения по еде" required
-            style="padding:12px; font-size:16px; border:1px solid #ddd; border-radius:8px; background:#fff;">
+            style="padding:14px; font-size:16px; border:1px solid #e0d6d1; border-radius:10px; background:#fff;">
       <option value="">Предпочтения по еде</option>
       <option>Курица</option>
       <option>Рыба</option>
@@ -352,28 +358,43 @@
     </select>
 
     <input type="text" name="Пожелания по алкоголю" placeholder="Пожелания по алкоголю"
-           style="padding:12px; font-size:16px; border:1px solid #ddd; border-radius:8px;">
-
-    <select name="Будете с парой?" required
-            style="padding:12px; font-size:16px; border:1px solid #ddd; border-radius:8px; background:#fff;">
-      <option value="">Будете с парой?</option>
-      <option>Да</option>
-      <option>Нет</option>
-    </select>
-
-    <input type="text" name="Есть ли аллергии / ограничения?" placeholder="Аллергии или ограничения по еде"
-           style="padding:12px; font-size:16px; border:1px solid #ddd; border-radius:8px;">
+           style="padding:14px; font-size:16px; border:1px solid #e0d6d1; border-radius:10px;">
 
     <textarea name="Пожелания для молодожёнов" placeholder="Пожелания для молодожёнов"
-              style="padding:12px; font-size:16px; border:1px solid #ddd; border-radius:8px; min-height:80px;"></textarea>
+              style="padding:14px; font-size:16px; border:1px solid #e0d6d1; border-radius:10px; min-height:90px;"></textarea>
+
+    <label style="font-size:14px; display:flex; gap:8px; justify-content:center; align-items:center; color:#555; margin-top:6px;">
+      <input type="checkbox" required> Согласен(на) на обработку данных для организации мероприятия
+    </label>
 
     <button type="submit"
-            style="padding:14px; font-size:18px; font-weight:500; background:#e74c3c; color:#fff;
-                   border:none; border-radius:8px; cursor:pointer; transition:0.3s;">
+            style="padding:16px; font-size:18px; font-weight:600; background:#e74c3c; color:#fff;
+                   border:none; border-radius:12px; cursor:pointer; transition:0.3s;">
       Отправить
     </button>
   </form>
 </section>
+
+<!-- Скрипт анимации и уведомления -->
+<script>
+  // Анимация плавного появления
+  window.addEventListener("load", () => {
+    const form = document.getElementById("rsvp-form");
+    setTimeout(() => {
+      form.style.transition = "0.8s ease-out";
+      form.style.opacity = "1";
+      form.style.transform = "translateY(0)";
+    }, 200);
+  });
+
+  // Уведомление после отправки
+  document.getElementById("rsvp-form").addEventListener("submit", function() {
+    setTimeout(() => {
+      alert("Спасибо! Мы вас ждем!");
+    }, 300);
+  });
+</script>
+
 
 
   <!-- AOS JS -->
