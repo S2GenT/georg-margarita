@@ -293,12 +293,14 @@
     <a href="#survey">RSVP</a>
   </nav>
 
-<!-- Главный экран -->
+<!-- Главный экран (Приветственный слайд) -->
 <section class="main-start" id="home">
-  <div class="top-image">
+  <!-- Верхняя картинка -->
+  <div class="start-image">
     <img src="startimg.png" alt="Свадебная картинка">
   </div>
 
+  <!-- Нижняя часть с текстом и обратным отсчетом -->
   <div class="content" data-aos="fade-up" data-aos-once="true">
     <h1 class="names">ГЕОРГ & МАРГАРИТА</h1>
     <p class="subtitle">Мы приглашаем Вас разделить с нами день нашей Свадьбы</p>
@@ -318,25 +320,29 @@
 
 <style>
 .main-start {
+  position: relative;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end; /* Текст внизу */
   align-items: center;
-  color: #2c3e50;
   font-family: "TT Berlinerins Script", cursive;
   text-align: center;
+  color: #fff;
+  background: #2c3e50; /* Темный фон за текстом */
 }
 
-.main-start .top-image img {
+.start-image img {
   width: 100%;
-  max-width: 600px;
+  height: auto;
   display: block;
-  margin: 0 auto;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .main-start .content {
-  margin-top: 40px; /* смещаем вниз экрана */
+  padding: 40px 20px;
+  z-index: 2;
+  width: 100%;
+  background: rgba(0,0,0,0.3); /* полупрозрачный фон под текстом */
 }
 
 .main-start .names {
@@ -359,11 +365,10 @@
 }
 
 .main-start .countdown-cell {
-  background: rgba(231, 76, 60, 0.15);
+  background: rgba(255,255,255,0.2);
   padding: 12px 18px;
   border-radius: 10px;
   font-weight: 500;
-  min-width: 80px;
 }
 
 .main-start .countdown-cell span {
@@ -376,25 +381,16 @@
 .main-start .wedding-date {
   font-size: 32px;
   letter-spacing: 4px;
+  margin-bottom: 0;
 }
 
 /* Адаптив */
 @media (max-width: 600px) {
-  .main-start .names {
-    font-size: 40px;
-  }
-  .main-start .subtitle {
-    font-size: 18px;
-  }
-  .main-start .countdown-cell span {
-    font-size: 22px;
-  }
-  .main-start .wedding-date {
-    font-size: 24px;
-  }
-  .main-start .top-image img {
-    max-width: 90%;
-  }
+  .main-start .names { font-size: 40px; }
+  .main-start .subtitle { font-size: 18px; }
+  .main-start .countdown-cell span { font-size: 22px; }
+  .main-start .countdown-cell { padding: 8px 12px; }
+  .main-start .wedding-date { font-size: 24px; }
 }
 </style>
 
