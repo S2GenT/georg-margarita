@@ -19,7 +19,7 @@
       font-style: normal;
       font-display: swap;
     }
-  
+
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
@@ -28,6 +28,7 @@
       scroll-behavior: smooth;
     }
 
+    /* Навигация */
     nav {
       display: flex;
       justify-content: center;
@@ -52,54 +53,147 @@
       color: #e74c3c;
     }
 
+    /* Гамбургер-меню */
+    .hamburger {
+      display: none; /* скрыт на больших экранах */
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 22px;
+      cursor: pointer;
+      z-index: 20;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+    }
+
+    .hamburger span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background: #2c3e50;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100%;
+        background: #fff;
+        padding-top: 80px;
+        transition: right 0.3s ease;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+        gap: 30px;
+        z-index: 15;
+      }
+
+      nav.show {
+        right: 0;
+      }
+
+      nav a {
+        font-size: 22px;
+        padding: 10px 20px;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
     /* Главный экран */
-    .main {
+    .main-start {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: "TT Berlinerins Script", cursive;
+      color: #2c3e50;
+    }
+
+    .main-start .background {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('backimg.jpg') center/cover no-repeat;
+      z-index: 0;
+    }
+
+    .main-start .content {
+      position: relative;
+      z-index: 2;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-      box-sizing: border-box;
+      justify-content: flex-start;
+      gap: 20px;
+      padding-top: 20px; /* поднял картинку выше */
     }
 
-    .initials {
-      font-size: 120px;
-      font-family: "TT Berlinerins Script", cursive;
-      font-weight: bold;
+    .main-start .start-img {
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      margin-bottom: 0px;
+    }
+
+    .main-start .names {
+      font-size: 64px;
+      margin: 0;
+    }
+
+    .main-start .subtitle {
+      font-size: 45px;
+      margin-bottom: 4px;
+    }
+
+    .main-start .countdown-table {
       display: flex;
       justify-content: center;
-      align-items: center;
-      gap: 20px;
-      color: #2c3e50;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      gap: 15px;
+      flex-wrap: wrap;
+      font-size: 20px;
+      margin-bottom: 40px;
     }
 
-    .initials span.heart {
-      font-size: 50px;
-      color: #e74c3c;
-      animation: beat 1s infinite;
-      display: inline-block;
-    }
-
-    @keyframes beat {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.3); }
-    }
-
-    .names {
-      margin-top: 20px;
-      font-family: "TT Berlinerins Script", cursive;
-      font-size: 36px;
-      color: #8B0000;
-    }
-
-    .date {
-      margin-top: 60px;
-      font-size: 24px;
-      letter-spacing: 1.5px;
+    .main-start .countdown-cell {
+      background: rgba(0,0,0,0.4);
+      padding: 12px 18px;
+      border-radius: 10px;
       font-weight: 500;
-      color: #34495e;
+      color: #fff;
+    }
+
+    .main-start .countdown-cell span {
+      font-size: 28px;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .main-start .wedding-date {
+      font-size: 32px;
+      letter-spacing: 4px;
     }
 
     /* Календарь */
@@ -243,242 +337,89 @@
     }
 
     /* Адаптивность */
-    @media (max-width: 600px) {
-      .initials {
-        font-size: 80px;
+    @media (max-width: 768px) {
+      .main-start .start-img {
+        width: 100%;
       }
-      .initials span.heart {
-        font-size: 40px;
+      .main-start .names {
+        font-size: 48px;
       }
-      .names {
+      .main-start .subtitle {
+        font-size: 30px;
+      }
+      .main-start .countdown-cell {
+        font-size: 16px;
+      }
+      .main-start .countdown-cell span {
+        font-size: 22px;
+      }
+      .main-start .wedding-date {
         font-size: 24px;
       }
-      .date {
-        font-size: 18px;
-        margin-top: 40px;
-      }
+    }
 
-      .info-date h2, .location h2 {
-        font-size: 32px;
+    @media (max-width: 480px) {
+      .main-start .start-img {
+        width: 80%;
+        margin-bottom: 20px;
       }
-      .info-date p {
+      .main-start .names {
+        font-size: 36px;
+      }
+      .main-start .subtitle {
         font-size: 16px;
       }
-      .date-calendar h3 {
-        font-size: 28px;
+      .main-start .countdown-cell span {
+        font-size: 18px;
       }
-      .date-calendar th, .date-calendar td {
-        font-size: 14px;
-        padding: 8px 0;
-      }
-      .event h3 {
-        font-size: 24px;
-      }
-      .event p {
-        font-size: 16px;
-      }
-      .map-container iframe {
-        height: 300px;
+      .main-start .wedding-date {
+        font-size: 20px;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- Гамбургер -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
   <!-- Навигация -->
-  <nav>
+  <nav id="nav-links">
     <a href="#where">Где</a>
     <a href="#schedule">План дня</a>
     <a href="#details">Детали</a>
     <a href="#survey">RSVP</a>
   </nav>
 
-<!-- Главный экран -->
-<section class="main-start" id="home">
-  <!-- Фоновое изображение -->
-  <div class="background"></div>
+  <!-- Главный экран -->
+  <section class="main-start" id="home">
+    <div class="background"></div>
+    <div class="content" data-aos="fade-up" data-aos-once="true">
+      <img src="startimg.png" alt="Start Image" class="start-img">
+      <h1 class="names">Георг & Маргарита</h1>
+      <p class="subtitle">Мы приглашаем Вас разделить с нами день нашей Свадьбы</p>
+      <div class="wedding-date">14 | 07 | 2026</div>
 
-  <div class="content" data-aos="fade-up" data-aos-once="true">
-    <!-- Картинка сверху -->
-    <img src="startimg.png" alt="Start Image" class="start-img">
-
-    <!-- Текст -->
-    <h1 class="names">Георг & Маргарита</h1>
-    <p class="subtitle">Мы приглашаем Вас разделить с нами день нашей Свадьбы</p>
-
-    <div class="wedding-date">14 | 07 | 2026</div>
-
-    <!-- Обратный отсчет -->
-    <div class="countdown-table" id="countdown">
-      <div class="countdown-cell"><span id="weeks">0</span> недель</div>
-      <div class="countdown-cell"><span id="days">0</span> дней</div>
-      <div class="countdown-cell"><span id="hours">0</span> часов</div>
-      <div class="countdown-cell"><span id="minutes">0</span> минут</div>
-      <div class="countdown-cell"><span id="seconds">0</span> секунд</div>
+      <!-- Обратный отсчет -->
+      <div class="countdown-table" id="countdown">
+        <div class="countdown-cell"><span id="weeks">0</span> недель</div>
+        <div class="countdown-cell"><span id="days">0</span> дней</div>
+        <div class="countdown-cell"><span id="hours">0</span> часов</div>
+        <div class="countdown-cell"><span id="minutes">0</span> минут</div>
+        <div class="countdown-cell"><span id="seconds">0</span> секунд</div>
+      </div>
     </div>
-  </div>
-</section>
-
-<style>
-.main-start {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: "TT Berlinerins Script", cursive;
-  color: #2c3e50;
-}
-
-.main-start .background {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: url('backimg.jpg') center/cover no-repeat;
-  z-index: 0;
-}
-
-.main-start .content {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 20px;
-  padding-top: 0px; /* смещаем текст ниже центра */
-}
-
-.main-start .start-img {
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-  margin-bottom: 0px;
-}
-
-.main-start .names {
-  font-size: 64px;
-  margin: 0;
-}
-
-.main-start .subtitle {
-  font-size: 45px;
-  margin-bottom: 4px;
-}
-
-.main-start .countdown-table {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  font-size: 20px;
-  margin-bottom: 40px;
-}
-
-.main-start .countdown-cell {
-  background: rgba(0,0,0,0.4);
-  padding: 12px 18px;
-  border-radius: 10px;
-  font-weight: 500;
-}
-
-.main-start .countdown-cell span {
-  font-size: 28px;
-  font-weight: bold;
-  display: block;
-  margin-bottom: 4px;
-}
-
-.main-start .wedding-date {
-  font-size: 32px;
-  letter-spacing: 4px;
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-  .main-start .start-img {
-    width: 100%;
-    margin-bottom: 0px;
-  }
-  .main-start .names {
-    font-size: 48px;
-  }
-  .main-start .subtitle {
-    font-size: 30px;
-    margin-bottom: 0px;
-  }
-  .main-start .countdown-cell {
-    font-size: 16px;
-    padding: 10px 14px;
-  }
-  .main-start .countdown-cell span {
-    font-size: 22px;
-  }
-  .main-start .wedding-date {
-    font-size: 24px;
-    margin-bottom: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .main-start .start-img {
-    width: 80%;
-    margin-bottom: 20px;
-  }
-  .main-start .names {
-    font-size: 36px;
-  }
-  .main-start .subtitle {
-    font-size: 16px;
-  }
-  .main-start .countdown-cell span {
-    font-size: 18px;
-  }
-  .main-start .wedding-date {
-    font-size: 20px;
-  }
-}
-</style>
-
-<script>
-// Обратный отсчет
-const countdownDate = new Date("2026-07-14T00:00:00").getTime();
-
-function updateCountdown() {
-  const now = new Date().getTime();
-  const distance = countdownDate - now;
-
-  const weeks = Math.floor(distance / (1000 * 60 * 60 * 24 * 7));
-  const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  document.getElementById("weeks").textContent = weeks;
-  document.getElementById("days").textContent = days;
-  document.getElementById("hours").textContent = hours;
-  document.getElementById("minutes").textContent = minutes;
-  document.getElementById("seconds").textContent = seconds;
-
-  if(distance < 0){
-    clearInterval(countdownInterval);
-    document.getElementById("countdown").textContent = "Свадьба уже состоялась!";
-  }
-}
-
-const countdownInterval = setInterval(updateCountdown, 1000);
-updateCountdown();
-</script>
-
+  </section>
 
   <!-- Календарь -->
   <section class="info-date" id="schedule">
     <h2 data-aos="fade-up" data-aos-once="true">Дорогие гости!</h2>
     <p data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
-     С радостью сообщаем, что 14.07.2026 состоится наша свадьба<br><br>
+      С радостью сообщаем, что 14.07.2026 состоится наша свадьба<br><br>
       Ждём вас на первом празднике нашей семьи
     </p>
 
@@ -534,7 +475,6 @@ updateCountdown();
   <!-- Форма RSVP -->
   <section id="survey">
     <h2 data-aos="fade-up" data-aos-once="true" style="font-family:'TT Berlinerins Script',cursive; font-size:42px; color:#2c3e50; margin-bottom:20px;">Анкета</h2>
-
     <p data-aos="fade-up" data-aos-delay="200" data-aos-once="true" style="font-size:18px; max-width:700px; margin:0 auto 40px; line-height:1.6; color:#34495e;">
       Пожалуйста, заполните анкету и подтвердите свое присутствие до <b>01 июня 2026</b>, чтобы мы могли спланировать торжество наилучшим образом<br>
       <i>*Заполните форму для каждого гостя отдельно</i>
@@ -559,176 +499,6 @@ updateCountdown();
         <option>Вегетарианское меню</option>
       </select>
 
-<div class="custom-select-container" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
-  <div class="custom-select" id="alcohol-select">
-    <div class="selected">Предпочтения по алкоголю</div>
-    <div class="options">
-      <label><input type="checkbox" value="Красное вино"> Красное вино</label>
-      <label><input type="checkbox" value="Белое вино"> Белое вино</label>
-      <label><input type="checkbox" value="Шампанское"> Шампанское</label>
-      <label><input type="checkbox" value="Виски/коньяк"> Виски/коньяк</label>
-      <label><input type="checkbox" value="Водка"> Водка</label>
-      <label><input type="checkbox" value="Не буду пить алкоголь"> Не буду пить алкоголь</label>
-      <label>
-        <input type="checkbox" id="other-alcohol-checkbox"> Свой вариант
-        <input type="text" id="other-alcohol-text" name="Алкоголь_свой" placeholder="Укажите свой вариант">
-      </label>
-    </div>
-  </div>
-  <input type="hidden" name="Алкоголь" id="alcohol-hidden">
-</div>
-
-<style>
-.custom-select-container {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto 16px;
-  font-family: 'Roboto', sans-serif;
-}
-
-.custom-select-container label {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 16px;
-}
-
-.custom-select {
-  border: 1px solid #e0d6d1;
-  border-radius: 10px;
-  background: #fff;
-  cursor: pointer;
-  position: relative;
-  width: 100%;
-}
-
-.custom-select .selected {
-  padding: 14px;
-  font-size: 16px;
-}
-
-.custom-select .options {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  width: 100%;
-  background: #fff;
-  border: 1px solid #e0d6d1;
-  border-radius: 10px;
-  max-height: 200px;
-  overflow-y: auto;
-  z-index: 10;
-  flex-direction: column;
-  gap: 6px;
-  padding: 10px;
-}
-
-.custom-select .options label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.custom-select .options input[type="text"] {
-  display: none;
-  margin-top: 4px;
-  padding: 10px;
-  border: 1px solid #e0d6d1;
-  border-radius: 10px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.custom-select .options input[type="checkbox"] {
-  margin: 0;
-}
-</style>
-
-<script>
-const select = document.getElementById('alcohol-select');
-const selectedDiv = select.querySelector('.selected');
-const optionsDiv = select.querySelector('.options');
-const checkboxes = optionsDiv.querySelectorAll('input[type="checkbox"]:not(#other-alcohol-checkbox)');
-const otherCheckbox = document.getElementById('other-alcohol-checkbox');
-const otherText = document.getElementById('other-alcohol-text');
-const hiddenInput = document.getElementById('alcohol-hidden');
-
-// Открытие/закрытие списка
-selectedDiv.addEventListener('click', () => {
-  optionsDiv.style.display = optionsDiv.style.display === 'flex' ? 'none' : 'flex';
-  optionsDiv.style.flexDirection = 'column';
-});
-
-// Показ текста при выборе "Свой вариант"
-otherCheckbox.addEventListener('change', () => {
-  otherText.style.display = otherCheckbox.checked ? 'block' : 'none';
-  updateSelected();
-});
-
-// Обновление отображаемого текста и скрытого поля
-const updateSelected = () => {
-  let values = [];
-  checkboxes.forEach(cb => { if(cb.checked) values.push(cb.value); });
-  if(otherCheckbox.checked && otherText.value.trim() !== '') {
-    values.push(otherText.value.trim());
-  }
-  selectedDiv.textContent = values.length ? values.join(', ') : 'Выберите варианты';
-  hiddenInput.value = values.join(', ');
-};
-
-// Следим за изменениями
-checkboxes.forEach(cb => cb.addEventListener('change', updateSelected));
-otherText.addEventListener('input', updateSelected);
-
-// Закрытие списка при клике вне
-document.addEventListener('click', (e) => {
-  if(!select.contains(e.target)) {
-    optionsDiv.style.display = 'none';
-  }
-});
-</script>
-
-
       <button type="submit">Отправить</button>
     </form>
-  </section>
-
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
-
-    // Сообщение после отправки
-    document.getElementById("rsvp-form").addEventListener("submit", function() {
-      setTimeout(() => { alert("Спасибо! Мы вас ждем!"); }, 3000);
-    });
-// Показываем поле для своего варианта алкоголя
-  const alcoholSelect = document.getElementById("alcohol");
-  const alcoholOther = document.getElementById("alcohol-other");
-
-  alcoholSelect.addEventListener("change", function() {
-    const selected = Array.from(this.selectedOptions).map(opt => opt.value);
-    if(selected.includes("Свой вариант")) {
-      alcoholOther.style.display = "block";
-      alcoholOther.required = true;
-    } else {
-      alcoholOther.style.display = "none";
-      alcoholOther.required = false;
-      alcoholOther.value = "";
-    }
-  });
-</script>
-
-</body>
-</html>
-
-
-
-
-
-
-
+  </section
