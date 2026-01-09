@@ -295,7 +295,10 @@
 
 <!-- Главный экран -->
 <section class="main-start" id="home">
-  <div class="overlay"></div>
+  <div class="top-image">
+    <img src="startimg.png" alt="Свадебная картинка">
+  </div>
+
   <div class="content" data-aos="fade-up" data-aos-once="true">
     <h1 class="names">ГЕОРГ & МАРГАРИТА</h1>
     <p class="subtitle">Мы приглашаем Вас разделить с нами день нашей Свадьбы</p>
@@ -315,30 +318,25 @@
 
 <style>
 .main-start {
-  position: relative;
-  background: url('startimg.png') center/cover no-repeat;
-  height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  color: #fff;
-  text-align: center;
+  color: #2c3e50;
   font-family: "TT Berlinerins Script", cursive;
+  text-align: center;
 }
 
-.main-start .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+.main-start .top-image img {
   width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.35);
-  z-index: 1;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .main-start .content {
-  position: relative;
-  z-index: 2;
+  margin-top: 40px; /* смещаем вниз экрана */
 }
 
 .main-start .names {
@@ -361,10 +359,11 @@
 }
 
 .main-start .countdown-cell {
-  background: rgba(255,255,255,0.2);
+  background: rgba(231, 76, 60, 0.15);
   padding: 12px 18px;
   border-radius: 10px;
   font-weight: 500;
+  min-width: 80px;
 }
 
 .main-start .countdown-cell span {
@@ -377,6 +376,25 @@
 .main-start .wedding-date {
   font-size: 32px;
   letter-spacing: 4px;
+}
+
+/* Адаптив */
+@media (max-width: 600px) {
+  .main-start .names {
+    font-size: 40px;
+  }
+  .main-start .subtitle {
+    font-size: 18px;
+  }
+  .main-start .countdown-cell span {
+    font-size: 22px;
+  }
+  .main-start .wedding-date {
+    font-size: 24px;
+  }
+  .main-start .top-image img {
+    max-width: 90%;
+  }
 }
 </style>
 
@@ -662,3 +680,5 @@ document.addEventListener('click', (e) => {
 
 </body>
 </html>
+
+
