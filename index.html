@@ -604,6 +604,197 @@ updateCountdown();
       </div>
     </div>
   </section>
+
+<!-- Программа дня -->
+<section class="program" id="program">
+  <h2 class="program-title">ПРОГРАММА ДНЯ</h2>
+
+  <div class="timeline">
+
+    <div class="event">
+      <div class="time">12:15</div>
+      <div class="dot">❤</div>
+      <div class="content">
+        <strong>Сбор гостей</strong>
+        <p>Шипиловский дворец бракосочетания<br>Шипиловский пр-д, 27</p>
+      </div>
+    </div>
+    
+    <div class="event">
+      <div class="time">12:30</div>
+      <div class="dot">❤</div>
+      <div class="content">
+        <strong>Торжественная церемония</strong>
+        <p>Шипиловский дворец бракосочетания<br>Шипиловский пр-д, 27</p>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="time">13:30</div>
+      <div class="dot">❤</div>
+      <div class="content">
+        <strong>Прогулка и фотосессия</strong>
+        <p>парк Царицыно</p>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="time">13:30</div>
+      <div class="dot">❤</div>
+      <div class="content">
+        <strong>Фуршет</strong>
+        <p>Банкетный зал Пантеон<br>парк Царицыно, ул. Тюрина, 1</p>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="time">15:30</div>
+      <div class="dot">❤</div>
+      <div class="content">
+        <strong>Праздничный банкет</strong>
+        <p>Банкетный зал Пантеон<br>парк Царицыно, ул. Тюрина, 1</p>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="time">19:00</div>
+      <div class="dot">❤</div>
+      <div class="content">
+        <strong>Свадебный торт</strong>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="time">22:00</div>
+      <div class="dot">❤</div>
+      <div class="content">
+        <strong>Завершение вечера</strong>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+/* Программа дня */
+.program {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: "TT Berlinerins Script", cursive;
+  color: #2c3e50;
+  background: #fdf6f0;
+}
+
+.program-title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 60px;
+  color: #2c3e50;
+}
+
+/* Сетка только внутри программы дня */
+.program .timeline {
+  position: relative;
+  padding-left: 120px;
+}
+
+/* пунктирная линия */
+.program .timeline::before {
+  content: "";
+  position: absolute;
+  left: 60px;
+  top: 0;
+  bottom: 0;
+  border-left: 2px dashed #2c3e50;
+  border-radius: 20px;
+}
+
+.program .event {
+  display: grid;
+  grid-template-columns: 100px 40px auto;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.program .time {
+  font-size: 22px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.program .dot {
+  font-size: 18px;
+  color: #e74c3c;
+  text-align: center;
+  z-index: 2;
+}
+
+.program .content strong {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 6px;
+  color: #2c3e50;
+}
+
+.program .content p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .program-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .program .timeline {
+    padding-left: 80px;
+  }
+
+  .program .time {
+    font-size: 18px;
+  }
+
+  .program .dot {
+    font-size: 16px;
+  }
+
+  .program .content strong {
+    font-size: 18px;
+  }
+
+  .program .content p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .program .timeline {
+    padding-left: 40px;
+  }
+
+  .program .time {
+    font-size: 16px;
+  }
+
+  .program .dot {
+    font-size: 14px;
+  }
+
+  .program .content strong {
+    font-size: 16px;
+  }
+
+  .program .content p {
+    font-size: 13px;
+  }
+}
+</style>
   
   <!-- Форма RSVP -->
   <section id="survey">
@@ -799,6 +990,7 @@ document.addEventListener('click', (e) => {
 
 </body>
 </html>
+
 
 
 
