@@ -5,23 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Приглашение на свадьбу</title>
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
   <!-- AOS Library для анимаций -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <style>
-  @font-face {
-    font-family: "TT Berlinerins Script";
-    src: url("TTBerlinerins-Script.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-  </style>
-
-  <style>
+    @font-face {
+      font-family: "TT Berlinerins Script";
+      src: url("TTBerlinerins-Script.woff2") format("woff2");
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+  
     body {
       margin: 0;
-      font-family: "TT Berlinerins Script", cursive;
+      font-family: 'Roboto', sans-serif;
       background: #fff;
       color: #000;
       scroll-behavior: smooth;
@@ -33,7 +34,6 @@
       gap: 40px;
       padding: 20px;
       font-size: 18px;
-      font-family: "TT Berlinerins Script", cursive;
       position: sticky;
       top: 0;
       background: #fff;
@@ -45,7 +45,6 @@
       text-decoration: none;
       color: #000;
       font-weight: 500;
-      font-family: "TT Berlinerins Script", cursive;
       transition: color 0.3s;
     }
 
@@ -62,7 +61,6 @@
       min-height: 100vh;
       padding: 20px;
       box-sizing: border-box;
-      font-family: "TT Berlinerins Script", cursive;
     }
 
     .initials {
@@ -102,7 +100,6 @@
       letter-spacing: 1.5px;
       font-weight: 500;
       color: #34495e;
-      font-family: "TT Berlinerins Script", cursive;
     }
 
     /* Календарь */
@@ -110,7 +107,6 @@
       padding: 80px 20px;
       background: #fdf6f0;
       text-align: center;
-      font-family: "TT Berlinerins Script", cursive;
     }
 
     .info-date h2 {
@@ -140,7 +136,6 @@
       max-width: 400px;
       margin: 0 auto;
       border-collapse: collapse;
-      font-family: "TT Berlinerins Script", cursive;
     }
 
     .date-calendar th,
@@ -168,7 +163,6 @@
       padding: 80px 20px;
       background: #fff7f0;
       text-align: center;
-      font-family: "TT Berlinerins Script", cursive;
     }
 
     .location h2 {
@@ -214,7 +208,6 @@
       padding: 80px 20px;
       background: #fdf6f0;
       text-align: center;
-      font-family: "TT Berlinerins Script", cursive;
     }
 
     #rsvp-form {
@@ -231,9 +224,6 @@
       border:1px solid #e0d6d1;
       border-radius:10px;
       background:#fff;
-      width:100%;
-      box-sizing:border-box;
-      font-family: "TT Berlinerins Script", cursive;
     }
 
     #rsvp-form button {
@@ -246,85 +236,50 @@
       border-radius:12px;
       cursor:pointer;
       transition:0.3s;
-      font-family: "TT Berlinerins Script", cursive;
     }
 
     #rsvp-form button:hover {
       background:#c0392b;
     }
 
-    /* Кастомный мульти-select алкоголя */
-    .custom-select-container {
-      position: relative;
-      width: 100%;
-      max-width: 100%;
-      margin: 0 auto 16px;
-      font-family: "TT Berlinerins Script", cursive;
-    }
-
-    .custom-select {
-      border: 1px solid #e0d6d1;
-      border-radius: 10px;
-      background: #fff;
-      cursor: pointer;
-      position: relative;
-      width: 100%;
-    }
-
-    .custom-select .selected {
-      padding: 14px;
-      font-size: 16px;
-      width: 100%;
-    }
-
-    .custom-select .options {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      width: 100%;
-      background: #fff;
-      border: 1px solid #e0d6d1;
-      border-radius: 10px;
-      max-height: 200px;
-      overflow-y: auto;
-      z-index: 10;
-      flex-direction: column;
-      gap: 6px;
-      padding: 10px;
-    }
-
-    .custom-select .options label {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .custom-select .options input[type="text"] {
-      display: none;
-      margin-top: 4px;
-      padding: 10px;
-      border: 1px solid #e0d6d1;
-      border-radius: 10px;
-      width: 100%;
-      box-sizing: border-box;
-      font-family: "TT Berlinerins Script", cursive;
-    }
-
     /* Адаптивность */
     @media (max-width: 600px) {
-      .initials { font-size: 80px; }
-      .initials span.heart { font-size: 40px; }
-      .names { font-size: 24px; }
-      .date { font-size: 18px; margin-top: 40px; }
-      .info-date h2, .location h2 { font-size: 32px; }
-      .info-date p { font-size: 16px; }
-      .event h3 { font-size: 24px; }
-      .event p { font-size: 16px; }
-      .map-container iframe { height: 300px; }
+      .initials {
+        font-size: 80px;
+      }
+      .initials span.heart {
+        font-size: 40px;
+      }
+      .names {
+        font-size: 24px;
+      }
+      .date {
+        font-size: 18px;
+        margin-top: 40px;
+      }
+
+      .info-date h2, .location h2 {
+        font-size: 32px;
+      }
+      .info-date p {
+        font-size: 16px;
+      }
+      .date-calendar h3 {
+        font-size: 28px;
+      }
+      .date-calendar th, .date-calendar td {
+        font-size: 14px;
+        padding: 8px 0;
+      }
+      .event h3 {
+        font-size: 24px;
+      }
+      .event p {
+        font-size: 16px;
+      }
+      .map-container iframe {
+        height: 300px;
+      }
     }
   </style>
 </head>
@@ -363,11 +318,21 @@
         <tr>
           <th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th>Сб</th><th>Вс</th>
         </tr>
-        <tr><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
-        <tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
-        <tr><td>13</td><td class="wedding-day">14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td></tr>
-        <tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr>
-        <tr><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td><td></td></tr>
+        <tr>
+          <td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+        </tr>
+        <tr>
+          <td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
+        </tr>
+        <tr>
+          <td>13</td><td class="wedding-day">14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
+        </tr>
+        <tr>
+          <td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td>
+        </tr>
+        <tr>
+          <td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td><td></td>
+        </tr>
       </table>
     </div>
   </section>
@@ -398,9 +363,9 @@
 
   <!-- Форма RSVP -->
   <section id="survey">
-    <h2 data-aos="fade-up" data-aos-once="true">Анкета</h2>
+    <h2 data-aos="fade-up" data-aos-once="true" style="font-family:'TT Berlinerins Script',cursive; font-size:42px; color:#2c3e50; margin-bottom:20px;">Анкета</h2>
 
-    <p data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
+    <p data-aos="fade-up" data-aos-delay="200" data-aos-once="true" style="font-size:18px; max-width:700px; margin:0 auto 40px; line-height:1.6; color:#34495e;">
       Пожалуйста, заполните анкету и подтвердите свое присутствие до <b>01 июня 2026</b>, чтобы мы могли спланировать торжество наилучшим образом<br>
       <i>*Заполните форму для каждого гостя отдельно</i>
     </p>
@@ -424,25 +389,139 @@
         <option>Вегетарианское меню</option>
       </select>
 
-      <!-- Блок выбора алкоголя -->
-      <div class="custom-select-container">
-        <div class="custom-select" id="alcohol-select">
-          <div class="selected">Предпочтения по алкоголю</div>
-          <div class="options">
-            <label><input type="checkbox" value="Красное вино"> Красное вино</label>
-            <label><input type="checkbox" value="Белое вино"> Белое вино</label>
-            <label><input type="checkbox" value="Шампанское"> Шампанское</label>
-            <label><input type="checkbox" value="Виски/коньяк"> Виски/коньяк</label>
-            <label><input type="checkbox" value="Водка"> Водка</label>
-            <label><input type="checkbox" value="Не буду пить алкоголь"> Не буду пить алкоголь</label>
-            <label>
-              <input type="checkbox" id="other-alcohol-checkbox"> Свой вариант
-              <input type="text" id="other-alcohol-text" name="Алкоголь_свой" placeholder="Укажите свой вариант">
-            </label>
-          </div>
-        </div>
-        <input type="hidden" name="Алкоголь" id="alcohol-hidden">
-      </div>
+<div class="custom-select-container" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
+  <div class="custom-select" id="alcohol-select">
+    <div class="selected">Предпочтения по алкоголю</div>
+    <div class="options">
+      <label><input type="checkbox" value="Красное вино"> Красное вино</label>
+      <label><input type="checkbox" value="Белое вино"> Белое вино</label>
+      <label><input type="checkbox" value="Шампанское"> Шампанское</label>
+      <label><input type="checkbox" value="Виски/коньяк"> Виски/коньяк</label>
+      <label><input type="checkbox" value="Водка"> Водка</label>
+      <label><input type="checkbox" value="Не буду пить алкоголь"> Не буду пить алкоголь</label>
+      <label>
+        <input type="checkbox" id="other-alcohol-checkbox"> Свой вариант
+        <input type="text" id="other-alcohol-text" name="Алкоголь_свой" placeholder="Укажите свой вариант">
+      </label>
+    </div>
+  </div>
+  <input type="hidden" name="Алкоголь" id="alcohol-hidden">
+</div>
+
+<style>
+.custom-select-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.custom-select-container label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.custom-select {
+  border: 1px solid #e0d6d1;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+}
+
+.custom-select .selected {
+  padding: 14px;
+  font-size: 16px;
+}
+
+.custom-select .options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e0d6d1;
+  border-radius: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+}
+
+.custom-select .options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.custom-select .options input[type="text"] {
+  display: none;
+  margin-top: 4px;
+  padding: 10px;
+  border: 1px solid #e0d6d1;
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.custom-select .options input[type="checkbox"] {
+  margin: 0;
+}
+</style>
+
+<script>
+const select = document.getElementById('alcohol-select');
+const selectedDiv = select.querySelector('.selected');
+const optionsDiv = select.querySelector('.options');
+const checkboxes = optionsDiv.querySelectorAll('input[type="checkbox"]:not(#other-alcohol-checkbox)');
+const otherCheckbox = document.getElementById('other-alcohol-checkbox');
+const otherText = document.getElementById('other-alcohol-text');
+const hiddenInput = document.getElementById('alcohol-hidden');
+
+// Открытие/закрытие списка
+selectedDiv.addEventListener('click', () => {
+  optionsDiv.style.display = optionsDiv.style.display === 'flex' ? 'none' : 'flex';
+  optionsDiv.style.flexDirection = 'column';
+});
+
+// Показ текста при выборе "Свой вариант"
+otherCheckbox.addEventListener('change', () => {
+  otherText.style.display = otherCheckbox.checked ? 'block' : 'none';
+  updateSelected();
+});
+
+// Обновление отображаемого текста и скрытого поля
+const updateSelected = () => {
+  let values = [];
+  checkboxes.forEach(cb => { if(cb.checked) values.push(cb.value); });
+  if(otherCheckbox.checked && otherText.value.trim() !== '') {
+    values.push(otherText.value.trim());
+  }
+  selectedDiv.textContent = values.length ? values.join(', ') : 'Выберите варианты';
+  hiddenInput.value = values.join(', ');
+};
+
+// Следим за изменениями
+checkboxes.forEach(cb => cb.addEventListener('change', updateSelected));
+otherText.addEventListener('input', updateSelected);
+
+// Закрытие списка при клике вне
+document.addEventListener('click', (e) => {
+  if(!select.contains(e.target)) {
+    optionsDiv.style.display = 'none';
+  }
+});
+</script>
+
 
       <button type="submit">Отправить</button>
     </form>
@@ -457,45 +536,24 @@
     document.getElementById("rsvp-form").addEventListener("submit", function() {
       setTimeout(() => { alert("Спасибо! Мы вас ждем!"); }, 3000);
     });
+// Показываем поле для своего варианта алкоголя
+  const alcoholSelect = document.getElementById("alcohol");
+  const alcoholOther = document.getElementById("alcohol-other");
 
-    // Кастомный select для алкоголя
-    const selectBlock = document.getElementById('alcohol-select');
-    const selectedDiv = selectBlock.querySelector('.selected');
-    const optionsDiv = selectBlock.querySelector('.options');
-    const checkboxes = optionsDiv.querySelectorAll('input[type="checkbox"]:not(#other-alcohol-checkbox)');
-    const otherCheckbox = document.getElementById('other-alcohol-checkbox');
-    const otherText = document.getElementById('other-alcohol-text');
-    const hiddenInput = document.getElementById('alcohol-hidden');
-
-    selectedDiv.addEventListener('click', () => {
-      optionsDiv.style.display = optionsDiv.style.display === 'flex' ? 'none' : 'flex';
-      optionsDiv.style.flexDirection = 'column';
-    });
-
-    otherCheckbox.addEventListener('change', () => {
-      otherText.style.display = otherCheckbox.checked ? 'block' : 'none';
-      updateSelected();
-    });
-
-    const updateSelected = () => {
-      let values = [];
-      checkboxes.forEach(cb => { if(cb.checked) values.push(cb.value); });
-      if(otherCheckbox.checked && otherText.value.trim() !== '') {
-        values.push(otherText.value.trim());
-      }
-      selectedDiv.textContent = values.length ? values.join(', ') : 'Выберите варианты';
-      hiddenInput.value = values.join(', ');
-    };
-
-    checkboxes.forEach(cb => cb.addEventListener('change', updateSelected));
-    otherText.addEventListener('input', updateSelected);
-
-    document.addEventListener('click', (e) => {
-      if(!selectBlock.contains(e.target)) {
-        optionsDiv.style.display = 'none';
-      }
-    });
-  </script>
+  alcoholSelect.addEventListener("change", function() {
+    const selected = Array.from(this.selectedOptions).map(opt => opt.value);
+    if(selected.includes("Свой вариант")) {
+      alcoholOther.style.display = "block";
+      alcoholOther.required = true;
+    } else {
+      alcoholOther.style.display = "none";
+      alcoholOther.required = false;
+      alcoholOther.value = "";
+    }
+  });
+</script>
 
 </body>
 </html>
+
+
