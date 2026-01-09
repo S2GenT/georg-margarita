@@ -484,7 +484,60 @@ const countdownInterval = setInterval(updateCountdown, 1000);
 updateCountdown();
 </script>
 
+<!-- Цитата -->
+<section class="quote-section">
+  <div class="quote-content" data-aos="fade-up" data-aos-once="true">
+    <p class="quote-text">
+      «Любовь выскочила перед нами, как из-под земли выскакивает убийца в переулке,
+      и поразила нас сразу обоих! Так поражает молния, так поражает финский нож!»
+    </p>
+    <p class="quote-author">— М. А. Булгаков</p>
+  </div>
+</section>
+<style>
+/* Блок с цитатой */
+.quote-section {
+  padding: 100px 20px;
+  background: #fdf6f0;
+  text-align: center;
+}
 
+.quote-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quote-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  line-height: 1.7;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.quote-author {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .quote-section {
+    padding: 70px 16px;
+  }
+
+  .quote-text {
+    font-size: 18px;
+  }
+
+  .quote-author {
+    font-size: 16px;
+  }
+}
+</style>
+  
   <!-- Календарь -->
   <section class="info-date" id="schedule">
     <h2 data-aos="fade-up" data-aos-once="true">Дорогие гости!</h2>
@@ -736,4 +789,5 @@ document.addEventListener('click', (e) => {
 
 </body>
 </html>
+
 
