@@ -151,12 +151,24 @@
       color: #2c3e50;
     }
 
-    .date-calendar td.wedding-day {
-      background: #e74c3c;
-      color: #fff;
-      font-weight: bold;
-      border-radius: 50%;
-    }
+.date-calendar td.wedding-day {
+  position: relative;
+  color: #fff;
+  font-weight: bold;
+  z-index: 1;
+}
+
+/* Сердце */
+.date-calendar td.wedding-day::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background-color: #e74c3c; /* 🔴 цвет сердца */
+  mask: url("heart-white-01.svg") center / contain no-repeat;
+  -webkit-mask: url("heart-white-01.svg") center / contain no-repeat;
+  z-index: -1;
+}
+
 
     /* Локация */
     .location {
@@ -789,6 +801,7 @@ document.addEventListener('click', (e) => {
 
 </body>
 </html>
+
 
 
 
