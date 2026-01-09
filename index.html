@@ -325,7 +325,6 @@
 
     <!-- Обратный отсчет -->
     <div class="countdown-table" id="countdown">
-      <div class="countdown-cell"><span id="weeks">0</span> недель</div>
       <div class="countdown-cell"><span id="days">0</span> дней</div>
       <div class="countdown-cell"><span id="hours">0</span> часов</div>
       <div class="countdown-cell"><span id="minutes">0</span> минут</div>
@@ -474,8 +473,7 @@ function updateCountdown() {
   const now = new Date().getTime();
   const distance = countdownDate - now;
 
-  const weeks = Math.floor(distance / (1000 * 60 * 60 * 24 * 7));
-  const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
   const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
@@ -802,6 +800,7 @@ document.addEventListener('click', (e) => {
 
 </body>
 </html>
+
 
 
 
