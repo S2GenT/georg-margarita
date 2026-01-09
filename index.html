@@ -293,15 +293,15 @@
     <a href="#survey">RSVP</a>
   </nav>
 
-<!-- Главный экран (Приветственный слайд) -->
+<!-- Приветственный экран -->
 <section class="main-start" id="home">
-  <!-- Верхняя картинка -->
-  <div class="start-image">
-    <img src="startimg.png" alt="Свадебная картинка">
-  </div>
+  <!-- Фоновая картинка -->
+  <div class="background"></div>
 
-  <!-- Нижняя часть с текстом и обратным отсчетом -->
   <div class="content" data-aos="fade-up" data-aos-once="true">
+    <!-- Картинка сверху -->
+    <img src="startimg.png" alt="Начало" class="start-image">
+
     <h1 class="names">ГЕОРГ & МАРГАРИТА</h1>
     <p class="subtitle">Мы приглашаем Вас разделить с нами день нашей Свадьбы</p>
 
@@ -322,40 +322,54 @@
 .main-start {
   position: relative;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; /* Текст внизу */
-  align-items: center;
+  width: 100%;
   font-family: "TT Berlinerins Script", cursive;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* текст чуть ниже центра */
   color: #fff;
-  background: #2c3e50; /* Темный фон за текстом */
+  text-align: center;
+  overflow: hidden;
 }
 
-.start-image img {
+.main-start .background {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  background: url('backimg.jpg') center/cover no-repeat;
+  z-index: 0;
 }
 
 .main-start .content {
-  padding: 40px 20px;
+  position: relative;
   z-index: 2;
+  padding-top: 10vh; /* смещаем текст ниже центра */
   width: 100%;
-  background: rgba(0,0,0,0.3); /* полупрозрачный фон под текстом */
 }
 
-.main-start .names {
+.start-image {
+  display: block;
+  margin: 0 auto;
+  max-width: none;
+  height: auto;
+  object-fit: contain; /* не растягиваем */
+  margin-bottom: 20px;
+}
+
+.names {
   font-size: 64px;
-  margin: 0 0 20px;
+  margin: 0 0 10px;
 }
 
-.main-start .subtitle {
+.subtitle {
   font-size: 24px;
   margin-bottom: 40px;
 }
 
-.main-start .countdown-table {
+/* Обратный отсчет */
+.countdown-table {
   display: flex;
   justify-content: center;
   gap: 15px;
@@ -364,33 +378,38 @@
   font-size: 20px;
 }
 
-.main-start .countdown-cell {
-  background: rgba(255,255,255,0.2);
+.countdown-cell {
+  background: rgba(0,0,0,0.4);
   padding: 12px 18px;
   border-radius: 10px;
   font-weight: 500;
 }
 
-.main-start .countdown-cell span {
+.countdown-cell span {
   font-size: 28px;
   font-weight: bold;
   display: block;
   margin-bottom: 4px;
 }
 
-.main-start .wedding-date {
+.wedding-date {
   font-size: 32px;
   letter-spacing: 4px;
-  margin-bottom: 0;
 }
 
 /* Адаптив */
-@media (max-width: 600px) {
-  .main-start .names { font-size: 40px; }
-  .main-start .subtitle { font-size: 18px; }
-  .main-start .countdown-cell span { font-size: 22px; }
-  .main-start .countdown-cell { padding: 8px 12px; }
-  .main-start .wedding-date { font-size: 24px; }
+@media (max-width: 768px) {
+  .names { font-size: 48px; }
+  .subtitle { font-size: 20px; }
+  .countdown-cell span { font-size: 24px; }
+  .wedding-date { font-size: 28px; }
+}
+
+@media (max-width: 480px) {
+  .names { font-size: 36px; }
+  .subtitle { font-size: 18px; }
+  .countdown-cell span { font-size: 20px; }
+  .wedding-date { font-size: 24px; }
 }
 </style>
 
