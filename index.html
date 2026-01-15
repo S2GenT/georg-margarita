@@ -136,20 +136,30 @@
       max-width: 400px;
       margin: 0 auto;
       border-collapse: collapse;
+  
     }
 
-    .date-calendar th,
-    .date-calendar td {
-      padding: 10px 0;
-      border: 1px solid #ddd;
-      text-align: center;
-      font-size: 16px;
-    }
 
-    .date-calendar th {
-      background: #f0e0d6;
-      color: #2c3e50;
-    }
+
+    .date-calendar th,.date-calendar th,
+.date-calendar td {
+  padding: 10px 0;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+}
+   
+   
+.date-calendar tr:first-child th {
+  border-bottom: 1.5px solid #c2a36b;
+  padding-bottom: 12px;
+}
+
+
+.date-calendar tbody tr:last-child td {
+  border-bottom: 1.5px solid #c2a36b;
+  padding-bottom: 12px;
+}
 
 .date-calendar td.wedding-day {
   position: relative;
@@ -157,6 +167,9 @@
   font-weight: bold;
   z-index: 1;
 }
+
+
+
 
 /* Сердце */
 .date-calendar td.wedding-day::before {
@@ -303,8 +316,9 @@
   <!-- Навигация -->
   <nav>
     <a href="#where">Где</a>
-    <a href="#schedule">План дня</a>
+    <a href="#program">План дня</a>
     <a href="#details">Детали</a>
+    <a href="#telegram">Чат</a>
     <a href="#survey">RSVP</a>
   </nav>
 
@@ -500,7 +514,7 @@ updateCountdown();
       «Любовь выскочила перед нами, как из-под земли выскакивает убийца в переулке,
       и поразила нас сразу обоих! Так поражает молния, так поражает финский нож!»
     </p>
-    <p class="quote-author">— М. А. Булгаков</p>
+    <p class="quote-author">— М.А. Булгаков</p>
   </div>
 </section>
 <style>
@@ -608,19 +622,40 @@ updateCountdown();
 <!-- Программа дня -->
 <section class="program" id="program">
   <h2 class="program-title">ПРОГРАММА ДНЯ</h2>
+  
+   <div class="timeline">
+   
+     <!-- ВОЛНООБРАЗНАЯ ЛИНИЯ -->
+     <div class="timeline-line">
+  <svg viewBox="0 0 100 600" preserveAspectRatio="none">
+    <path
+      d="
+        M50 0
+        C15 75, 85 150, 50 225
+        C15 300, 85 375, 50 450
+        C15 525, 85 600, 50 675
+      "
+      fill="none"
+      stroke="#335724"
+      stroke-width="0.5"
+      stroke-dasharray="3 2"
+    />
+  </svg>
+  </div>
 
-  <div class="timeline">
 
-    <div class="event">
-      <div class="time">12:15</div>
-      <div class="dot">❤</div>
+<div class="timeline-events">
+  
+  <div class="event left">
       <div class="content">
         <strong>Сбор гостей</strong>
         <p>Шипиловский дворец бракосочетания<br>Шипиловский пр-д, 27</p>
       </div>
+      <div class="dot">❤</div>
+      <div class="time">12:15</div>
     </div>
     
-    <div class="event">
+    <div class="event right">
       <div class="time">12:30</div>
       <div class="dot">❤</div>
       <div class="content">
@@ -628,17 +663,17 @@ updateCountdown();
         <p>Шипиловский дворец бракосочетания<br>Шипиловский пр-д, 27</p>
       </div>
     </div>
-
-    <div class="event">
-      <div class="time">13:30</div>
-      <div class="dot">❤</div>
+    
+    <div class="event left">
       <div class="content">
         <strong>Прогулка и фотосессия</strong>
         <p>парк Царицыно</p>
       </div>
+       <div class="dot">❤</div>
+      <div class="time">13:30</div>
     </div>
 
-    <div class="event">
+    <div class="event right">
       <div class="time">13:30</div>
       <div class="dot">❤</div>
       <div class="content">
@@ -646,101 +681,124 @@ updateCountdown();
         <p>Банкетный зал Пантеон<br>парк Царицыно, ул. Тюрина, 1</p>
       </div>
     </div>
-
-    <div class="event">
-      <div class="time">15:30</div>
-      <div class="dot">❤</div>
+    
+    <div class="event left">
       <div class="content">
         <strong>Праздничный банкет</strong>
         <p>Банкетный зал Пантеон<br>парк Царицыно, ул. Тюрина, 1</p>
       </div>
+      <div class="dot">❤</div>
+      <div class="time">15:30</div>
     </div>
 
-    <div class="event">
+
+    <div class="event right">
       <div class="time">19:00</div>
       <div class="dot">❤</div>
       <div class="content">
         <strong>Свадебный торт</strong>
       </div>
     </div>
-
-    <div class="event">
-      <div class="time">22:00</div>
-      <div class="dot">❤</div>
+    
+    <div class="event left">
       <div class="content">
         <strong>Завершение вечера</strong>
       </div>
+       <div class="dot">❤</div>
+      <div class="time">22:00</div>
     </div>
 
   </div>
+  </div>
+  
+  
 </section>
 
 <style>
 /* Программа дня */
+
 .program {
   padding: 80px 200px;
   background: #fff7f0;
-  text-align: top;
 }
 
 .program-title {
   text-align: center;
   font-size: 42px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   color: #2c3e50;
 }
 
-/* Сетка только внутри программы дня */
-.program .timeline {
+.timeline {
   position: relative;
-  padding-left: 120px;
 }
 
-/* пунктирная линия */
-.program .timeline::before {
-  content: "";
+.timeline-line {
   position: absolute;
-  left: 60px;
+  left: 50%;
   top: 0;
-  bottom: 0;
-  border-left: 2px dashed #2c3e50;
-  border-radius: 20px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  z-index: 1;
 }
 
-.program .event {
-  display: grid;
-  grid-template-columns: 100px 40px auto;
-  align-items: flex-start;
-  margin-bottom: 50px;
+.timeline-events {
   position: relative;
-}
-
-.program .time {
-  font-size: 22px;
-  text-align: right;
-  padding-right: 10px;
-}
-
-.program .dot {
-  font-size: 18px;
-  color: #335724;
-  text-align: center;
   z-index: 2;
 }
 
-.program .content strong {
+
+.event {
+  display: grid;
+  align-items: flex-start;
+}
+
+.event.left {
+  grid-template-columns: 1fr 30px 70px;
+  text-align: right;
+}
+
+.event.right {
+  grid-template-columns: 70px 30px 1fr;
+  text-align: left;
+}
+
+
+
+/* ВРЕМЯ */
+.time {
+  font-size: 22px;
+  color: #2c3e50;
+  white-space: nowrap;
+}
+
+/* СЕРДЦЕ */
+.dot {
+  font-size: 18px;
+  color: #335724;
+  text-align: center;
+}
+
+/* ТЕКСТ */
+.content strong {
   display: block;
   font-size: 20px;
   margin-bottom: 6px;
-  color: #2c3e50;
 }
 
-.program .content p {
+.content p {
   margin: 0;
   line-height: 1.5;
   font-size: 16px;
-  color: #2c3e50;
 }
+
+.timeline-line svg {
+  height: 100%;
+  width: 100%;
+}
+
 
 /* Адаптивность */
 @media (max-width: 768px) {
@@ -791,6 +849,170 @@ updateCountdown();
     font-size: 13px;
   }
 }
+</style>
+
+<script>
+function syncTimelineHeight() {
+  const timeline = document.querySelector('.timeline');
+  const leftCol = document.querySelector('.timeline-col.left');
+  const rightCol = document.querySelector('.timeline-col.right');
+  const line = document.querySelector('.timeline-line');
+
+  if (!timeline || !leftCol || !rightCol || !line) return;
+
+  const timelineTop = timeline.getBoundingClientRect().top;
+
+  const leftBottom =
+    leftCol.getBoundingClientRect().bottom - timelineTop;
+
+  const rightBottom =
+    rightCol.getBoundingClientRect().bottom - timelineTop;
+
+  const maxHeight = Math.max(leftBottom, rightBottom);
+
+  line.style.height = maxHeight + 'px';
+}
+
+window.addEventListener('load', syncTimelineHeight);
+window.addEventListener('resize', syncTimelineHeight);
+</script>
+
+<!-- Детали -->
+<section class="details" id="details">
+  <h2 class="details-title">ДЕТАЛИ</h2>
+  
+ 
+  <div class="details-content" data-aos="fade-up" data-aos-once="true">
+    <p class="details-text">
+      Просим не дарить нам цветы, поскольку мы уедем в путешествие и не сможем насладиться их красотой
+    </p>
+    <p class="details-text">
+      Обращаем внимание, что формат мероприятия не предполагает присутствие детей. Просим оставить малышей дома, чтобы все смогли в полной мере насладиться праздником.
+    </p>
+    <p class="details-text">
+      Наше мероприятие не предполагает специальный дресс код для гостей. Ждем всех в хорошем настроении!
+    </p>
+    
+  </div>
+</section>
+
+<style>
+/* Блок с деталями */
+.details {
+  padding: 100px 20px;
+  background: #fdf6f0;
+  text-align: top;
+}
+
+.details-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.details-title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 80px;
+  color: #2c3e50;
+}
+
+.details-text {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  line-height: 1.7;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .details-section {
+    padding: 70px 16px;
+  }
+
+  .details-text {
+    font-size: 18px;
+  }
+
+</style>
+
+<!-- Телеграмм -->
+<section class="telegram" id="telegram">
+  <h2 class="telegram-title">ТЕЛЕГРАММ-ЧАТ</h2>
+  
+ 
+  <div class="telegram-content" data-aos="fade-up" data-aos-once="true">
+    <p class="telegram-text">
+      Мы создали телеграмм-чат нашего праздника, где можно будет узнать дополнительную информацию, поделиться фотографиями и видео, записывать кружочки и голосовые сообщения в день и после свадьбы:
+    </p>
+    
+    <!-- Кнопка с ссылкой на чат -->
+    <a href="https://t.me/ВАШ_ЧАТ" target="_blank" class="telegram-btn">Перейти в чат</a>
+    
+  </div>
+</section>
+
+<style>
+/* Блок с телеграм чатом */
+.telegram {
+  padding: 100px 20px;
+  background: #fdf6f0;
+  text-align: top;
+}
+
+.telegram-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.telegram-title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 80px;
+  color: #2c3e50;
+}
+
+.telegram-text {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  line-height: 1.7;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Стили кнопки */
+.telegram-btn {
+  display: inline-block;
+  padding: 14px 30px;
+  margin-top: 30px;
+  background-color: #335724; /* зеленый цвет, как у линии */
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.telegram-btn:hover {
+  background-color: #a30000;
+  transform: translateY(-2px);
+}
+
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .telegram-section {
+    padding: 70px 16px;
+  }
+
+  .telegram-text {
+    font-size: 18px;
+  }
+
 </style>
   
   <!-- Форма RSVP -->
@@ -985,20 +1207,37 @@ document.addEventListener('click', (e) => {
   });
 </script>
 
+<!-- Подпись -->
+<section class="signature">
+  <p class="signature-text">
+    Будем рады видеть Вас на нашем празднике,<br>
+    <span class="signature-names">Георг и Маргарита</span>
+  </p>
+</section>
+
+<style>
+.signature {
+  padding: 100px 20px; /* отступы сверху и снизу */
+  background: #fff7f0; /* можно оставить под цвет сайта */
+  text-align: center; /* центрируем текст */
+}
+
+.signature-text {
+  font-family: 'TT Berlinerins Script', cursive; /* красивый рукописный шрифт */
+  font-size: 36px; /* крупный размер текста */
+  color: #8B0000; /* бордовый цвет */
+  line-height: 1.4;
+  margin: 0;
+}
+
+.signature-names {
+  display: block; /* перенос на новую строку */
+  font-size: 42px; /* чуть больше, чем основной текст */
+  font-weight: 600; /* можно подчеркнуть имена */
+  margin-top: 10px;
+}
+</style>
+
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
