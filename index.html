@@ -1,178 +1,211 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Приглашение на свадьбу</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Приглашение на свадьбу</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-  <!-- AOS Library для анимаций -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-  <style>
-    @font-face {
-      font-family: "TT Berlinerins Script";
-      src: url("TTBerlinerins-Script.woff2") format("woff2");
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
-  
-    body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background: #fff;
-      color: #000;
-      scroll-behavior: smooth;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      padding: 20px;
-      font-size: 18px;
-      position: sticky;
-      top: 0;
-      background: #fff;
-      z-index: 10;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #000;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #e74c3c;
-    }
-
-    /* Главный экран */
-    .main {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    .initials {
-      font-size: 120px;
-      font-family: "TT Berlinerins Script", cursive;
-      font-weight: bold;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      color: #2c3e50;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    }
-
-    .initials span.heart {
-      font-size: 50px;
-      color: #e74c3c;
-      animation: beat 1s infinite;
-      display: inline-block;
-    }
-
-    @keyframes beat {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.3); }
-    }
-
-    .names {
-      margin-top: 20px;
-      font-family: "TT Berlinerins Script", cursive;
-      font-size: 36px;
-      color: #8B0000;
-    }
-
-    .date {
-      margin-top: 60px;
-      font-size: 24px;
-      letter-spacing: 1.5px;
-      font-weight: 500;
-      color: #34495e;
-    }
-
-    /* Календарь */
-    .info-date {
-      padding: 1px 20px 80px;
-      background: #fdf6f0;
-      text-align: center;
-    }
-
-    .info-date h2 {
-      font-family: "Great Vibes", cursive;
-      font-size: 48px;
-      margin-bottom: 20px;
-      color: #2c3e50;
-    }
-
-    .info-date p {
-      font-size: 18px;
-      color: #34495e;
-      max-width: 600px;
-      margin: 0 auto 40px;
-      line-height: 1.5;
-    }
-
-    .date-calendar h3 {
-      font-family: "Great Vibes", cursive;
-      font-size: 48px;
-      margin-bottom: 20px;
-      color: #2c3e50;
-    }
-
-    .date-calendar table {
-      width: 100%;
-      max-width: 400px;
-      margin: 0 auto;
-      border-collapse: collapse;
-  
-    }
-
-
-
-    .date-calendar th,.date-calendar th,
-.date-calendar td {
-  padding: 10px 0;
-  border: none;
-  text-align: center;
-  font-size: 18px;
+<style>
+@font-face {
+  font-family: "TT Berlinerins Script";
+  src: url("TTBerlinerins-Script.woff2") format("woff2");
+  font-display: swap;
 }
-   
-   
-.date-calendar tr:first-child th {
-  border-bottom: 2px solid #335724;
-  padding-bottom: 12px;
+body{
+  margin:0;
+  font-family:'Montserrat',sans-serif;
+  background:#fff;
+  scroll-behavior:smooth;
 }
+</style>
+</head>
+<body>
 
+<!-- ================= NAVIGATION ================= -->
+<section id="block-nav">
+<nav class="nav">
+<a href="#block-location">Где</a>
+<a href="#block-program">План дня</a>
+<a href="#block-details">Детали</a>
+<a href="#block-telegram">Чат</a>
+<a href="#block-rsvp">RSVP</a>
+</nav>
+</section>
 
-.date-calendar tbody tr:last-child td {
-  border-bottom: 2px solid #335724;
-  padding-bottom: 12px;
+<style>
+#block-nav{
+  --nav-bg:#fff;
+  --nav-color:#000;
+  --nav-hover:#e74c3c;
 }
-
-.date-calendar td.wedding-day {
-  position: relative;
-  color: #fff;
-  font-weight: bold;
-  z-index: 1;
+#block-nav .nav{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  padding:20px;
+  position:sticky;
+  top:0;
+  background:var(--nav-bg);
+  z-index:100;
+  box-shadow:0 2px 5px rgba(0,0,0,0.05);
 }
+#block-nav a{
+  text-decoration:none;
+  color:var(--nav-color);
+  font-weight:500;
+  transition:.3s;
+}
+#block-nav a:hover{color:var(--nav-hover);}
+@media(max-width:600px){
+  #block-nav .nav{display:none;}
+}
+</style>
 
+<!-- ================= HERO ================= -->
+<section id="block-hero">
+<div class="bg"></div>
+<div class="content" data-aos="fade-up">
+<img src="startimg.png" class="img">
+<h1>Георг & Маргарита</h1>
+<p class="subtitle">Мы приглашаем Вас разделить с нами день нашей Свадьбы</p>
+<div class="date">14 | 07 | 2026</div>
 
+<div class="countdown" id="countdown">
+<div><span id="days">0</span> дней</div>
+<div><span id="hours">0</span> часов</div>
+<div><span id="minutes">0</span> минут</div>
+<div><span id="seconds">0</span> секунд</div>
+</div>
+</div>
+</section>
 
+<style>
+#block-hero{
+  --hero-text:#2c3e50;
+  --hero-overlay:rgba(0,0,0,.4);
+  height:100vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+#block-hero .bg{
+  position:absolute; inset:0;
+  background:url('backimg.jpg') center/cover no-repeat;
+}
+#block-hero .content{
+  position:relative;
+  color:var(--hero-text);
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+#block-hero h1{
+  font-family:"Great Vibes",cursive;
+  font-size:70px;
+  margin:0;
+}
+#block-hero .img{max-width:700px;width:100%;}
+#block-hero .countdown{
+  display:flex;
+  gap:15px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+#block-hero .countdown div{
+  background:var(--hero-overlay);
+  padding:12px 18px;
+  border-radius:10px;
+  color:#fff;
+}
+</style>
 
-/* Сердце */
-.date-calendar td.wedding-day::before {
+<script>
+const cdDate=new Date("2026-07-14T12:30:00").getTime();
+function updateCD(){
+const now=new Date().getTime();
+const d=cdDate-now;
+const days=Math.floor(d/(1000*60*60*24));
+const hours=Math.floor((d%(1000*60*60*24))/(1000*60*60));
+const minutes=Math.floor((d%(1000*60*60))/(1000*60));
+const seconds=Math.floor((d%(1000*60))/1000);
+document.getElementById("days").textContent=days;
+document.getElementById("hours").textContent=hours;
+document.getElementById("minutes").textContent=minutes;
+document.getElementById("seconds").textContent=seconds;
+}
+setInterval(updateCD,1000);
+updateCD();
+</script>
+
+<!-- ================= QUOTE BLOCK ================= -->
+<section id="block-quote">
+<div class="quote-wrap" data-aos="fade-up">
+<p class="quote-text">
+«Любовь выскочила перед нами, как из-под земли выскакивает убийца в переулке,
+и поразила нас сразу обоих! Так поражает молния, так поражает финский нож!»
+</p>
+<p class="quote-author">— М.А. Булгаков</p>
+</div>
+</section>
+
+<style>
+#block-quote{
+  padding:100px 20px;
+  background:#fdf6f0;
+}
+#block-quote .quote-wrap{max-width:800px;margin:0 auto;}
+#block-quote .quote-text{
+  font-size:18px;
+  line-height:1.7;
+}
+#block-quote .quote-author{
+  text-align:right;
+  font-style:italic;
+}
+</style>
+
+<!-- ================= CALENDAR BLOCK ================= -->
+<section id="block-calendar">
+<h2>Дорогие гости!</h2>
+<p>
+С радостью сообщаем, что 14.07.2026 состоится наша свадьба<br><br>
+Ждём вас на первом празднике нашей семьи
+</p>
+
+<h3>Июль 2026</h3>
+<table>
+<tr><th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th>Сб</th><th>Вс</th></tr>
+<tr><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+<tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+<tr><td>13</td><td class="wed">14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td></tr>
+<tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr>
+<tr><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td><td></td></tr>
+</table>
+</section>
+
+<style>
+#block-calendar{
+  padding:80px 20px;
+  background:#fdf6f0;
+  text-align:center;
+}
+#block-calendar h2{
+  font-family:"Great Vibes",cursive;
+  font-size:48px;
+}
+#block-calendar table{
+  margin:40px auto;
+  border-collapse:collapse;
+}
+#block-calendar td,#block-calendar th{
+  padding:10px 14px;
+}
+#block-calendar .wed{
   content: "";
   position: absolute;
   inset: 0px;
@@ -181,1060 +214,181 @@
   -webkit-mask: url("heart-white-01.svg") center / contain no-repeat;
   z-index: -1;
 }
-
-
-    /* Локация */
-    .location {
-      padding: 80px 20px;
-      background: #fff7f0;
-      text-align: center;
-    }
-
-    .location h2 {
-      font-family: "Great Vibes", cursive;
-      font-size: 48px;
-      margin-bottom: 40px;
-      color: #2c3e50;
-    }
-
-    .event {
-      margin-bottom: 60px;
-    }
-
-    .event h3 {
-      font-family: "Great Vibes", cursive;
-      font-size: 48px;
-      margin-bottom: 10px;
-      color: #2c3e50;
-    }
-
-    .event p {
-      font-size: 18px;
-      margin-bottom: 20px;
-      color: #34495e;
-    }
-
-    .map-container {
-      position: relative;
-      overflow: hidden;
-      max-width: 600px;
-      margin: 0 auto;
-      border-radius: 10px;
-    }
-
-    .map-container iframe {
-      width: 100%;
-      height: 400px;
-      border: none;
-    }
-
-    /* Форма RSVP */
-    #survey {
-      padding: 80px 20px;
-      background: #fdf6f0;
-      text-align: center;
-    }
-
-    #rsvp-form {
-      display:flex;
-      flex-direction:column;
-      gap:16px;
-      max-width:420px;
-      margin:0 auto;
-    }
-
-    #rsvp-form input, #rsvp-form select, #rsvp-form textarea {
-      padding:14px;
-      font-size:16px;
-      border:1px solid #e0d6d1;
-      border-radius:10px;
-      background:#fff;
-    }
-
-    #rsvp-form button {
-      padding:16px;
-      font-size:18px;
-      font-weight:600;
-      background:#e74c3c;
-      color:#fff;
-      border:none;
-      border-radius:12px;
-      cursor:pointer;
-      transition:0.3s;
-    }
-
-    #rsvp-form button:hover {
-      background:#c0392b;
-    }
-
-    /* Адаптивность */
-    @media (max-width: 600px) {
-        nav {
-        display: none;
-      }
-      .initials {
-        font-size: 80px;
-      }
-      .initials span.heart {
-        font-size: 40px;
-      }
-      .names {
-        font-size: 24px;
-      }
-      .date {
-        font-size: 18px;
-        margin-top: 40px;
-      }
-
-      .info-date h2, .location h2 {
-        font-size: 48px;
-      }
-      .info-date p {
-        font-size: 18px;
-      }
-      .date-calendar h3 {
-        font-size: 48px;
-      }
-      .date-calendar th, .date-calendar td {
-        font-size: 18px;
-        padding: 8px 0;
-      }
-      .event h3 {
-        font-size: 48px;
-      }
-      .event p {
-        font-size: 18px;
-      }
-      .map-container iframe {
-        height: 300px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Навигация -->
-  <nav>
-    <a href="#where">Где</a>
-    <a href="#program">План дня</a>
-    <a href="#details">Детали</a>
-    <a href="#telegram">Чат</a>
-    <a href="#survey">RSVP</a>
-  </nav>
-
-<!-- Главный экран -->
-<section class="main-start" id="home">
-  <!-- Фоновое изображение -->
-  <div class="background"></div>
-
-  <div class="content" data-aos="fade-up" data-aos-once="true">
-    <!-- Картинка сверху -->
-    <img src="startimg.png" alt="Start Image" class="start-img">
-
-    <!-- Текст -->
-    <h1 class="names">Георг & Маргарита</h1>
-    <p class="subtitle">Мы приглашаем Вас разделить с нами день нашей Свадьбы</p>
-
-    <div class="wedding-date">14 | 07 | 2026</div>
-
-    <!-- Обратный отсчет -->
-    <div class="countdown-table" id="countdown">
-      <div class="countdown-cell"><span id="days">0</span> дней</div>
-      <div class="countdown-cell"><span id="hours">0</span> часов</div>
-      <div class="countdown-cell"><span id="minutes">0</span> минут</div>
-      <div class="countdown-cell"><span id="seconds">0</span> секунд</div>
-    </div>
-  </div>
-</section>
-
-<style>
-.main-start .subtitle,
-.main-start .wedding-date,
-.main-start .countdown-table,
-.main-start .countdown-cell,
-.main-start .countdown-cell span {
-  font-family: 'Montserrat', sans-serif;
-  color: #34495e;
-}
-.main-start {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: "Great Vibes", cursive;
-  color: #2c3e50;
-}
-
-.main-start .background {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: url('backimg.jpg') center/cover no-repeat;
-  z-index: 0;
-}
-
-.main-start .content {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 20px;
-  padding-top: 0px; /* смещаем текст ниже центра */
-}
-
-.main-start .start-img {
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-  margin-bottom: 0px;
-}
-
-.main-start .names {
-  font-size: 70px;
-  margin: 0;
-}
-
-.main-start .subtitle {
-  font-size: 48px;
-  margin-bottom: 4px;
-}
-
-.main-start .countdown-table {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  font-size: 18px;
-  margin-bottom: 40px;
-}
-
-.main-start .countdown-cell {
-  background: rgba(0,0,0,0.4);
-  padding: 12px 18px;
-  border-radius: 10px;
-  font-weight: 500;
-}
-
-.main-start .countdown-cell span {
-  font-size: 18px;
-  font-weight: bold;
-  display: block;
-  margin-bottom: 4px;
-}
-
-.main-start .wedding-date {
-  font-size: 18px;
-  letter-spacing: 4px;
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-  .main-start .start-img {
-    width: 100%;
-    margin-bottom: 0px;
-  }
-  .main-start .names {
-    font-size: 48px;
-  }
-  .main-start .subtitle {
-    font-size: 38px;
-    margin-bottom: 0px;
-  }
-  .main-start .countdown-cell {
-    font-size: 18px;
-    padding: 10px 14px;
-  }
-  .main-start .countdown-cell span {
-    font-size: 18px;
-  }
-  .main-start .wedding-date {
-    font-size: 18px;
-    margin-bottom: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .main-start .start-img {
-    width: 80%;
-    margin-bottom: 20px;
-  }
-  .main-start .names {
-    font-size: 48px;
-  }
-  .main-start .subtitle {
-    font-size: 18px;
-  }
-  .main-start .countdown-cell span {
-    font-size: 18px;
-  }
-  .main-start .wedding-date {
-    font-size: 18px;
-  }
-}
 </style>
 
-<script>
-// Обратный отсчет
-const countdownDate = new Date("2026-07-14T00:00:00").getTime();
-
-function updateCountdown() {
-  const now = new Date().getTime();
-  const distance = countdownDate - now;
-
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  document.getElementById("days").textContent = days;
-  document.getElementById("hours").textContent = hours;
-  document.getElementById("minutes").textContent = minutes;
-  document.getElementById("seconds").textContent = seconds;
-
-  if(distance < 0){
-    clearInterval(countdownInterval);
-    document.getElementById("countdown").textContent = "Свадьба уже состоялась!";
-  }
-}
-
-const countdownInterval = setInterval(updateCountdown, 1000);
-updateCountdown();
-</script>
-
-<!-- Цитата -->
-<section class="quote-section">
-  <div class="quote-content" data-aos="fade-up" data-aos-once="true">
-    <p class="quote-text">
-      «Любовь выскочила перед нами, как из-под земли выскакивает убийца в переулке,
-      и поразила нас сразу обоих! Так поражает молния, так поражает финский нож!»
-    </p>
-    <p class="quote-author">— М.А. Булгаков</p>
-  </div>
-</section>
-<style>
-/* Блок с цитатой */
-.quote-section {
-  padding: 100px 20px;
-  background: #fdf6f0;
-  text-align: top;
-}
-
-.quote-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.quote-text {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #2c3e50;
-  margin-bottom: 20px;
-}
-
-.quote-author {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
-  color: #7f8c8d;
-  font-style: italic;
-  text-align: right;
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-  .quote-section {
-    padding: 70px 16px;
-  }
-
-
-}
-</style>
-  
-  <!-- Календарь -->
-  <section class="info-date" id="schedule">
-    <h2 data-aos="fade-up" data-aos-once="true">Дорогие гости!</h2>
-    <p data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
-     С радостью сообщаем, что 14.07.2026 состоится наша свадьба<br><br>
-      Ждём вас на первом празднике нашей семьи
-    </p>
-
-    <div class="date-calendar" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
-      <h3>Июль 2026</h3>
-      <table>
-        <tr>
-          <th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th>Сб</th><th>Вс</th>
-        </tr>
-        <tr>
-          <td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
-        </tr>
-        <tr>
-          <td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
-        </tr>
-        <tr>
-          <td>13</td><td class="wedding-day">14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
-        </tr>
-        <tr>
-          <td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td>
-        </tr>
-        <tr>
-          <td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td><td></td>
-        </tr>
-      </table>
-    </div>
-  </section>
-
-  <!-- Локация -->
-  <section class="location" id="where">
-    <h2 data-aos="fade-up" data-aos-once="true">Локация</h2>
-
-    <div class="event" data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
-      <h3>Торжественная регистрация брака</h3>
-      <p>Шипиловский дворец бракосочетания</p>
-      <p>Шипиловский пр-д, 27</p>
-      <p>Начало в 12:30</p>
-      <div class="map-container">
-        <iframe src="https://yandex.ru/map-widget/v1/?ll=37.694909%2C55.616788&mode=poi&poi%5Bpoint%5D=37.695172%2C55.616962&z=19.23" allowfullscreen></iframe>
-      </div>
-    </div>
-
-    <div class="event" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
-      <h3>Праздничный банкет</h3>
-      <p>Банкетный зал Пантеон, парк Царицыно, ул. Тюрина, 1</p>
-      <p>Начало в 14:30</p>
-      <div class="map-container">
-        <iframe src="https://yandex.ru/map-widget/v1/?ll=37.673470%2C55.617790&mode=poi&poi%5Bpoint%5D=37.673388%2C55.618053&z=20.52" allowfullscreen></iframe>
-      </div>
-    </div>
-  </section>
-
-<!-- Программа дня -->
-<section class="program" id="program">
-  <h2 class="program-title">Программа дня</h2>
-  
-   <div class="timeline">
-   
-     <!-- ВОЛНООБРАЗНАЯ ЛИНИЯ -->
-     <div class="timeline-line">
-  <svg viewBox="0 0 100 600" preserveAspectRatio="none">
-    <path
-      d="
-        M50 0
-        C15 75, 85 150, 50 225
-        C15 300, 85 375, 50 450
-        C15 525, 85 600, 50 675
-      "
-      fill="none"
-      stroke="#335724"
-      stroke-width="0.5"
-      stroke-dasharray="3 2"
-    />
-  </svg>
-  </div>
-
-
-<div class="timeline-events">
-  
-  <div class="event left">
-      <div class="content">
-        <strong>Сбор гостей</strong>
-        <p>Шипиловский дворец бракосочетания<br>Шипиловский пр-д, 27</p>
-      </div>
-      <div class="dot">❤</div>
-      <div class="time">12:15</div>
-    </div>
-    
-    <div class="event right">
-      <div class="time">12:30</div>
-      <div class="dot">❤</div>
-      <div class="content">
-        <strong>Торжественная церемония</strong>
-        <p>Шипиловский дворец бракосочетания<br>Шипиловский пр-д, 27</p>
-      </div>
-    </div>
-    
-    <div class="event left">
-      <div class="content">
-        <strong>Прогулка и фотосессия</strong>
-        <p>парк Царицыно</p>
-      </div>
-       <div class="dot">❤</div>
-      <div class="time">13:30</div>
-    </div>
-
-    <div class="event right">
-      <div class="time">13:30</div>
-      <div class="dot">❤</div>
-      <div class="content">
-        <strong>Фуршет</strong>
-        <p>Банкетный зал Пантеон<br>парк Царицыно, ул. Тюрина, 1</p>
-      </div>
-    </div>
-    
-    <div class="event left">
-      <div class="content">
-        <strong>Праздничный банкет</strong>
-        <p>Банкетный зал Пантеон<br>парк Царицыно, ул. Тюрина, 1</p>
-      </div>
-      <div class="dot">❤</div>
-      <div class="time">15:30</div>
-    </div>
-
-
-    <div class="event right">
-      <div class="time">19:00</div>
-      <div class="dot">❤</div>
-      <div class="content">
-        <strong>Свадебный торт</strong>
-      </div>
-    </div>
-    
-    <div class="event left">
-      <div class="content">
-        <strong>Завершение вечера</strong>
-      </div>
-       <div class="dot">❤</div>
-      <div class="time">22:00</div>
-    </div>
-
-  </div>
-  </div>
-  
-  
-</section>
-
-<style>
-/* Программа дня */
-
-.program {
-  padding: 80px 200px;
-  background: #fff7f0;
-}
-
-.program-title {
-  text-align: center;
-  font-size: 48px;
-  margin-bottom: 80px;
-  color: #2c3e50;
-}
-
-.timeline {
-  position: relative;
-}
-
-.timeline-line {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  z-index: 1;
-}
-
-.timeline-events {
-  position: relative;
-  z-index: 2;
-}
-
-.timeline-events {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 22px;
-  line-height: 1.7;
-  color: #2c3e50;
-  margin-bottom: 20px;
-}
-
-.event {
-  display: grid;
-  align-items: flex-start;
-}
-
-.event.left {
-  grid-template-columns: 1fr 30px 70px;
-  text-align: right;
-}
-
-.event.right {
-  grid-template-columns: 70px 30px 1fr;
-  text-align: left;
-}
-
-
-
-/* ВРЕМЯ */
-.time {
-  font-size: 18px;
-  color: #2c3e50;
-  white-space: nowrap;
-}
-
-/* СЕРДЦЕ */
-.dot {
-  font-size: 18px;
-  color: #335724;
-  text-align: center;
-}
-
-/* ТЕКСТ */
-.content strong {
-  display: block;
-  font-size: 18px;
-  margin-bottom: 6px;
-}
-
-.content p {
-  margin: 0;
-  line-height: 1.5;
-  font-size: 18px;
-}
-
-.timeline-line svg {
-  height: 100%;
-  width: 100%;
-}
-
-  .program-title {
-      font-family: "Great Vibes", cursive;
-      font-size: 48px;
-      margin-bottom: 40px;
-      color: #2c3e50;
-    }
-
-/* Адаптивность */
-@media (max-width: 768px) {
-  .program-title {
-    font-size: 48px;
-    margin-bottom: 40px;
-  }
-
-  .program .timeline {
-    padding-left: 80px;
-  }
-
-  .program .time {
-    font-size: 18px;
-  }
-
-  .program .dot {
-    font-size: 18px;
-  }
-
-  .program .content strong {
-    font-size: 18px;
-  }
-
-  .program .content p {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 480px) {
-  .program .timeline {
-    padding-left: 40px;
-  }
-
-}
-</style>
-
-<script>
-function syncTimelineHeight() {
-  const timeline = document.querySelector('.timeline');
-  const leftCol = document.querySelector('.timeline-col.left');
-  const rightCol = document.querySelector('.timeline-col.right');
-  const line = document.querySelector('.timeline-line');
-
-  if (!timeline || !leftCol || !rightCol || !line) return;
-
-  const timelineTop = timeline.getBoundingClientRect().top;
-
-  const leftBottom =
-    leftCol.getBoundingClientRect().bottom - timelineTop;
-
-  const rightBottom =
-    rightCol.getBoundingClientRect().bottom - timelineTop;
-
-  const maxHeight = Math.max(leftBottom, rightBottom);
-
-  line.style.height = maxHeight + 'px';
-}
-
-window.addEventListener('load', syncTimelineHeight);
-window.addEventListener('resize', syncTimelineHeight);
-</script>
-
-<!-- Детали -->
-<section class="details" id="details">
-  <h2 class="details-title">Детали</h2>
-  
- 
-  <div class="details-content" data-aos="fade-up" data-aos-once="true">
-    <p class="details-text">
-      Просим не дарить нам цветы, поскольку мы уедем в путешествие и не сможем насладиться их красотой
-    </p>
-    <p class="details-text">
-      Обращаем внимание, что формат мероприятия не предполагает присутствие детей. Просим оставить малышей дома, чтобы все смогли в полной мере насладиться праздником.
-    </p>
-    <p class="details-text">
-      Наше мероприятие не предполагает специальный дресс код для гостей. Ждем всех в хорошем настроении!
-    </p>
-    
-  </div>
-</section>
-
-<style>
-/* Блок с деталями */
-.details {
-  padding: 100px 20px;
-  background: #fdf6f0;
-  text-align: top;
-}
-
-.details-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-  .details-title {
-      font-family: "Great Vibes", cursive;
-      text-align: center;
-      font-size: 48px;
-      margin-bottom: 40px;
-      color: #2c3e50;
-    }
-
-.details-text {
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #2c3e50;
-  margin-bottom: 20px;
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-  .details-section {
-    padding: 70px 16px;
-  }
-
-  .details-text {
-    font-size: 18px;
-  }
-
-</style>
-
-<!-- Телеграмм -->
-<section class="telegram" id="telegram">
-  <h2 class="telegram-title">Телеграмм-чат</h2>
-  
- 
-  <div class="telegram-content" data-aos="fade-up" data-aos-once="true">
-    <p class="telegram-text">
-      Мы создали телеграмм-чат нашего праздника, где можно будет узнать дополнительную информацию, поделиться фотографиями и видео, записывать кружочки и голосовые сообщения в день и после свадьбы:
-    </p>
-    
-    <!-- Кнопка с ссылкой на чат -->
-    <a href="https://t.me/+AqSEOJ7AYOQyZTYy" target="_blank" class="telegram-btn">Перейти в чат</a>
-    
-  </div>
-</section>
-
-<style>
-/* Блок с телеграм чатом */
-.telegram {
-  padding: 100px 20px;
-  background: #fdf6f0;
-  text-align: top;
-}
-
-.telegram-content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.telegram-title {
-      font-family: "Great Vibes", cursive;
-      text-align: center;
-      font-size: 48px;
-      margin-bottom: 40px;
-      color: #2c3e50;
-    }
-
-.telegram-text {
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #2c3e50;
-  margin-bottom: 20px;
-}
-
-/* Стили кнопки */
-.telegram-btn {
-  display: inline-block;
-  padding: 14px 30px;
-  margin-top: 30px;
-  background-color: #335724; /* зеленый цвет, как у линии */
-  color: #fff;
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 25px;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.telegram-btn:hover {
-  background-color: #a30000;
-  transform: translateY(-2px);
-}
-
-
-/* Адаптивность */
-@media (max-width: 768px) {
-  .telegram-section {
-    padding: 70px 16px;
-  }
-  
-  @media (max-width: 480px) {
-  .program {
-    padding: 60px 12px;
-  }
-}
-
-
-</style>
-  
-  <!-- Форма RSVP -->
-  <section id="survey">
-    <h2 data-aos="fade-up" data-aos-once="true" style="font-family:'Great Vibes',cursive; font-size:48px; color:#2c3e50; margin-bottom:20px;">Анкета</h2>
-
-    <p data-aos="fade-up" data-aos-delay="200" data-aos-once="true" style="font-size:18px; max-width:700px; margin:0 auto 40px; line-height:1.6; color:#34495e;">
-      Пожалуйста, заполните анкету и подтвердите свое присутствие до <b>01 июня 2026</b>, чтобы мы могли спланировать торжество наилучшим образом<br>
-      <i>*Заполните форму для каждого гостя отдельно</i>
-    </p>
-
-    <form id="rsvp-form" action="https://formsubmit.co/georg_rykunov@mail.ru" method="POST" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
-      <input type="hidden" name="_subject" value="RSVP Опрос — свадьба Георг и Маргарита">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-
-      <input type="text" name="Имя и фамилия" placeholder="Имя и фамилия" required>
-      <select name="Сможете ли Вы присутствовать на свадьбе?" required>
-        <option value="">Сможете ли Вы присутствовать на свадьбе?</option>
-        <option>Да, буду в загсе и на банкете</option>
-        <option>Да, буду только на банкете</option>
-        <option>Не смогу присутствовать</option>
-      </select>
-      <select name="Предпочтения по еде" required>
-        <option value="">Предпочтения по еде</option>
-        <option>Мясо</option>
-        <option>Рыба</option>
-        <option>Вегетарианское меню</option>
-      </select>
-
-<div class="custom-select-container" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
-  <div class="custom-select" id="alcohol-select">
-    <div class="selected">Предпочтения по алкоголю</div>
-    <div class="options">
-      <label><input type="checkbox" value="Красное вино"> Красное вино</label>
-      <label><input type="checkbox" value="Белое вино"> Белое вино</label>
-      <label><input type="checkbox" value="Шампанское"> Шампанское</label>
-      <label><input type="checkbox" value="Виски/коньяк"> Виски/коньяк</label>
-      <label><input type="checkbox" value="Водка"> Водка</label>
-      <label><input type="checkbox" value="Не буду пить алкоголь"> Не буду пить алкоголь</label>
-      <label>
-        <input type="checkbox" id="other-alcohol-checkbox"> Свой вариант
-        <input type="text" id="other-alcohol-text" name="Алкоголь_свой" placeholder="Укажите свой вариант">
-      </label>
-    </div>
-  </div>
-  <input type="hidden" name="Алкоголь" id="alcohol-hidden">
+<!-- ================= LOCATION ================= -->
+<section id="block-location">
+<h2>Локация</h2>
+
+<div class="event">
+<h3>Торжественная регистрация брака</h3>
+<p>Шипиловский дворец бракосочетания</p>
+<p>Шипиловский пр-д, 27</p>
+<p>Начало в 12:30</p>
+<iframe src="https://yandex.ru/map-widget/v1/?ll=37.694909%2C55.616788&mode=poi&poi%5Bpoint%5D=37.695172%2C55.616962&z=19.23"></iframe>
 </div>
 
-<style>
-.custom-select-container {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto 16px;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.custom-select-container label {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 16px;
-}
-
-.custom-select {
-  border: 1px solid #e0d6d1;
-  border-radius: 10px;
-  background: #fff;
-  cursor: pointer;
-  position: relative;
-  width: 100%;
-}
-
-.custom-select .selected {
-  padding: 14px;
-  font-size: 16px;
-}
-
-.custom-select .options {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  width: 100%;
-  background: #fff;
-  border: 1px solid #e0d6d1;
-  border-radius: 10px;
-  max-height: 200px;
-  overflow-y: auto;
-  z-index: 10;
-  flex-direction: column;
-  gap: 6px;
-  padding: 10px;
-}
-
-.custom-select .options label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.custom-select .options input[type="text"] {
-  display: none;
-  margin-top: 4px;
-  padding: 10px;
-  border: 1px solid #e0d6d1;
-  border-radius: 10px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.custom-select .options input[type="checkbox"] {
-  margin: 0;
-}
-</style>
-
-<script>
-const select = document.getElementById('alcohol-select');
-const selectedDiv = select.querySelector('.selected');
-const optionsDiv = select.querySelector('.options');
-const checkboxes = optionsDiv.querySelectorAll('input[type="checkbox"]:not(#other-alcohol-checkbox)');
-const otherCheckbox = document.getElementById('other-alcohol-checkbox');
-const otherText = document.getElementById('other-alcohol-text');
-const hiddenInput = document.getElementById('alcohol-hidden');
-
-// Открытие/закрытие списка
-selectedDiv.addEventListener('click', () => {
-  optionsDiv.style.display = optionsDiv.style.display === 'flex' ? 'none' : 'flex';
-  optionsDiv.style.flexDirection = 'column';
-});
-
-// Показ текста при выборе "Свой вариант"
-otherCheckbox.addEventListener('change', () => {
-  otherText.style.display = otherCheckbox.checked ? 'block' : 'none';
-  updateSelected();
-});
-
-// Обновление отображаемого текста и скрытого поля
-const updateSelected = () => {
-  let values = [];
-  checkboxes.forEach(cb => { if(cb.checked) values.push(cb.value); });
-  if(otherCheckbox.checked && otherText.value.trim() !== '') {
-    values.push(otherText.value.trim());
-  }
-  selectedDiv.textContent = values.length ? values.join(', ') : 'Выберите варианты';
-  hiddenInput.value = values.join(', ');
-};
-
-// Следим за изменениями
-checkboxes.forEach(cb => cb.addEventListener('change', updateSelected));
-otherText.addEventListener('input', updateSelected);
-
-// Закрытие списка при клике вне
-document.addEventListener('click', (e) => {
-  if(!select.contains(e.target)) {
-    optionsDiv.style.display = 'none';
-  }
-});
-</script>
-
-
-      <button type="submit">Отправить</button>
-    </form>
-  </section>
-
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
-
-    // Сообщение после отправки
-    document.getElementById("rsvp-form").addEventListener("submit", function() {
-      setTimeout(() => { alert("Спасибо! Мы вас ждем!"); }, 3000);
-    });
-// Показываем поле для своего варианта алкоголя
-  const alcoholSelect = document.getElementById("alcohol");
-  const alcoholOther = document.getElementById("alcohol-other");
-
-  alcoholSelect.addEventListener("change", function() {
-    const selected = Array.from(this.selectedOptions).map(opt => opt.value);
-    if(selected.includes("Свой вариант")) {
-      alcoholOther.style.display = "block";
-      alcoholOther.required = true;
-    } else {
-      alcoholOther.style.display = "none";
-      alcoholOther.required = false;
-      alcoholOther.value = "";
-    }
-  });
-</script>
-
-<!-- Подпись -->
-<section class="signature">
-  <p class="signature-text">
-    Будем рады видеть Вас на нашем празднике,<br>
-    <span class="signature-names">Георг и Маргарита</span>
-  </p>
+<div class="event">
+<h3>Праздничный банкет</h3>
+<p>Банкетный зал Пантеон, парк Царицыно, ул. Тюрина, 1</p>
+<p>Начало в 14:30</p>
+<iframe src="https://yandex.ru/map-widget/v1/?ll=37.673470%2C55.617790&mode=poi&poi%5Bpoint%5D=37.673388%2C55.618053&z=20.52"></iframe>
+</div>
 </section>
 
 <style>
-.signature {
-  padding: 100px 20px; /* отступы сверху и снизу */
-  background: #fff7f0; /* можно оставить под цвет сайта */
-  text-align: center; /* центрируем текст */
+#block-location{
+  --bg:#fff7f0;
+  padding:80px 20px;
+  background:var(--bg);
+  text-align:center;
 }
-
-.signature-text {
-  font-family: 'TT Berlinerins Script', cursive; /* красивый рукописный шрифт */
-  font-size: 48px; /* крупный размер текста */
-  color: #8B0000; /* бордовый цвет */
-  line-height: 1.4;
-  margin: 0;
-}
-
-.signature-names {
-  display: block; /* перенос на новую строку */
-  font-size: 48px; /* чуть больше, чем основной текст */
-  font-weight: 600; /* можно подчеркнуть имена */
-  margin-top: 10px;
+#block-location iframe{
+  width:100%;
+  max-width:600px;
+  height:350px;
+  border:none;
+  border-radius:10px;
 }
 </style>
 
+<!-- ================= PROGRAM ================= -->
+<section id="block-program">
+<h2>Программа дня</h2>
+<div class="timeline">
+
+<div class="item"><span>12:15</span> Сбор гостей</div>
+<div class="item"><span>12:30</span> Торжественная церемония</div>
+<div class="item"><span>13:30</span> Прогулка и фотосессия</div>
+<div class="item"><span>13:30</span> Фуршет</div>
+<div class="item"><span>15:30</span> Праздничный банкет</div>
+<div class="item"><span>19:00</span> Свадебный торт</div>
+<div class="item"><span>22:00</span> Завершение вечера</div>
+
+</div>
+</section>
+
+<style>
+#block-program{
+  --line:#335724;
+  padding:80px 20px;
+  background:#fff;
+  text-align:center;
+}
+#block-program .item{
+  margin:15px 0;
+  font-size:18px;
+}
+#block-program span{
+  color:var(--line);
+  font-weight:bold;
+  margin-right:10px;
+}
+</style>
+
+<!-- ================= DETAILS ================= -->
+<section id="block-details">
+<h2>Детали</h2>
+<p>Просим не дарить нам цветы, поскольку мы уедем в путешествие и не сможем насладиться их красотой</p>
+<p>Обращаем внимание, что формат мероприятия не предполагает присутствие детей. Просим оставить малышей дома, чтобы все смогли в полной мере насладиться праздником.</p>
+<p>Наше мероприятие не предполагает специальный дресс код для гостей. Ждем всех в хорошем настроении!</p>
+</section>
+
+<style>
+#block-details{
+  padding:80px 20px;
+  background:#fdf6f0;
+  text-align:center;
+}
+#block-details h2{
+  font-family:"Great Vibes",cursive;
+  font-size:48px;
+}
+</style>
+
+<!-- ================= TELEGRAM ================= -->
+<section id="block-telegram">
+<h2>Телеграмм-чат</h2>
+<p>Присоединяйтесь к нашему телеграм чату с новостями и всей актуальной информацией. Будем очень рады видеть ваши фото и видео с торжества в этом чате!</p>
+<p>Мы создали телеграмм-чат нашего праздника, где можно будет узнать дополнительную информацию, поделиться фотографиями и видео, записывать кружочки и голосовые сообщения в день и после свадьбы:</p>
+<a href="https://t.me/+AqSEOJ7AYOQyZTYy" target="_blank">Перейти в чат</a>
+</section>
+
+<style>
+#block-telegram{
+  --btn:#335724;
+  padding:80px 20px;
+  background:#fdf6f0;
+  text-align:center;
+}
+#block-telegram a{
+  display:inline-block;
+  padding:14px 30px;
+  background:var(--btn);
+  color:#fff;
+  border-radius:25px;
+  text-decoration:none;
+}
+</style>
+
+<!-- ================= RSVP ================= -->
+<section id="block-rsvp">
+<h2>Анкета</h2>
+<p>Пожалуйста, заполните анкету и подтвердите свое присутствие до <b>01 июня 2026</b>, чтобы мы могли спланировать торжество наилучшим образом<br><i>*Заполните форму для каждого гостя отдельно</i></p>
+    
+<form action="https://formsubmit.co/georg_rykunov@mail.ru" method="POST">
+<input type="hidden" name="_captcha" value="false">
+
+<input type="text" name="Имя" placeholder="Имя и фамилия" required>
+
+<select name="Присутствие" required>
+<option value="">Сможете ли Вы присутствовать?</option>
+<option>Да, буду в загсе и на банкете</option>
+<option>Да, буду только на банкете</option>
+<option>Не смогу присутствовать</option>
+</select>
+
+<select name="Еда" required>
+<option value="">Предпочтения по еде</option>
+<option>Мясо</option>
+<option>Рыба</option>
+<option>Вегетарианское меню</option>
+</select>
+
+<button type="submit">Отправить</button>
+</form>
+</section>
+
+<style>
+#block-rsvp{
+  padding:80px 20px;
+  background:#fdf6f0;
+  text-align:center;
+}
+#block-rsvp form{
+  max-width:400px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+#block-rsvp input,
+#block-rsvp select{
+  padding:14px;
+  border-radius:10px;
+  border:1px solid #e0d6d1;
+}
+#block-rsvp button{
+  padding:16px;
+  background:#e74c3c;
+  color:#fff;
+  border:none;
+  border-radius:12px;
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({duration:1000,once:true});</script>
 
 </body>
 </html>
