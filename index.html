@@ -473,7 +473,7 @@
             <p>Пожалуйста, заполните анкету и подтвердите свое присутствие до <b>01 июня 2026</b>, чтобы мы могли спланировать торжество наилучшим образом</p>
             <i class="rsvp-i">*Заполните форму для каждого гостя отдельно</i>
 
-            <form id="rsvp-form" action="https://formsubmit.co/georg_rykunov@mail.ru" method="POST">
+      <form id="rsvp-form" action="https://formsubmit.co/georg_rykunov@mail.ru" method="POST" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
       <input type="hidden" name="_subject" value="RSVP Опрос — свадьба Георг и Маргарита">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
@@ -593,7 +593,6 @@
 </style>
 
 <script>
-// Алкоголь: показываем текстовое поле при выборе "Свой вариант"
 const otherCheckbox = document.getElementById("alcohol-other-checkbox");
 const otherText = document.getElementById("alcohol-other-text");
 const hiddenInput = document.getElementById("alcohol-hidden");
@@ -616,9 +615,8 @@ otherCheckbox.addEventListener("change", () => {
 otherText.addEventListener("input", updateAlcohol);
 alcoholCheckboxes.forEach(cb => cb.addEventListener("change", updateAlcohol));
 
-// Сообщение после отправки
 document.getElementById("rsvp-form").addEventListener("submit", function() {
-  setTimeout(() => { alert("Спасибо! Мы вас ждем!"); }, 3000);
+  setTimeout(() => { alert("Спасибо! Мы получили вашу анкету. Ждем вас!"); }, 3000);
 });
 </script>
 
