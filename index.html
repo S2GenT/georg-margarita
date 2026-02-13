@@ -76,10 +76,10 @@
             <div class="date">14 | 07 | 2026</div>
 
             <div class="countdown" id="countdown">
-                <div>Дней: <span id="days">0</span></div>
-                <div>Часов: <span id="hours">0</span></div>
-                <div>Минут: <span id="minutes">0</span></div>
-                <div>Секунд: <span id="seconds">0</span></div>
+                <div>Дни: <span id="days">0</span></div>
+                <div>Часы: <span id="hours">0</span></div>
+                <div>Минуты: <span id="minutes">0</span></div>
+                <div>Секунды: <span id="seconds">0</span></div>
             </div>
         </div>
     </section>
@@ -471,73 +471,156 @@
         <div class="rsvp-wrap" data-aos="fade-up">
             <h2>Анкета</h2>
             <p>Пожалуйста, заполните анкету и подтвердите свое присутствие до <b>01 июня 2026</b>, чтобы мы могли спланировать торжество наилучшим образом</p>
-            <p class="rsvp-i">*Заполните форму для каждого гостя отдельно</p>
+            <i class="rsvp-i">*Заполните форму для каждого гостя отдельно</i>
 
-            <form action="https://formsubmit.co/georg_rykunov@mail.ru" method="POST">
-                <input type="hidden" name="_captcha" value="false">
+            <form id="rsvp-form" action="https://formsubmit.co/georg_rykunov@mail.ru" method="POST">
+      <input type="hidden" name="_subject" value="RSVP Опрос — свадьба Георг и Маргарита">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
 
                 <input type="text" name="Имя" placeholder="Имя и фамилия" required>
 
-                <select name="Присутствие" required>
-                    <option value="">Сможете ли Вы присутствовать?</option>
-                    <option>Да, буду в загсе и на банкете</option>
-                    <option>Да, буду только на банкете</option>
-                    <option>Не смогу присутствовать</option>
-                </select>
+      <!-- Присутствие -->
+      <div class="rsvp-group">
+        <p>Сможете ли Вы присутствовать на свадьбе?</p>
+        <label><input type="radio" name="Присутствие" value="Да, буду в загсе и на банкете" required> Да, буду в загсе и на банкете</label>
+        <label><input type="radio" name="Присутствие" value="Да, буду только на банкете"> Да, буду только на банкете</label>
+        <label><input type="radio" name="Присутствие" value="Не смогу присутствовать"> Не смогу присутствовать</label>
+      </div>
+      
+      <!-- Еда -->
+      <div class="rsvp-group">
+        <p>Предпочтения по еде</p>
+        <label><input type="radio" name="Еда" value="Мясо"> Мясо</label>
+        <label><input type="radio" name="Еда" value="Рыба"> Рыба</label>
+        <label><input type="radio" name="Еда" value="Вегетарианское меню"> Вегетарианское меню</label>
+      </div>
 
-                <select name="Еда" required>
-                    <option value="">Предпочтения по еде</option>
-                    <option>Мясо</option>
-                    <option>Рыба</option>
-                    <option>Вегетарианское меню</option>
-                </select>
+      <!-- Алкоголь -->
+      <div class="rsvp-group">
+        <p>Предпочтения по алкоголю</p>
+        <label><input type="checkbox" class="alcohol-checkbox" value="Красное вино"> Красное вино</label>
+        <label><input type="checkbox" class="alcohol-checkbox" value="Белое вино"> Белое вино</label>
+        <label><input type="checkbox" class="alcohol-checkbox" value="Шампанское"> Шампанское</label>
+        <label><input type="checkbox" class="alcohol-checkbox" value="Виски/коньяк"> Виски/коньяк</label>
+        <label><input type="checkbox" class="alcohol-checkbox" value="Водка"> Водка</label>
+        <label><input type="checkbox" class="alcohol-checkbox" value="Не буду пить алкоголь"> Не буду пить алкоголь</label>
+        <label>
+          <input type="checkbox" id="alcohol-other-checkbox"> Свой вариант
+          <input type="text" id="alcohol-other-text" name="Алкоголь_свой" placeholder="Укажите свой вариант">
+        </label>
+        <input type="hidden" name="Алкоголь" id="alcohol-hidden">
+      </div>
 
                 <button type="submit">Отправить</button>
             </form>
         </div>
     </section>
 
-    <style>
-        #block-rsvp{
-          padding:80px 20px;
-          background:#fdf6f0;
-          text-align:center;
-        }
-        #block-rsvp .rsvp-wrap{max-width:800px;margin:0 auto;}
-        #block-rsvp h2{
-          font-family:"Great Vibes",cursive;
-          font-size:48px;
-          color: #2c3e50;
-        }
-        #block-rsvp p{
-          color: #2c3e50;
-        }
-        #block-rsvp .rsvp-i{
-          color: #7f8c8d;
-          font-style: italic;
-          text-align: right;
-        }
-        #block-rsvp form{
-          max-width:400px;
-          margin:auto;
-          display:flex;
-          flex-direction:column;
-          gap:16px;
-        }
-        #block-rsvp input,
-        #block-rsvp select{
-          padding:14px;
-          border-radius:10px;
-          border:1px solid #e0d6d1;
-        }
-        #block-rsvp button{
-          padding:16px;
-          background:#e74c3c;
-          color:#fff;
-          border:none;
-          border-radius:12px;
-        }
-    </style>
+<style>
+:root {
+  --rsvp-bg: #fdf6f0;
+  --rsvp-color: #2c3e50;
+  --rsvp-accent: #e74c3c;
+  --rsvp-input-bg: #fff;
+  --rsvp-input-border: #e0d6d1;
+  --rsvp-radius: 10px;
+}
+
+#block-rsvp {
+  padding: 80px 20px;
+  background: var(--rsvp-bg);
+  text-align: center;
+}
+#block-rsvp .rsvp-wrap { max-width: 800px; margin: 0 auto; }
+#block-rsvp h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 48px;
+  color: var(--rsvp-color);
+}
+#block-rsvp p { color: var(--rsvp-color); font-size: 18px; line-height: 1.6; }
+#block-rsvp .rsvp-i { display: block; color: #7f8c8d; font-style: italic; margin-top: 4px; text-align: right; }
+
+#block-rsvp form {
+  max-width: 500px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#block-rsvp input[type="text"] {
+  padding: 14px;
+  border-radius: var(--rsvp-radius);
+  border: 1px solid var(--rsvp-input-border);
+  background: var(--rsvp-input-bg);
+}
+
+#block-rsvp button {
+  padding: 16px;
+  background: var(--rsvp-accent);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#block-rsvp button:hover { opacity: 0.9; }
+
+.rsvp-group {
+  text-align: left;
+  margin-bottom: 16px;
+}
+.rsvp-group p { font-weight: 600; margin-bottom: 8px; }
+.rsvp-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#alcohol-other-text { display: none; padding: 10px; border: 1px solid var(--rsvp-input-border); border-radius: var(--rsvp-radius); width: 100%; box-sizing: border-box; }
+
+/* Адаптив */
+@media (max-width: 600px) {
+  #block-rsvp h2 { font-size: 36px; }
+  #block-rsvp p { font-size: 16px; }
+  #block-rsvp button { font-size: 14px; }
+}
+</style>
+
+<script>
+// Алкоголь: показываем текстовое поле при выборе "Свой вариант"
+const otherCheckbox = document.getElementById("alcohol-other-checkbox");
+const otherText = document.getElementById("alcohol-other-text");
+const hiddenInput = document.getElementById("alcohol-hidden");
+const alcoholCheckboxes = document.querySelectorAll(".alcohol-checkbox");
+
+const updateAlcohol = () => {
+  let values = [];
+  alcoholCheckboxes.forEach(cb => { if(cb.checked) values.push(cb.value); });
+  if(otherCheckbox.checked && otherText.value.trim() !== '') {
+    values.push(otherText.value.trim());
+  }
+  hiddenInput.value = values.join(", ");
+};
+
+otherCheckbox.addEventListener("change", () => {
+  otherText.style.display = otherCheckbox.checked ? "block" : "none";
+  updateAlcohol();
+});
+
+otherText.addEventListener("input", updateAlcohol);
+alcoholCheckboxes.forEach(cb => cb.addEventListener("change", updateAlcohol));
+
+// Сообщение после отправки
+document.getElementById("rsvp-form").addEventListener("submit", function() {
+  setTimeout(() => { alert("Спасибо! Мы вас ждем!"); }, 3000);
+});
+</script>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
