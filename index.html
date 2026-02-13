@@ -70,7 +70,7 @@
     <section id="block-hero">
         <div class="bg"></div>
         <div class="content" data-aos="fade-up">
-            <img src="startimg.png" class="img">
+            <img src="startimg.png" class="start-img">
             <h1>Георг & Маргарита</h1>
             <p>Мы приглашаем Вас разделить с нами день нашей Свадьбы</p>
             <div class="date">14 | 07 | 2026</div>
@@ -97,12 +97,18 @@
           position:absolute; inset:0;
           background:url('backimg.jpg') center/cover no-repeat;
         }
+        #block-hero .start-img {
+          width: 100%;
+          max-width: 700px;
+          height: auto;
+          margin-bottom: 0px;
+        }
         #block-hero .content{
           position:relative;
           color:#2c3e50;
           display:flex;
           flex-direction:column;
-          gap:20px;
+          gap:40px;
         }
         #block-hero h1{
           font-family:"TT Berlinerins Script",cursive;
@@ -113,6 +119,7 @@
         #block-hero p{
           color: #34495e;
           font-size: 48px;
+          margin: 0 0 0px 0;
         }
         #block-hero .date {
           font-size: 18px;
