@@ -295,7 +295,7 @@
           padding-bottom: 12px;
         }
  #block-calendar .wed {
-  position: relative;      /* для правильного позиционирования псевдоэлемента */
+  position: relative;
   font-weight: bold;
   color: #fff;
   z-index: 1;
@@ -304,15 +304,11 @@
 #block-calendar .wed::before {
   content: "";
   position: absolute;
-  width: 30px;             /* ширина сердечка */
-  height: 30px;            /* высота сердечка */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* центрируем сердечко */
-  background-color: #8B0000; /* бордовый цвет сердца */
+  inset: 0px;
+  background-color: #8B0000; /* 🔴 цвет сердца */
   mask: url("heart-white-01.svg") center / contain no-repeat;
   -webkit-mask: url("heart-white-01.svg") center / contain no-repeat;
-  z-index: -1;             /* чтобы сердечко было позади числа */
+  z-index: -1;
 }
 
     </style>
