@@ -543,7 +543,13 @@
           background:#fdf6f0;
           text-align:center;
         }
-        #block-location .location-wrap{max-width:800px;margin:0 auto;}
+        #block-location .location-wrap{
+          max-width:800px;
+          margin:0 auto;
+        }
+        #block-location .location-wrap + .location-wrap {
+          margin-top: 60px;
+        }
         #block-location h2{
           font-family:"Great Vibes",cursive;
           font-size:48px;
@@ -564,6 +570,69 @@
           border:none;
           border-radius:10px;
         }
+  /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
+  
+  @media (max-width: 768px) {
+  #block-location {
+    padding: 60px 15px;
+  }
+
+  #block-location h2 {
+    font-size: clamp(28px, 6vw, 40px);
+  }
+
+  #block-location h3 {
+    font-size: 17px;
+  }
+
+  #block-location p {
+    font-size: 16px;
+  }
+
+  #block-location iframe {
+    height: 300px;
+  }
+
+  #block-location .event {
+    padding: 30px 20px;
+  }
+}
+
+  /* ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= */
+  
+  @media (max-width: 480px) {
+  #block-location {
+    padding: 50px 12px;
+  }
+
+  #block-location h2 {
+    font-size: 26px;
+  }
+
+  #block-location h3 {
+    font-size: 16px;
+  }
+
+  #block-location p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  /* уменьшаем карту */
+  #block-location iframe {
+    height: 240px;
+    border-radius: 14px;
+  }
+
+  #block-location .event {
+    padding: 25px 15px;
+    border-radius: 18px;
+  }
+
+  #block-location .location-wrap + .location-wrap {
+    margin-top: 40px;
+  }
+  }
     </style>
 
     <!-- ================= PROGRAM ================= -->
