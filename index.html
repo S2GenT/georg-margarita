@@ -444,6 +444,72 @@
   -webkit-mask: url("heart-white-01.svg") center / contain no-repeat;
   z-index: -1;
 }
+
+  /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
+  
+  @media (max-width: 768px) {
+  #block-calendar {
+    padding: 60px 15px;
+  }
+
+  #block-calendar h2,
+  #block-calendar h3 {
+    font-size: clamp(28px, 6vw, 40px);
+  }
+
+  #block-calendar p {
+    font-size: 16px;
+  }
+
+  #block-calendar table {
+    font-size: 16px;
+    margin: 30px auto;
+  }
+
+  #block-calendar td,
+  #block-calendar th {
+    padding: 8px 10px;
+  }
+}
+
+  /* ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= */
+  
+  @media (max-width: 480px) {
+
+  #block-calendar {
+    padding: 50px 12px;
+  }
+
+  #block-calendar .calendar-wrap {
+    width: 100%;
+  }
+
+  #block-calendar h2,
+  #block-calendar h3 {
+    font-size: 26px;
+  }
+
+  #block-calendar p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  /* делаем таблицу полностью адаптивной */
+  #block-calendar table {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  #block-calendar td,
+  #block-calendar th {
+    padding: 6px 4px;
+  }
+
+  /* уменьшаем сердце */
+  #block-calendar .wed::before {
+    inset: 2px;
+  }
+}
     </style>
 
     <!-- ================= LOCATION ================= -->
