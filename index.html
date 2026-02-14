@@ -84,160 +84,159 @@
         </div>
     </section>
 
-<style>
-  /* ================= HERO ================= */
-
-  #block-hero {
-    min-height: 100svh; /* корректная высота на мобильных */
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 40px 20px; /* чтобы текст не прилипал к краям */
-    overflow: hidden;
-  }
-
-  #block-hero .bg {
-    position: absolute;
-    inset: 0;
-    background: url('backimg.jpg') center / cover no-repeat;
-    z-index: 0;
-  }
-
-  #block-hero .content {
-    position: relative;
-    z-index: 2;
-    color: #2c3e50;
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-    max-width: 1100px;
-    width: 100%;
-  }
-
-  #block-hero .start-img {
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-  }
-
-  #block-hero h1 {
-    font-family: "TT Berlinerins Script", cursive;
-    font-size: clamp(36px, 6vw, 70px); /* адаптивный размер */
-    margin: 0;
-    color: #8B0000;
-  }
-
-  #block-hero p {
-    color: #34495e;
-    font-size: clamp(18px, 4vw, 48px);
-    margin: 0;
-  }
-
-  #block-hero .date {
-    font-size: 18px;
-    letter-spacing: 4px;
-  }
-
-  #block-hero .countdown {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  #block-hero .countdown div {
-    background: rgba(0, 0, 0, .4);
-    padding: 12px 18px;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 16px;
-    min-width: 90px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  #block-hero .countdown span {
-    font-weight: bold;
-    font-size: 18px;
-  }
-
-  /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
-
-  @media (max-width: 768px) {
-
-    #block-hero {
-      padding: 30px 15px;
-    padding-top: -40px;       /* поднимаем вверх */
-    padding-bottom: 60px;
-    }
-
-    #block-hero .content {
-      gap: 25px;
-      margin-top: 20px;
-    }
-
-    #block-hero .date {
-      font-size: 16px;
-      letter-spacing: 3px;
-    }
-
-    #block-hero .countdown {
-      gap: 10px;
-    }
-
-    #block-hero .countdown div {
-      padding: 10px 12px;
-      font-size: 14px;
-      min-width: 75px;
-    }
-
-    #block-hero .countdown span {
-      font-size: 16px;
-    }
-  }
-
-/* ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= */
-
-@media (max-width: 420px) {
-
-  /* скрываем секунды */
-  #block-hero .countdown div:last-child {
-    display: none;
-  }
-
-  /* делаем три блока в ряд */
-  #block-hero .countdown {
-    justify-content: center;
-    gap: 12px;
-  }
-
-  /* блок таймера */
-  #block-hero .countdown div {
-    display: flex;
-    flex-direction: column; /* переносим в две строки */
-    align-items: center;
-    justify-content: center;
-    padding: 14px 10px;
-    min-width: 20%;
-    font-size: 14px;
-    line-height: 1.2;
-  }
-
-  /* число */
-  #block-hero .countdown span {
-    font-size: 22px;
-    font-weight: 600;
-    margin-top: 6px;
-  }
-}
-
-</style>
+    <style>
+        /* ================= HERO ================= */
+        
+          #block-hero {
+            min-height: 100svh; /* корректная высота на мобильных */
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px; /* чтобы текст не прилипал к краям */
+            overflow: hidden;
+          }
+        
+          #block-hero .bg {
+            position: absolute;
+            inset: 0;
+            background: url('backimg.jpg') center / cover no-repeat;
+            z-index: 0;
+          }
+        
+          #block-hero .content {
+            position: relative;
+            z-index: 2;
+            color: #2c3e50;
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            max-width: 1100px;
+            width: 100%;
+          }
+        
+          #block-hero .start-img {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+          }
+        
+          #block-hero h1 {
+            font-family: "TT Berlinerins Script", cursive;
+            font-size: clamp(36px, 6vw, 70px); /* адаптивный размер */
+            margin: 0;
+            color: #8B0000;
+          }
+        
+          #block-hero p {
+            color: #34495e;
+            font-size: clamp(18px, 4vw, 48px);
+            margin: 0;
+          }
+        
+          #block-hero .date {
+            font-size: 18px;
+            letter-spacing: 4px;
+          }
+        
+          #block-hero .countdown {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+          }
+        
+          #block-hero .countdown div {
+            background: rgba(0, 0, 0, .4);
+            padding: 12px 18px;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 16px;
+            min-width: 90px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
+        
+          #block-hero .countdown span {
+            font-weight: bold;
+            font-size: 18px;
+          }
+        
+          /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
+        
+          @media (max-width: 768px) {
+        
+            #block-hero {
+              padding: 30px 15px;
+            padding-top: -40px;       /* поднимаем вверх */
+            padding-bottom: 60px;
+            }
+        
+            #block-hero .content {
+              gap: 25px;
+              margin-top: 20px;
+            }
+        
+            #block-hero .date {
+              font-size: 16px;
+              letter-spacing: 3px;
+            }
+        
+            #block-hero .countdown {
+              gap: 10px;
+            }
+        
+            #block-hero .countdown div {
+              padding: 10px 12px;
+              font-size: 14px;
+              min-width: 75px;
+            }
+        
+            #block-hero .countdown span {
+              font-size: 16px;
+            }
+          }
+        
+        /* ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= */
+        
+        @media (max-width: 420px) {
+        
+          /* скрываем секунды */
+          #block-hero .countdown div:last-child {
+            display: none;
+          }
+        
+          /* делаем три блока в ряд */
+          #block-hero .countdown {
+            justify-content: center;
+            gap: 12px;
+          }
+        
+          /* блок таймера */
+          #block-hero .countdown div {
+            display: flex;
+            flex-direction: column; /* переносим в две строки */
+            align-items: center;
+            justify-content: center;
+            padding: 14px 10px;
+            min-width: 20%;
+            font-size: 14px;
+            line-height: 1.2;
+          }
+        
+          /* число */
+          #block-hero .countdown span {
+            font-size: 22px;
+            font-weight: 600;
+            margin-top: 6px;
+          }
+        }
+    </style>
 
 
     <script>
@@ -273,18 +272,52 @@
           padding:80px 20px;
           background:#fdf6f0;
         }
-        #block-quote .quote-wrap{max-width:800px;margin:0 auto;}
+        #block-quote .quote-wrap{
+          max-width:800px;
+          margin:0 auto;
+        }
         #block-quote .quote-text{
-          font-size:18px;
+          font-size: clamp(17px, 2.2vw, 18px);
           line-height:1.7;
           color: #2c3e50;
         }
         #block-quote .quote-author{
-          font-size: 18px;
+          font-size: clamp(15px, 2.2vw, 18px);
           color: #7f8c8d;
           font-style: italic;
           text-align: right;
         }
+  
+  /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
+  
+  @media (max-width: 768px) {
+    #block-quote {
+      padding: 70px 20px;
+    }
+
+    #block-quote .quote-text {
+      line-height: 1.7;
+    }
+  }
+
+  /* ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= */
+  
+  @media (max-width: 480px) {
+
+    #block-quote {
+      padding: 50px 18px;
+    }
+
+    #block-quote .quote-text {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    #block-quote .quote-author {
+      font-size: 15px;
+      margin-top: 10px;
+    }
+  }
     </style>
 
     <!-- ================= CALENDAR BLOCK ================= -->
@@ -411,7 +444,6 @@
   -webkit-mask: url("heart-white-01.svg") center / contain no-repeat;
   z-index: -1;
 }
-
     </style>
 
     <!-- ================= LOCATION ================= -->
@@ -579,153 +611,165 @@
             <p>Пожалуйста, заполните анкету и подтвердите свое присутствие до <b>01 июня 2026</b>, чтобы мы могли спланировать торжество наилучшим образом</p>
             <i class="rsvp-i">*Заполните форму для каждого гостя отдельно</i>
 
-      <form id="rsvp-form" action="https://formsubmit.co/georg_rykunov@mail.ru" method="POST" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
-      <input type="hidden" name="_subject" value="RSVP Опрос — свадьба Георг и Маргарита">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
+            <form id="rsvp-form" action="https://formsubmit.co/georg_rykunov@mail.ru" method="POST" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
+                <input type="hidden" name="_subject" value="RSVP Опрос — свадьба Георг и Маргарита">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
 
                 <input type="text" name="Имя" placeholder="Имя и фамилия" required>
 
-      <!-- Присутствие -->
-      <div class="rsvp-group">
-        <p>Сможете ли Вы присутствовать на свадьбе?</p>
-        <label><input type="radio" name="Присутствие" value="Да, буду в загсе и на банкете" required> Да, буду в загсе и на банкете</label>
-        <label><input type="radio" name="Присутствие" value="Да, буду только на банкете"> Да, буду только на банкете</label>
-        <label><input type="radio" name="Присутствие" value="Не смогу присутствовать"> Не смогу присутствовать</label>
-      </div>
-      
-      <!-- Еда -->
-      <div class="rsvp-group">
-        <p>Предпочтения по еде</p>
-        <label><input type="radio" name="Еда" value="Мясо"> Мясо</label>
-        <label><input type="radio" name="Еда" value="Рыба"> Рыба</label>
-        <label><input type="radio" name="Еда" value="Вегетарианское меню"> Вегетарианское меню</label>
-      </div>
+                <!-- Присутствие -->
+                <div class="rsvp-group">
+                    <p>Сможете ли Вы присутствовать на свадьбе?</p>
+                    <label>
+                        <input type="radio" name="Присутствие" value="Да, буду в загсе и на банкете" required> Да, буду в загсе и на банкете</label>
+                    <label>
+                        <input type="radio" name="Присутствие" value="Да, буду только на банкете"> Да, буду только на банкете</label>
+                    <label>
+                        <input type="radio" name="Присутствие" value="Не смогу присутствовать"> Не смогу присутствовать</label>
+                </div>
 
-      <!-- Алкоголь -->
-      <div class="rsvp-group">
-        <p>Предпочтения по алкоголю</p>
-        <label><input type="checkbox" class="alcohol-checkbox" value="Красное вино"> Красное вино</label>
-        <label><input type="checkbox" class="alcohol-checkbox" value="Белое вино"> Белое вино</label>
-        <label><input type="checkbox" class="alcohol-checkbox" value="Шампанское"> Шампанское</label>
-        <label><input type="checkbox" class="alcohol-checkbox" value="Виски/коньяк"> Виски/коньяк</label>
-        <label><input type="checkbox" class="alcohol-checkbox" value="Водка"> Водка</label>
-        <label><input type="checkbox" class="alcohol-checkbox" value="Не буду пить алкоголь"> Не буду пить алкоголь</label>
-        <label>
-          <input type="checkbox" id="alcohol-other-checkbox"> Свой вариант
-          <input type="text" id="alcohol-other-text" name="Алкоголь_свой" placeholder="Укажите свой вариант">
-        </label>
-        <input type="hidden" name="Алкоголь" id="alcohol-hidden">
-      </div>
+                <!-- Еда -->
+                <div class="rsvp-group">
+                    <p>Предпочтения по еде</p>
+                    <label>
+                        <input type="radio" name="Еда" value="Мясо"> Мясо</label>
+                    <label>
+                        <input type="radio" name="Еда" value="Рыба"> Рыба</label>
+                    <label>
+                        <input type="radio" name="Еда" value="Вегетарианское меню"> Вегетарианское меню</label>
+                </div>
+
+                <!-- Алкоголь -->
+                <div class="rsvp-group">
+                    <p>Предпочтения по алкоголю</p>
+                    <label>
+                        <input type="checkbox" class="alcohol-checkbox" value="Красное вино"> Красное вино</label>
+                    <label>
+                        <input type="checkbox" class="alcohol-checkbox" value="Белое вино"> Белое вино</label>
+                    <label>
+                        <input type="checkbox" class="alcohol-checkbox" value="Шампанское"> Шампанское</label>
+                    <label>
+                        <input type="checkbox" class="alcohol-checkbox" value="Виски/коньяк"> Виски/коньяк</label>
+                    <label>
+                        <input type="checkbox" class="alcohol-checkbox" value="Водка"> Водка</label>
+                    <label>
+                        <input type="checkbox" class="alcohol-checkbox" value="Не буду пить алкоголь"> Не буду пить алкоголь</label>
+                    <label>
+                        <input type="checkbox" id="alcohol-other-checkbox"> Свой вариант
+                        <input type="text" id="alcohol-other-text" name="Алкоголь_свой" placeholder="Укажите свой вариант">
+                    </label>
+                    <input type="hidden" name="Алкоголь" id="alcohol-hidden">
+                </div>
 
                 <button type="submit">Отправить</button>
             </form>
         </div>
     </section>
 
-<style>
-:root {
-  --rsvp-bg: #fdf6f0;
-  --rsvp-color: #2c3e50;
-  --rsvp-accent: #e74c3c;
-  --rsvp-input-bg: #fff;
-  --rsvp-input-border: #e0d6d1;
-  --rsvp-radius: 10px;
-}
+    <style>
+        :root {
+          --rsvp-bg: #fdf6f0;
+          --rsvp-color: #2c3e50;
+          --rsvp-accent: #e74c3c;
+          --rsvp-input-bg: #fff;
+          --rsvp-input-border: #e0d6d1;
+          --rsvp-radius: 10px;
+        }
+        
+        #block-rsvp {
+          padding: 80px 20px;
+          background: var(--rsvp-bg);
+          text-align: center;
+        }
+        #block-rsvp .rsvp-wrap { max-width: 800px; margin: 0 auto; }
+        #block-rsvp h2 {
+          font-family: "Great Vibes", cursive;
+          font-size: 48px;
+          color: var(--rsvp-color);
+        }
+        #block-rsvp p { color: var(--rsvp-color); font-size: 18px; line-height: 1.6; }
+        #block-rsvp .rsvp-i { font-size: 18px; display: block; color: #7f8c8d; font-style: italic; margin-top: 4px; text-align: right; }
+        
+        #block-rsvp form {
+          max-width: 500px;
+          margin: 40px auto 0;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+        
+        #block-rsvp input[type="text"] {
+          padding: 14px;
+          font-size: 14px;
+          border-radius: var(--rsvp-radius);
+          border: 1px solid var(--rsvp-input-border);
+          background: var(--rsvp-input-bg);
+        }
+        
+        #block-rsvp button {
+          padding: 16px;
+          background: var(--rsvp-accent);
+          color: #fff;
+          border: none;
+          border-radius: 12px;
+          font-size: 16px;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+        #block-rsvp button:hover { opacity: 0.9; }
+        
+        .rsvp-group {
+          text-align: left;
+          margin-bottom: 16px;
+        }
+        .rsvp-group p { font-weight: 600; margin-bottom: 8px; }
+        .rsvp-group label {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin-bottom: 6px;
+          cursor: pointer;
+          font-size: 16px;
+        }
+        
+        #alcohol-other-text { display: none; padding: 10px; border: 1px solid var(--rsvp-input-border); border-radius: var(--rsvp-radius); width: 100%; box-sizing: border-box; }
+        
+        /* Адаптив */
+        @media (max-width: 600px) {
+          #block-rsvp h2 { font-size: 36px; }
+          #block-rsvp p { font-size: 16px; }
+          #block-rsvp button { font-size: 14px; }
+        }
+    </style>
 
-#block-rsvp {
-  padding: 80px 20px;
-  background: var(--rsvp-bg);
-  text-align: center;
-}
-#block-rsvp .rsvp-wrap { max-width: 800px; margin: 0 auto; }
-#block-rsvp h2 {
-  font-family: "Great Vibes", cursive;
-  font-size: 48px;
-  color: var(--rsvp-color);
-}
-#block-rsvp p { color: var(--rsvp-color); font-size: 18px; line-height: 1.6; }
-#block-rsvp .rsvp-i { font-size: 18px; display: block; color: #7f8c8d; font-style: italic; margin-top: 4px; text-align: right; }
-
-#block-rsvp form {
-  max-width: 500px;
-  margin: 40px auto 0;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-#block-rsvp input[type="text"] {
-  padding: 14px;
-  font-size: 14px;
-  border-radius: var(--rsvp-radius);
-  border: 1px solid var(--rsvp-input-border);
-  background: var(--rsvp-input-bg);
-}
-
-#block-rsvp button {
-  padding: 16px;
-  background: var(--rsvp-accent);
-  color: #fff;
-  border: none;
-  border-radius: 12px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-#block-rsvp button:hover { opacity: 0.9; }
-
-.rsvp-group {
-  text-align: left;
-  margin-bottom: 16px;
-}
-.rsvp-group p { font-weight: 600; margin-bottom: 8px; }
-.rsvp-group label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 6px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-#alcohol-other-text { display: none; padding: 10px; border: 1px solid var(--rsvp-input-border); border-radius: var(--rsvp-radius); width: 100%; box-sizing: border-box; }
-
-/* Адаптив */
-@media (max-width: 600px) {
-  #block-rsvp h2 { font-size: 36px; }
-  #block-rsvp p { font-size: 16px; }
-  #block-rsvp button { font-size: 14px; }
-}
-</style>
-
-<script>
-const otherCheckbox = document.getElementById("alcohol-other-checkbox");
-const otherText = document.getElementById("alcohol-other-text");
-const hiddenInput = document.getElementById("alcohol-hidden");
-const alcoholCheckboxes = document.querySelectorAll(".alcohol-checkbox");
-
-const updateAlcohol = () => {
-  let values = [];
-  alcoholCheckboxes.forEach(cb => { if(cb.checked) values.push(cb.value); });
-  if(otherCheckbox.checked && otherText.value.trim() !== '') {
-    values.push(otherText.value.trim());
-  }
-  hiddenInput.value = values.join(", ");
-};
-
-otherCheckbox.addEventListener("change", () => {
-  otherText.style.display = otherCheckbox.checked ? "block" : "none";
-  updateAlcohol();
-});
-
-otherText.addEventListener("input", updateAlcohol);
-alcoholCheckboxes.forEach(cb => cb.addEventListener("change", updateAlcohol));
-
-document.getElementById("rsvp-form").addEventListener("submit", function() {
-  setTimeout(() => { alert("Спасибо! Мы вас ждем!"); }, 3000);
-});
-</script>
+    <script>
+        const otherCheckbox = document.getElementById("alcohol-other-checkbox");
+        const otherText = document.getElementById("alcohol-other-text");
+        const hiddenInput = document.getElementById("alcohol-hidden");
+        const alcoholCheckboxes = document.querySelectorAll(".alcohol-checkbox");
+        
+        const updateAlcohol = () => {
+          let values = [];
+          alcoholCheckboxes.forEach(cb => { if(cb.checked) values.push(cb.value); });
+          if(otherCheckbox.checked && otherText.value.trim() !== '') {
+            values.push(otherText.value.trim());
+          }
+          hiddenInput.value = values.join(", ");
+        };
+        
+        otherCheckbox.addEventListener("change", () => {
+          otherText.style.display = otherCheckbox.checked ? "block" : "none";
+          updateAlcohol();
+        });
+        
+        otherText.addEventListener("input", updateAlcohol);
+        alcoholCheckboxes.forEach(cb => cb.addEventListener("change", updateAlcohol));
+        
+        document.getElementById("rsvp-form").addEventListener("submit", function() {
+          setTimeout(() => { alert("Спасибо! Мы вас ждем!"); }, 3000);
+        });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
