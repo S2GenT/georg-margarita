@@ -665,6 +665,61 @@
           font-weight:bold;
           margin-right:10px;
         }
+
+  /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
+  
+@media (max-width: 768px) {
+
+  #block-program {
+    padding: 60px 15px;
+  }
+
+  #block-program h2 {
+    font-size: clamp(30px, 6vw, 40px);
+  }
+
+  #block-program .item {
+    font-size: 18px;
+  }
+
+}
+
+  /* ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= */
+  
+ @media (max-width: 480px) {
+
+  #block-program {
+    padding: 50px 15px;
+  }
+
+  #block-program h2 {
+    font-size: 30px;
+  }
+
+  #block-program .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 25px;
+  }
+
+  #block-program .item {
+    font-size: 18px;
+    background: rgba(255,255,255,0.6);
+    padding: 12px 14px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column; /* перенос времени на отдельную строку */
+    align-items: center;
+    gap: 6px;
+  }
+
+  #block-program span {
+    margin-right: 0;
+    font-size: 16px;
+  }
+
+}
     </style>
 
     <!-- ================= DETAILS ================= -->
@@ -693,6 +748,46 @@
           color: #2c3e50;
           font-size: 18px;
         }
+    /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
+  
+  @media (max-width: 768px) {
+
+    #block-details {
+      padding: 60px 20px;
+    }
+
+    #block-details .details-wrap {
+      gap: 22px;
+    }
+  #block-details h2 {
+    font-size: clamp(30px, 6vw, 40px);
+  }
+    #block-details p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  }
+
+  /* ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= */
+    @media (max-width: 480px) {
+
+    #block-details {
+      padding: 50px 18px;
+    }
+
+    #block-details .details-wrap {
+      gap: 18px;
+    }
+
+    #block-details h2  {
+    font-size: 30px;
+    }
+
+    #block-details p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  }
     </style>
 
     <!-- ================= TELEGRAM ================= -->
@@ -711,7 +806,10 @@
           background:#fdf6f0;
           text-align:center;
         }
-        #block-telegram .telegram-wrap{max-width:800px;margin:0 auto;}
+        #block-telegram .telegram-wrap{
+          max-width:800px;
+          margin:0 auto;
+        }
         #block-telegram h2{
           font-family:"Great Vibes",cursive;
           font-size:48px;
@@ -730,6 +828,51 @@
           text-decoration:none;
           font-size: 18px;
         }
+      /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
+  
+  @media (max-width: 768px) {
+
+    #block-telegram {
+      padding: 60px 20px;
+    }
+  #block-telegram h2 {
+    font-size: clamp(30px, 6vw, 40px);
+  }
+    #block-telegram p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    #block-telegram a {
+      padding: 12px 26px;
+      font-size: 16px;
+    }
+  }
+
+  /* ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= */
+  @media (max-width: 420px) {
+
+    #block-telegram {
+      padding: 50px 16px;
+    }
+
+    #block-telegram .telegram-wrap {
+      max-width: 100%;
+    }
+   #block-telegram h2  {
+    font-size: 30px;
+    }
+    #block-telegram p {
+      font-size: 18px;
+    }
+
+    #block-telegram a {
+      width: 100%;
+      max-width: 280px;
+      padding: 14px 0;
+      font-size: 16px;
+    }
+  }
     </style>
 
     <!-- ================= RSVP ================= -->
@@ -863,12 +1006,97 @@
         
         #alcohol-other-text { display: none; padding: 10px; border: 1px solid var(--rsvp-input-border); border-radius: var(--rsvp-radius); width: 100%; box-sizing: border-box; }
         
-        /* Адаптив */
-        @media (max-width: 600px) {
-          #block-rsvp h2 { font-size: 36px; }
-          #block-rsvp p { font-size: 16px; }
-          #block-rsvp button { font-size: 14px; }
-        }
+      /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
+  
+@media (max-width: 768px) {
+
+  #block-rsvp {
+    padding: 60px 16px;
+  }
+
+  #block-rsvp .rsvp-wrap {
+    max-width: 100%;
+  }
+
+  #block-rsvp h2 {
+    font-size: 34px;
+  }
+
+  #block-rsvp p {
+    font-size: 18px;
+  }
+
+  #block-rsvp .rsvp-i {
+    text-align: left;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  #block-rsvp form {
+    max-width: 100%;
+    margin-top: 30px;
+    gap: 18px;
+  }
+
+  #block-rsvp input[type="text"] {
+    font-size: 16px; /* чтобы iOS не зумил */
+  }
+
+  #block-rsvp button {
+    width: 100%;
+    font-size: 16px;
+    padding: 18px;
+  }
+
+  .rsvp-group label {
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .rsvp-group input[type="radio"],
+  .rsvp-group input[type="checkbox"] {
+    margin-top: 4px;
+    transform: scale(1.2);
+  }
+
+  #alcohol-other-text {
+    margin-top: 8px;
+    font-size: 16px;
+  }
+}
+
+  /* ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= */
+@media (max-width: 420px) {
+
+  #block-rsvp {
+    padding: 50px 14px;
+  }
+
+  #block-rsvp h2 {
+    font-size: 30px;
+  }
+
+  #block-rsvp p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .rsvp-group p {
+    font-size: 18px;
+  }
+
+  .rsvp-group label {
+    font-size: 14px;
+  }
+
+  #block-rsvp button {
+    font-size: 15px;
+    padding: 16px;
+  }
+}  
+  
     </style>
 
     <script>
