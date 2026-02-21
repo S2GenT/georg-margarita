@@ -524,7 +524,8 @@
                 <p>Шипиловский дворец бракосочетания</p>
                 <p>Шипиловский пр-д, 27</p>
                 <p>Начало в 12:30</p>
-                <iframe src="https://yandex.ru/map-widget/v1/?indoorLevel=1&ll=37.699632%2C55.615535&mode=poi&poi%5Bpoint%5D=37.695177%2C55.616951&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1678230485&z=17.16"></iframe>
+                <p><iframe src="https://yandex.ru/map-widget/v1/?indoorLevel=1&ll=37.699632%2C55.615535&mode=poi&poi%5Bpoint%5D=37.695177%2C55.616951&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1678230485&z=17.16"></iframe></p>
+                <a href="https://yandex.ru/maps/?from=mapframe&ll=37.696018%2C55.617052&mode=routes&rtext=~55.616961%2C37.695169&rtt=auto&ruri=~&source=mapframe&utm_source=mapframe&z=17.8" target="_blank">Открыть карту</a>
             </div>
         </div>
         <div class="location-wrap" data-aos="fade-up">
@@ -532,7 +533,8 @@
                 <h3>Праздничный банкет</h3>
                 <p>Банкетный зал Пантеон, парк Царицыно, ул. Тюрина, 1</p>
                 <p>Начало в 14:30</p>
-                <iframe src="https://yandex.ru/map-widget/v1/?ll=37.673307%2C55.617837&mode=poi&poi%5Bpoint%5D=37.673119%2C55.617870&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D160707256462&z=17.16"></iframe>
+                <p><iframe src="https://yandex.ru/map-widget/v1/?ll=37.673307%2C55.617837&mode=poi&poi%5Bpoint%5D=37.673119%2C55.617870&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D160707256462&z=17.16"></iframe></p>
+                <a href="https://yandex.ru/maps/?from=mapframe&ll=37.673275%2C55.618137&mode=routes&rtext=~55.617869%2C37.673119&rtt=auto&ruri=~&source=mapframe&utm_source=mapframe&z=17" target="_blank">Открыть карту</a>
             </div>
         </div>
     </section>
@@ -570,6 +572,15 @@
           border:none;
           border-radius:10px;
         }
+       #block-location a{
+          display:inline-block;
+          padding:14px 30px;
+          background:#335724;
+          color:#fff;
+          border-radius:25px;
+          text-decoration:none;
+          font-size: 18px;
+        }
   /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
   
   @media (max-width: 768px) {
@@ -592,6 +603,10 @@
   #block-location iframe {
     height: 300px;
   }
+  #block-location a {
+      padding: 12px 26px;
+      font-size: 16px;
+    }
 }
 
   /* ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= */
@@ -613,6 +628,12 @@
     font-size: 18px;
     line-height: 1.5;
   }
+  #block-location a {
+      width: 100%;
+      max-width: 280px;
+      padding: 14px 0;
+      font-size: 16px;
+    }
 
   /* уменьшаем карту */
   #block-location iframe {
@@ -1134,6 +1155,7 @@
 </body>
 
 </html>
+
 
 
 
