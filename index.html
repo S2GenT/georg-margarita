@@ -932,7 +932,7 @@
                     <label>
                         <input type="checkbox" class="alcohol-checkbox" value="Водка"> Водка</label>
                     <label>
-                        <input type="checkbox" class="alcohol-checkbox" value="Без алкоголя"> Не буду пить алкоголь</label>
+                        <input type="checkbox" class="alcohol-checkbox" value="Не буду пить"> Не буду пить</label>
                     <label>
                         <input type="checkbox" id="alcohol-other-checkbox"> Свой вариант
                         <input type="text" id="alcohol-other-text" name="Алкоголь_свой" placeholder="Укажите свой вариант">
@@ -1018,15 +1018,23 @@
         }
         .rsvp-group p { font-weight: 600; margin-bottom: 8px; }
         .rsvp-group label {
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          margin-bottom: 6px;
-          cursor: pointer;
-          font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+            cursor: pointer;
+            font-size: 18px;
+            flex-wrap: wrap; 
         }
         
-        #alcohol-other-text { display: none; padding: 10px; border: 1px solid #e0d6d1; border-radius: 10px; width: 100%; box-sizing: border-box; }
+        #alcohol-other-text {
+            display: none; 
+            padding: 10px; 
+            border: 1px solid #e0d6d1;
+            border-radius: 10px; 
+            width: 100%; 
+            box-sizing: border-box;
+        }
         
       /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
   
@@ -1157,6 +1165,7 @@
 </body>
 
 </html>
+
 
 
 
