@@ -1004,6 +1004,11 @@
           transition: 0.3s;
           margin: 20px auto 0; /* Центрируем, если форма flex */
           font-family: inherit;
+              -webkit-appearance: none;       /* Отключает стандартные стили Safari */
+              appearance: none;               /* Отключает стандартные стили системных кнопок */
+              -webkit-font-smoothing: antialiased; /* Убирает лишнюю жирность шрифта в Safari */
+              -moz-osx-font-smoothing: grayscale;
+              font-weight: 400;   
         }
         #block-rsvp button:hover { opacity: 0.9; }
         
@@ -1153,6 +1158,7 @@
 </body>
 
 </html>
+
 
 
 
