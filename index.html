@@ -869,18 +869,25 @@
           font-size: 18px;
         }
 #block-details .details-img {
-  width: 100px;              /* ширина блока */
-  height: 100px;             /* высота блока */
-  padding: 20px 14px;        /* внутренние отступы */
-  margin: 0px auto;          /* центрирование блока */
-  
-  background: #335724;       /* насыщенный цвет сердечка */
-  
-  /* маска для SVG */
-  mask: url("heart-white-01.svg") center / contain no-repeat;
+  width: 20px;
+  height: 14px;
+  margin: 0px auto;
+  position: relative;
+  display: block;
+
+  /* создаем полностью непрозрачное сердце через ::before */
+}
+
+#block-details .details-img::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #335724;   /* насыщенный цвет */
   -webkit-mask: url("heart-white-01.svg") center / contain no-repeat;
-  
-  display: block;            /* чтобы div корректно рендерился */
+  mask: url("heart-white-01.svg") center / contain no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  mask-type: alpha;            /* гарантирует непрозрачный цвет */
 }
     /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
   
@@ -1282,6 +1289,7 @@
 </body>
 
 </html>
+
 
 
 
