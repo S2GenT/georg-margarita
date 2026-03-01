@@ -845,9 +845,9 @@
     <div class="details-wrap" data-aos="fade-up">
         <h2>Детали</h2>
         <p>Просим не дарить нам цветы, поскольку мы уедем в путешествие и не сможем насладиться их красотой</p>
-        <div class="details-img"></div>
+        <img src="heart-white-01.svg" class="details-img">
         <p>Обращаем внимание, что формат мероприятия не предполагает присутствие детей. Просим оставить малышей дома, чтобы все смогли в полной мере насладиться праздником</p>
-        <div class="details-img"></div>
+        <img src="heart-white-01.svg" class="details-img">
         <p>Наше мероприятие не предполагает специальный дресс код для гостей. Ждем всех в хорошем настроении!</p>
     </div>
 </section>
@@ -868,26 +868,10 @@
           color: #2c3e50;
           font-size: 18px;
         }
-#block-details .details-img {
-  width: 20px;
-  height: 14px;
-  margin: 0px auto;
-  position: relative;
-  display: block;
-
-  /* создаем полностью непрозрачное сердце через ::before */
-}
-
-#block-details .details-img::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: #335724;   /* насыщенный цвет */
-  -webkit-mask: url("heart-white-01.svg") center / contain no-repeat;
-  mask: url("heart-white-01.svg") center / contain no-repeat;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  mask-type: alpha;            /* гарантирует непрозрачный цвет */
+       #block-details .details-img {
+  width: 28px;
+  height: 28px;
+  fill: #335724; /* основной цвет */
 }
     /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
   
@@ -1289,6 +1273,7 @@
 </body>
 
 </html>
+
 
 
 
