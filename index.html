@@ -841,19 +841,31 @@
     </style>
 
 <!-- ================= DETAILS ================= -->
-    <section id="block-details">
-        <div class="details-wrap" data-aos="fade-up">
-            <h2>Детали</h2>
-            <p>Просим не дарить нам цветы, поскольку мы уедем в путешествие и не сможем насладиться их красотой</p>
-             <img src="heart-white-02.png" class="details-img">
-            <p>Обращаем внимание, что формат мероприятия не предполагает присутствие детей. Просим оставить малышей дома, чтобы все смогли в полной мере насладиться праздником</p>
-             <img src="heart-white-02.png" class="details-img">
-            <p>Наше мероприятие не предполагает специальный дресс код для гостей. Ждем всех в хорошем настроении!</p>
-        </div>
-    </section>
+<section id="block-details">
+    <div class="details-wrap" data-aos="fade-up">
+        <h2>Детали</h2>
+        <p>Просим не дарить нам цветы, поскольку мы уедем в путешествие и не сможем насладиться их красотой</p>
+        <table class="details-heart" cellspacing="0" cellpadding="0">
+            <tr>
+                <td>
+                    <img src="https://uploads.onecompiler.io/44a4ky9ak/44dhbp3tj/heart-white-03.png" alt="Сердечко">
+                </td>
+            </tr>
+        </table>
+        <p>Обращаем внимание, что формат мероприятия не предполагает присутствие детей. Просим оставить малышей дома, чтобы все смогли в полной мере насладиться праздником</p>
+        <table class="details-heart" cellspacing="0" cellpadding="0">
+            <tr>
+                <td>
+                    <img src="https://uploads.onecompiler.io/44a4ky9ak/44dhbp3tj/heart-white-03.png" alt="Сердечко">
+                </td>
+            </tr>
+        </table>
+        <p>Наше мероприятие не предполагает специальный дресс код для гостей. Ждем всех в хорошем настроении!</p>
+    </div>
+</section>
 
-    <style>
-        #block-details{
+<style>
+    #block-details{
           padding:80px 20px;
           background:#fdf6f0;
           text-align:center;
@@ -868,9 +880,29 @@
           color: #2c3e50;
           font-size: 18px;
         }
+.details-heart {
+  width: 36px;       /* ширина, как в календаре */
+  height: 36px;      /* высота, как в календаре */
+  margin: 12px auto; /* вертикальный отступ и центрирование */
+  border-collapse: collapse;
+}
+
+.details-heart td {
+  width: 36px;
+  height: 36px;
+  padding: 0;       /* убираем отступы внутри ячейки */
+}
+
+.details-heart img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* сохраняем пропорции */
+  display: block;
+}
+      
        #block-details .details-img {
-            width: 51px;
-            height: 42px;
+            width: 28px;
+            height: 20px;
         }
     /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
   
@@ -915,6 +947,12 @@
       font-size: 17px;
       line-height: 1.6;
     }
+    
+      .details-heart,
+  .details-heart td {
+    width: 28px;
+    height: 28px;
+  }
   }
 </style>
 
@@ -1272,6 +1310,7 @@
 </body>
 
 </html>
+
 
 
 
