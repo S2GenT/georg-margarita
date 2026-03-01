@@ -869,12 +869,18 @@
           font-size: 18px;
         }
 #block-details .details-img {
-  width: 100px;        /* задаём размер, иначе div 0px по умолчанию */
-  height: 100px;
-  margin: 20px auto;   /* центрируем */
-  background-color: #335724;
+  width: 100px;              /* ширина блока */
+  height: 100px;             /* высота блока */
+  padding: 20px 14px;        /* внутренние отступы */
+  margin: 0px auto;          /* центрирование блока */
+  
+  background: #335724;       /* насыщенный цвет сердечка */
+  
+  /* маска для SVG */
   mask: url("heart-white-01.svg") center / contain no-repeat;
   -webkit-mask: url("heart-white-01.svg") center / contain no-repeat;
+  
+  display: block;            /* чтобы div корректно рендерился */
 }
     /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
   
