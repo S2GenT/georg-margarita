@@ -66,28 +66,28 @@
         }
     </style>
 
-    <!-- ================= HERO ================= -->
-    <section id="block-hero">
-        <div class="bg"></div>
-        <div class="content" data-aos="fade-up">
-            <img src="startimg.png" class="start-img">
-            <h1>Георг & Маргарита</h1>
-            <p>Мы приглашаем Вас разделить с нами день нашей Свадьбы</p>
-            <div class="date">14 | 07 | 2026</div>
+<!-- ================= HERO ================= -->
+<section id="block-hero">
+    <div class="bg"></div>
+    <div class="content" data-aos="fade-up">
+        <img src="startimg.png" class="start-img">
+        <h1>Георг & Маргарита</h1>
+        <p>Мы приглашаем Вас разделить с нами день нашей Свадьбы</p>
+        <div class="date">14 | 07 | 2026</div>
 
-            <div class="countdown" id="countdown">
-                <div><span id="days">0</span>Дней</div>
-                <div><span id="hours">0</span>Часов</div>
-                <div><span id="minutes">0</span>Минут</div>
-                <div><span id="seconds">0</span>Секунд</div>
-            </div>
+        <div class="countdown-title">до торжества осталось</div>
+
+        <div class="countdown" id="countdown">
+            <div><span id="days">0</span></div>
+            <div><span id="hours">0</span></div>
+            <div><span id="minutes">0</span></div>
+            <div><span id="seconds">0</span></div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <style>
-        /* ================= HERO ================= */
-        
-          #block-hero {
+<style>
+    #block-hero {
             min-height: 100svh; /* корректная высота на мобильных */
             position: relative;
             display: flex;
@@ -149,23 +149,67 @@
             flex-wrap: wrap;
           }
         
-          #block-hero .countdown div {
-            background: rgba(0, 0, 0, .4);
-            padding: 12px 18px;
-            border-radius: 10px;
-            color: #fff;
-            font-size: 16px;
-            min-width: 90px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-          }
+#block-hero .countdown-title {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#block-hero .countdown div {
+  position: relative;
+
+  width: 130px;
+  height: 130px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  /* Толщина рамки */
+  border: 5px solid transparent;
+
+  /* Градиентная рамка */
+  background: transparent; /* центр полностью прозрачный */
+  color: #2c3e50;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  transition: transform 0.3s ease;
+}
+#block-hero .countdown div::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 4px; /* толщина рамки */
+
+  background: linear-gradient(135deg, #335724, #9bbf9b);
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
         
-          #block-hero .countdown span {
-            font-weight: bold;
-            font-size: 18px;
-          }
+#block-hero .countdown span {
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+#block-hero .countdown small {
+  display: block;
+  font-size: 12px;
+  margin-top: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
         
           /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
         
@@ -191,15 +235,16 @@
               gap: 10px;
             }
         
-            #block-hero .countdown div {
-              padding: 10px 12px;
-              font-size: 14px;
-              min-width: 75px;
-            }
-        
-            #block-hero .countdown span {
-              font-size: 16px;
-            }
+  #block-hero .countdown div {
+    width: 90px;
+    height: 90px;
+    font-size: 12px;
+    border: 3px solid transparent;
+  }
+
+  #block-hero .countdown span {
+    font-size: 22px;
+  }
           }
         
         /* ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= */
@@ -216,46 +261,70 @@
             justify-content: center;
             gap: 12px;
           }
-        
+          #block-hero .countdown-title {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
           /* блок таймера */
           #block-hero .countdown div {
             display: flex;
             flex-direction: column; /* переносим в две строки */
             align-items: center;
             justify-content: center;
-            padding: 14px 10px;
             min-width: 20%;
             font-size: 14px;
             line-height: 1.2;
+    width: 75px;
+    height: 75px;
           }
-        
-          /* число */
-          #block-hero .countdown span {
-            font-size: 22px;
-            font-weight: 600;
-            margin-top: 6px;
-          }
+
+  #block-hero .countdown span {
+    font-size: 18px;
+  }
         }
-    </style>
+</style>
 
 
-    <script>
-        const cdDate=new Date("2026-07-14T12:30:00").getTime();
-        function updateCD(){
-        const now=new Date().getTime();
-        const d=cdDate-now;
-        const days=Math.floor(d/(1000*60*60*24));
-        const hours=Math.floor((d%(1000*60*60*24))/(1000*60*60));
-        const minutes=Math.floor((d%(1000*60*60))/(1000*60));
-        const seconds=Math.floor((d%(1000*60))/1000);
-        document.getElementById("days").textContent=days;
-        document.getElementById("hours").textContent=hours;
-        document.getElementById("minutes").textContent=minutes;
-        document.getElementById("seconds").textContent=seconds;
-        }
-        setInterval(updateCD,1000);
-        updateCD();
-    </script>
+<script>
+    const cdDate = new Date("2026-07-14T12:30:00").getTime();
+    
+    function getDeclension(number, words) {
+      number = Math.abs(number) % 100;
+      const n1 = number % 10;
+    
+      if (number > 10 && number < 20) return words[2];
+      if (n1 > 1 && n1 < 5) return words[1];
+      if (n1 === 1) return words[0];
+      return words[2];
+    }
+    
+    function updateCD() {
+      const now = new Date().getTime();
+      const diff = cdDate - now;
+    
+      if (diff <= 0) return;
+    
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    
+      document.getElementById("days").innerHTML =
+        days + "<small>" + getDeclension(days, ["день", "дня", "дней"]) + "</small>";
+    
+      document.getElementById("hours").innerHTML =
+        hours + "<small>" + getDeclension(hours, ["час", "часа", "часов"]) + "</small>";
+    
+      document.getElementById("minutes").innerHTML =
+        minutes + "<small>" + getDeclension(minutes, ["минута", "минуты", "минут"]) + "</small>";
+    
+      document.getElementById("seconds").innerHTML =
+        seconds + "<small>" + getDeclension(seconds, ["секунда", "секунды", "секунд"]) + "</small>";
+    }
+    
+    setInterval(updateCD, 1000);
+    updateCD();
+</script>
 
     <!-- ================= QUOTE BLOCK ================= -->
     <section id="block-quote">
@@ -771,18 +840,20 @@
 }
     </style>
 
-    <!-- ================= DETAILS ================= -->
-    <section id="block-details">
-        <div class="details-wrap" data-aos="fade-up">
-            <h2>Детали</h2>
-            <p>Просим не дарить нам цветы, поскольку мы уедем в путешествие и не сможем насладиться их красотой</p>
-            <p>Обращаем внимание, что формат мероприятия не предполагает присутствие детей. Просим оставить малышей дома, чтобы все смогли в полной мере насладиться праздником</p>
-            <p>Наше мероприятие не предполагает специальный дресс код для гостей. Ждем всех в хорошем настроении!</p>
-        </div>
-    </section>
+<!-- ================= DETAILS ================= -->
+<section id="block-details">
+    <div class="details-wrap" data-aos="fade-up">
+        <h2>Детали</h2>
+        <p>Просим не дарить нам цветы, поскольку мы уедем в путешествие и не сможем насладиться их красотой</p>
+        <div class="details-img"></div>
+        <p>Обращаем внимание, что формат мероприятия не предполагает присутствие детей. Просим оставить малышей дома, чтобы все смогли в полной мере насладиться праздником</p>
+        <div class="details-img"></div>
+        <p>Наше мероприятие не предполагает специальный дресс код для гостей. Ждем всех в хорошем настроении!</p>
+    </div>
+</section>
 
-    <style>
-        #block-details{
+<style>
+    #block-details{
           padding:80px 20px;
           background:#fdf6f0;
           text-align:center;
@@ -797,6 +868,14 @@
           color: #2c3e50;
           font-size: 18px;
         }
+#block-details .details-img {
+  width: 100px;        /* задаём размер, иначе div 0px по умолчанию */
+  height: 100px;
+  margin: 20px auto;   /* центрируем */
+  background-color: #335724;
+  mask: url("heart-white-01.svg") center / contain no-repeat;
+  -webkit-mask: url("heart-white-01.svg") center / contain no-repeat;
+}
     /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
   
   @media (max-width: 768px) {
@@ -815,6 +894,10 @@
       font-size: 17px;
       line-height: 1.6;
     }
+      #block-details .details-img {
+    width: 70px;
+    height: 70px;
+  }
   }
 
   /* ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= */
@@ -837,7 +920,7 @@
       line-height: 1.6;
     }
   }
-    </style>
+</style>
 
     <!-- ================= TELEGRAM ================= -->
     <section id="block-telegram">
@@ -1193,6 +1276,7 @@
 </body>
 
 </html>
+
 
 
 
