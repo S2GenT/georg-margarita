@@ -272,7 +272,7 @@
             height: 70px;
           }
           #block-hero .countdown div::before {
-            padding: 2px; /* толщина рамки */
+            padding: 3px; /* толщина рамки */
             
           }
           #block-hero .countdown span {
@@ -306,16 +306,16 @@
           const seconds = Math.floor((diff % (1000 * 60)) / 1000);
         
           document.getElementById("days").innerHTML =
-            days + "<small>" + getDeclension(days, ["день", "дня", "дней"]) + "</small>";
+            days + "<small>" + getDeclension(days, ["дней", "дней", "дней"]) + "</small>";
         
           document.getElementById("hours").innerHTML =
-            hours + "<small>" + getDeclension(hours, ["час", "часа", "часов"]) + "</small>";
+            hours + "<small>" + getDeclension(hours, ["часов", "часов", "часов"]) + "</small>";
         
           document.getElementById("minutes").innerHTML =
-            minutes + "<small>" + getDeclension(minutes, ["минута", "минуты", "минут"]) + "</small>";
+            minutes + "<small>" + getDeclension(minutes, ["минут", "минут", "минут"]) + "</small>";
         
           document.getElementById("seconds").innerHTML =
-            seconds + "<small>" + getDeclension(seconds, ["секунда", "секунды", "секунд"]) + "</small>";
+            seconds + "<small>" + getDeclension(seconds, ["секунд", "секунд", "секунд"]) + "</small>";
         }
         
         setInterval(updateCD, 1000);
