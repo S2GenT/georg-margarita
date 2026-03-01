@@ -284,7 +284,12 @@
         }
 </style>
 
-
+<script>
+window.addEventListener('load', () => {
+  // сдвигаем страницу на 20-30px вниз при загрузке
+  window.scrollTo({ top: 30, behavior: 'smooth' });
+});
+</script>
 <script>
     const cdDate = new Date("2026-07-14T12:30:00").getTime();
     
@@ -1310,6 +1315,7 @@
 </body>
 
 </html>
+
 
 
 
