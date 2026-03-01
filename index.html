@@ -286,8 +286,12 @@
 
 <script>
 window.addEventListener('load', () => {
-  // сдвигаем страницу на 20-30px вниз при загрузке
-  window.scrollTo({ top: 30, behavior: 'smooth' });
+  // проверка: мобильное устройство (ширина экрана меньше 768px)
+  if (window.innerWidth < 768) {
+    // регулируем сдвиг сверху (под адресную строку)
+    let offset = 30; // можно менять, например 20-40px
+    window.scrollTo({ top: offset, behavior: 'smooth' });
+  }
 });
 </script>
 <script>
@@ -1315,6 +1319,7 @@ window.addEventListener('load', () => {
 </body>
 
 </html>
+
 
 
 
