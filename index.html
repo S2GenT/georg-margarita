@@ -623,7 +623,7 @@
                 <h3>Праздничный банкет</h3>
                 <p>Банкетный зал Пантеон
                     <br> парк Царицыно, ул. Тюрина, 1</p>
-                <p>Начало в 14:30</p>
+                <p>Начало в 15:30</p>
                 <p>
                     <iframe src="https://yandex.ru/map-widget/v1/?ll=37.673307%2C55.617837&mode=poi&poi%5Bpoint%5D=37.673119%2C55.617870&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D160707256462&z=17.16"></iframe>
                 </p>
@@ -751,7 +751,7 @@
                 <div class="item"><span>13:30</span> Прогулка и фотосессия</div>
                 <div class="item"><span>13:30</span> Фуршет</div>
                 <div class="item"><span>15:30</span> Праздничный банкет</div>
-                <div class="item"><span>19:00</span> Свадебный торт</div>
+                <div class="item"><span>20:00</span> Свадебный торт</div>
                 <div class="item"><span>22:00</span> Завершение вечера</div>
 
             </div>
@@ -779,6 +779,16 @@
           font-weight:bold;
           margin-right:10px;
         }
+        #block-program{
+  padding:60px 20px;
+  text-align:center;
+  background:#335724;
+
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
 
   /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
   
@@ -1169,7 +1179,8 @@
             margin-bottom: 6px;
             cursor: pointer;
             font-size: 18px;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
+            color: #2c3e50;
         }
         
         #alcohol-other-text {
@@ -1306,9 +1317,68 @@
         AOS.init({duration:1000,once:true});
     </script>
 
+<section id="block-signature">
+  <div class="signature-wrap">
+    <p class="signature-text">
+      С   любовью,<br>
+
+      Георг и Маргарита
+    </p>
+
+    <div class="signature-line"></div>
+
+    <p class="signature-date">
+      14 июля 2026
+    </p>
+  </div>
+</section>
+ <style>
+#block-signature{
+  padding:60px 20px;
+  text-align:center;
+  background:#335724;
+}
+
+#block-signature .signature-wrap{
+  max-width:600px;
+  margin:0 auto;
+}
+
+#block-signature .signature-text{
+  font-family:"Great Vibes", cursive;
+  font-size:42px;
+  color:#fdf6f0;
+  margin-bottom:20px;
+}
+
+#block-signature .signature-line{
+  width:120px;
+  height:2px;
+  background:linear-gradient(90deg,#9bbf9b,#fdf6f0,#9bbf9b);
+  margin:0 auto 20px;
+  border-radius:2px;
+}
+
+#block-signature .signature-date{
+  font-size:14px;
+  letter-spacing:3px;
+  color:#fdf6f0;
+}
+#block-signature{
+  padding:60px 20px;
+  text-align:center;
+  background:#335724;
+
+  border-top-left-radius:20px;
+  border-top-right-radius:20px;
+}
+body {
+  background-color: #fdf6f0;
+  margin: 0;
+}
+ </style>
 </body>
 
 </html>
-
 
 
