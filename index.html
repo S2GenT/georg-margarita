@@ -741,53 +741,149 @@
     </style>
 
     <!-- ================= PROGRAM ================= -->
-    <section id="block-program" data-aos="fade-up">
-        <div class="location-wrap" data-aos="fade-up">
-            <h2>Программа дня</h2>
-            <div class="timeline">
-
-                <div class="item"><span>12:15</span> Сбор гостей</div>
-                <div class="item"><span>12:30</span> Торжественная церемония</div>
-                <div class="item"><span>13:30</span> Прогулка и фотосессия</div>
-                <div class="item"><span>13:30</span> Фуршет</div>
-                <div class="item"><span>15:30</span> Праздничный банкет</div>
-                <div class="item"><span>20:00</span> Свадебный торт</div>
-                <div class="item"><span>22:00</span> Завершение вечера</div>
-
+    <section id="block-desktop-program">
+    <div class="timeline-container">
+        <h2>Программа дня</h2>
+        <div class="timeline-vibe">
+            <!-- Пункты программы -->
+            <div class="item">
+                <div class="time">12:15</div>
+                <div class="dot"></div>
+                <div class="info">
+                    <h3>Сбор гостей</h3>
+                    <p>Ждем всех к началу торжества</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="time">12:30</div>
+                <div class="dot"></div>
+                <div class="info">
+                    <h3>Торжественная церемония</h3>
+                    <p>Шипиловский Дворец бракосочетания</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="time">13:30</div>
+                <div class="dot"></div>
+                <div class="info">
+                    <h3>Прогулка и фотосессия</h3>
+                    <p>Музей-заповедник Царицыно</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="time">13:30</div>
+                <div class="dot"></div>
+                <div class="info">
+                    <h3>Фуршет</h3>
+                    <p>Банкетный зал Пантеон</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="time">15:30</div>
+                <div class="dot"></div>
+                <div class="info">
+                    <h3>Праздничный банкет</h3>
+                    <p>Банкетный зал Пантеон</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="time">22:00</div>
+                <div class="dot"></div>
+                <div class="info">
+                    <h3>Завершение вечера</h3>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <style>
-        #block-program{
-          --line:#335724;
-          padding:80px 20px;
-          background:#fdf6f0;
-          text-align:center;
-        }
-        #block-program h2{
-          font-family:"Great Vibes",cursive;
-          font-size:48px;
-          color: #2c3e50;
-        }
-        #block-program .item{
-          margin:15px 0;
-          font-size:18px;
-        }
-        #block-program span{
-          color:var(--line);
-          font-weight:bold;
-          margin-right:10px;
-        }
-        #block-program{
-  padding:60px 20px;
-  text-align:center;
-  background:#335724;
+#block-desktop-program {
+    background: #fdf6f0;
+    padding: 80px 20px;
+    font-family: 'Inter', sans-serif; /* или ваш основной шрифт */
+}
 
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+#block-desktop-program h2 {
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(40px, 5vw, 60px);
+    text-align: center;
+    margin-bottom: 60px;
+    color: #2c3e50;
+}
+
+#block-desktop-program .timeline-vibe {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/* Пунктирная линия-змейка */
+#block-desktop-program .timeline-vibe::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    border-left: 2px dashed #335724;
+    transform: translateX(-50%);
+    /* Эффект изгиба (опционально через маску или просто ровно) */
+    opacity: 0.5;
+}
+
+#block-desktop-program .timeline-vibe .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+/* Расположение контента в шахматном порядке */
+#block-desktop-program .timeline-vibe .item:nth-child(even) { flex-direction: row-reverse; }
+
+#block-desktop-program .time {
+    width: 40%;
+    font-size: 28px;
+    font-weight: 300;
+    text-align: right;
+    padding: 0 30px;
+    color: #333;
+}
+#block-desktop-program .item:nth-child(even) .time { text-align: left; }
+
+#block-desktop-program .info {
+    width: 40%;
+    padding: 0 30px;
+    text-align: left;
+}
+#block-desktop-program .item:nth-child(even) .info { text-align: right; }
+
+#block-desktop-program .info h3 { margin: 0; font-size: 18px; color: #335724; }
+#block-desktop-program .info p { margin: 5px 0 0; font-size: 14px; color: #666; }
+
+/* Сердечко на линии */
+#block-desktop-program .dot {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: #fdf6f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+#block-desktop-program .dot::after {
+    content: '❤'; /* Можно заменить на SVG иконку сердечка */
+    color: #335724;
+    font-size: 14px;
 }
 
   /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
