@@ -748,7 +748,13 @@
             <!-- Пункты программы -->
             <div class="item">
                 <div class="time">12:15</div>
-                <div class="dot"></div>
+                <table class="programm-heart" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <img src="heart-white-02.png" alt="Сердечко">
+                    </td>
+                </tr>
+            </table>
                 <div class="info">
                     <h3>Сбор гостей</h3>
                     <p>Ждем всех к началу торжества</p>
@@ -756,7 +762,13 @@
             </div>
             <div class="item">
                 <div class="time">12:30</div>
-                <div class="dot"></div>
+                <table class="programm-heart" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <img src="heart-white-02.png" alt="Сердечко">
+                    </td>
+                </tr>
+            </table>
                 <div class="info">
                     <h3>Торжественная церемония</h3>
                     <p>Шипиловский Дворец бракосочетания</p>
@@ -764,7 +776,13 @@
             </div>
             <div class="item">
                 <div class="time">13:30</div>
-                <div class="dot"></div>
+                <table class="programm-heart" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <img src="heart-white-02.png" alt="Сердечко">
+                    </td>
+                </tr>
+            </table>
                 <div class="info">
                     <h3>Прогулка и фотосессия</h3>
                     <p>Музей-заповедник Царицыно</p>
@@ -772,7 +790,13 @@
             </div>
             <div class="item">
                 <div class="time">13:30</div>
-                <div class="dot"></div>
+                <table class="programm-heart" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <img src="heart-white-02.png" alt="Сердечко">
+                    </td>
+                </tr>
+            </table>
                 <div class="info">
                     <h3>Фуршет</h3>
                     <p>Банкетный зал Пантеон</p>
@@ -780,7 +804,13 @@
             </div>
             <div class="item">
                 <div class="time">15:30</div>
-                <div class="dot"></div>
+                <table class="programm-heart" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <img src="heart-white-02.png" alt="Сердечко">
+                    </td>
+                </tr>
+            </table>
                 <div class="info">
                     <h3>Праздничный банкет</h3>
                     <p>Банкетный зал Пантеон</p>
@@ -788,7 +818,13 @@
             </div>
             <div class="item">
                 <div class="time">22:00</div>
-                <div class="dot"></div>
+            <table class="programm-heart" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <img src="heart-white-02.png" alt="Сердечко">
+                    </td>
+                </tr>
+            </table>
                 <div class="info">
                     <h3>Завершение вечера</h3>
                 </div>
@@ -867,24 +903,27 @@
 #block-desktop-program .info p { margin: 5px 0 0; font-size: 14px; color: #666; }
 
 /* Сердечко на линии */
-#block-desktop-program .dot {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20px;
-    height: 20px;
-    background: #fdf6f0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-}
 
-#block-desktop-program .dot::after {
-    content: '❤'; /* Можно заменить на SVG иконку сердечка */
-    color: #335724;
-    font-size: 14px;
-}
+.programm-heart {
+      width: 36px;       /* ширина, как в календаре */
+      height: 36px;      /* высота, как в календаре */
+      margin: 12px auto; /* вертикальный отступ и центрирование */
+      border-collapse: collapse;
+    }
+    
+    .programm-heart td {
+      width: 36px;
+      height: 36px;
+      padding: 0;       /* убираем отступы внутри ячейки */
+    }
+    
+    .programm-heart img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* сохраняем пропорции */
+      display: block;
+    }
+    
 
   /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
   
