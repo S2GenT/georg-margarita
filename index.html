@@ -741,20 +741,14 @@
     </style>
 
     <!-- ================= PROGRAM ================= -->
-    <section id="block-desktop-program">
+   <section id="block-desktop-program">
     <div class="timeline-container">
         <h2>Программа дня</h2>
         <div class="timeline-vibe">
             <!-- Пункты программы -->
             <div class="item">
                 <div class="time">12:15</div>
-                <table class="programm-heart" cellspacing="0" cellpadding="0">
-                <tr>
-                    <td>
-                        <img src="heart-white-02.png" alt="Сердечко">
-                    </td>
-                </tr>
-            </table>
+                <div class = "programm-heart" > <img src = "heart-white-02.png" alt = "Сердечко" > </div> 
                 <div class="info">
                     <h3>Сбор гостей</h3>
                     <p>Ждем всех к началу торжества</p>
@@ -762,13 +756,7 @@
             </div>
             <div class="item">
                 <div class="time">12:30</div>
-                <table class="programm-heart" cellspacing="0" cellpadding="0">
-                <tr>
-                    <td>
-                        <img src="heart-white-02.png" alt="Сердечко">
-                    </td>
-                </tr>
-            </table>
+                <div class = "programm-heart" > <img src = "heart-white-02.png" alt = "Сердечко" > </div>
                 <div class="info">
                     <h3>Торжественная церемония</h3>
                     <p>Шипиловский Дворец бракосочетания</p>
@@ -776,13 +764,7 @@
             </div>
             <div class="item">
                 <div class="time">13:30</div>
-                <table class="programm-heart" cellspacing="0" cellpadding="0">
-                <tr>
-                    <td>
-                        <img src="heart-white-02.png" alt="Сердечко">
-                    </td>
-                </tr>
-            </table>
+                <div class = "programm-heart" > <img src = "heart-white-02.png" alt = "Сердечко" > </div>
                 <div class="info">
                     <h3>Прогулка и фотосессия</h3>
                     <p>Музей-заповедник Царицыно</p>
@@ -790,13 +772,7 @@
             </div>
             <div class="item">
                 <div class="time">13:30</div>
-                <table class="programm-heart" cellspacing="0" cellpadding="0">
-                <tr>
-                    <td>
-                        <img src="heart-white-02.png" alt="Сердечко">
-                    </td>
-                </tr>
-            </table>
+                <div class = "programm-heart" > <img src = "heart-white-02.png" alt = "Сердечко" > </div>
                 <div class="info">
                     <h3>Фуршет</h3>
                     <p>Банкетный зал Пантеон</p>
@@ -804,13 +780,7 @@
             </div>
             <div class="item">
                 <div class="time">15:30</div>
-                <table class="programm-heart" cellspacing="0" cellpadding="0">
-                <tr>
-                    <td>
-                        <img src="heart-white-02.png" alt="Сердечко">
-                    </td>
-                </tr>
-            </table>
+                <div class = "programm-heart" > <img src = "heart-white-02.png" alt = "Сердечко" > </div>
                 <div class="info">
                     <h3>Праздничный банкет</h3>
                     <p>Банкетный зал Пантеон</p>
@@ -818,13 +788,7 @@
             </div>
             <div class="item">
                 <div class="time">22:00</div>
-            <table class="programm-heart" cellspacing="0" cellpadding="0">
-                <tr>
-                    <td>
-                        <img src="heart-white-02.png" alt="Сердечко">
-                    </td>
-                </tr>
-            </table>
+            <div class = "programm-heart" > <img src = "heart-white-02.png" alt = "Сердечко" > </div>
                 <div class="info">
                     <h3>Завершение вечера</h3>
                 </div>
@@ -904,26 +868,12 @@
 
 /* Сердечко на линии */
 
-.programm-heart {
-      width: 36px;       /* ширина, как в календаре */
-      height: 36px;      /* высота, как в календаре */
-      margin: 12px auto; /* вертикальный отступ и центрирование */
-      border-collapse: collapse;
-    }
-    
-    .programm-heart td {
-      width: 36px;
-      height: 36px;
-      padding: 0;       /* убираем отступы внутри ячейки */
-    }
-    
-    .programm-heart img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain; /* сохраняем пропорции */
-      display: block;
-    }
-    
+#block-desktop-program .programm-heart {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+}
+  
 
   /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
   
