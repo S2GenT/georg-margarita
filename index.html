@@ -880,22 +880,20 @@
     object-fit: contain;
     display: block;
 }
-    
-
 
   /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
   
 @media (max-width: 768px) {
 
-  #block-desktop-program {
+  #block-program {
     padding: 60px 15px;
   }
 
-  #block-desktop-program h2 {
+  #block-program h2 {
     font-size: clamp(34px, 6vw, 40px);
   }
 
-  #block-desktop-program .item {
+  #block-program .item {
     font-size: 17px;
   }
 
@@ -903,23 +901,46 @@
 
   /* ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= */
   
-@media (max-width: 480px) {
+ @media (max-width: 480px) {
 
-  #block-desktop-program {
+  #block-program {
     padding: 50px 15px;
+    background:#335724;
   }
 
-  #block-desktop-program h2 {
+  #block-program h2 {
     font-size: 34px;
+    color: #fdf6f0;
   }
 
-  /* уменьшение сердечек */
-  #block-desktop-program .programm-heart {
-    width: 18px;
-    height: 18px;
+  #block-program .timeline {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
   }
 
+  #block-program .item {
+    font-size: 17px;
+    background: #fdf6f0;
+    padding: 12px 14px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column; /* перенос времени на отдельную строку */
+    align-items: center;
+    gap: 6px;
+    margin:3px 0;
+  }
+
+  #block-program span {
+    margin-right: 0;
+    font-size: 16px;
+  }
+.programm-heart {
+        width: 18px;
+        height: 18px;
+      }
 }
+    </style>
     </style>
 
     <!-- ================= DETAILS ================= -->
@@ -1461,4 +1482,3 @@ body {
 </body>
 
 </html>
-
