@@ -1,295 +1,295 @@
-!DOCTYPE html
-html lang=ru
+<!DOCTYPE html>
+<html lang="ru">
 
-head
-    meta charset=UTF-8
-    meta name=viewport content=width=device-width, initial-scale=1.0
-    titleПриглашение на свадьбуtitle
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на свадьбу</title>
 
-    link href=httpsfonts.googleapis.comcss2family=Great+Vibes&family=Montserratwght@400;500;700&display=swap rel=stylesheet
-    link href=httpscdn.jsdelivr.netnpmaos@2.3.4distaos.css rel=stylesheet
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-    style
+    <style>
         @font-face {
-          font-family TT Berlinerins Script;
-          src url(TTBerlinerins-Script.woff2) format(woff2);
-          font-display swap;
+          font-family: "TT Berlinerins Script";
+          src: url("TTBerlinerins-Script.woff2") format("woff2");
+          font-display: swap;
         }
         body{
-          margin0;
-          font-family'Montserrat',sans-serif;
-          background#fff;
-          scroll-behaviorsmooth;
+          margin:0;
+          font-family:'Montserrat',sans-serif;
+          background:#fff;
+          scroll-behavior:smooth;
         }
-    style
-head
+    </style>
+</head>
 
-body
+<body>
 
-    !-- ================= NAVIGATION ================= --
-    section id=block-nav
-        nav class=nav
-            a href=#block-locationГдеa
-            a href=#block-programПлан дняa
-            a href=#block-detailsДеталиa
-            a href=#block-telegramЧатa
-            a href=#block-rsvpRSVPa
-        nav
-    section
+    <!-- ================= NAVIGATION ================= -->
+    <section id="block-nav">
+        <nav class="nav">
+            <a href="#block-location">Где</a>
+            <a href="#block-program">План дня</a>
+            <a href="#block-details">Детали</a>
+            <a href="#block-telegram">Чат</a>
+            <a href="#block-rsvp">RSVP</a>
+        </nav>
+    </section>
 
-    style
+    <style>
         #block-nav{
-          --nav-bg#fff;
-          --nav-color#000;
-          --nav-hover#e74c3c;
+          --nav-bg:#fff;
+          --nav-color:#000;
+          --nav-hover:#e74c3c;
         }
         #block-nav .nav{
-          displayflex;
-          justify-contentcenter;
-          gap40px;
-          padding20px;
-          positionsticky;
-          top0;
-          backgroundvar(--nav-bg);
-          z-index100;
-          box-shadow0 2px 5px rgba(0,0,0,0.05);
+          display:flex;
+          justify-content:center;
+          gap:40px;
+          padding:20px;
+          position:sticky;
+          top:0;
+          background:var(--nav-bg);
+          z-index:100;
+          box-shadow:0 2px 5px rgba(0,0,0,0.05);
         }
         #block-nav a{
-          text-decorationnone;
-          colorvar(--nav-color);
-          font-weight500;
-          transition.3s;
+          text-decoration:none;
+          color:var(--nav-color);
+          font-weight:500;
+          transition:.3s;
         }
-        #block-nav ahover{colorvar(--nav-hover);}
-        @media(max-width600px){
-          #block-nav .nav{displaynone;}
+        #block-nav a:hover{color:var(--nav-hover);}
+        @media(max-width:600px){
+          #block-nav .nav{display:none;}
         }
-    style
+    </style>
 
-    !-- ================= HERO ================= --
-    section id=block-hero
-        div class=bgdiv
-        div class=content data-aos=fade-up
-            img src=startimg.png class=start-img
-            h1Георг & Маргаритаh1
-            pМы приглашаем Вас разделить с нами день нашей Свадьбыp
-            div class=date14  07  2026div
+    <!-- ================= HERO ================= -->
+    <section id="block-hero">
+        <div class="bg"></div>
+        <div class="content" data-aos="fade-up">
+            <img src="startimg.png" class="start-img">
+            <h1>Георг & Маргарита</h1>
+            <p>Мы приглашаем Вас разделить с нами день нашей Свадьбы</p>
+            <div class="date">14 | 07 | 2026</div>
 
-            div class=countdown-titleдо торжества осталосьdiv
+            <div class="countdown-title">до торжества осталось</div>
 
-            div class=countdown id=countdown
-                divspan id=days0spandiv
-                divspan id=hours0spandiv
-                divspan id=minutes0spandiv
-                divspan id=seconds0spandiv
-            div
-        div
-    section
+            <div class="countdown" id="countdown">
+                <div><span id="days">0</span></div>
+                <div><span id="hours">0</span></div>
+                <div><span id="minutes">0</span></div>
+                <div><span id="seconds">0</span></div>
+            </div>
+        </div>
+    </section>
 
-    style
+    <style>
         #block-hero {
-                min-height 100dvh;  корректная высота на мобильных 
-                position relative;
-                display flex;
-                align-items center;
-                justify-content center;
-                text-align center;
-                padding 40px 20px;  чтобы текст не прилипал к краям 
-                overflow hidden;
+                min-height: 100dvh; /* корректная высота на мобильных */
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 40px 20px; /* чтобы текст не прилипал к краям */
+                overflow: hidden;
               }
             
               #block-hero .bg {
-                position absolute;
-                inset 0;
-                background url('backimg.jpg') center  cover no-repeat;
-                z-index 0;
+                position: absolute;
+                inset: 0;
+                background: url('backimg.jpg') center / cover no-repeat;
+                z-index: 0;
               }
             
               #block-hero .content {
-                position relative;
-                z-index 2;
-                color #2c3e50;
-                display flex;
-                flex-direction column;
-                gap 35px;
-                max-width 1100px;
-                width 100%;
+                position: relative;
+                z-index: 2;
+                color: #2c3e50;
+                display: flex;
+                flex-direction: column;
+                gap: 35px;
+                max-width: 1100px;
+                width: 100%;
               }
             
               #block-hero .start-img {
-                width 100%;
-                max-width 700px;
-                height auto;
-                margin 0 auto;
-                display block;
+                width: 100%;
+                max-width: 700px;
+                height: auto;
+                margin: 0 auto;
+                display: block;
               }
             
               #block-hero h1 {
-                font-family TT Berlinerins Script, cursive;
-                font-size clamp(48px, 6vw, 70px);  адаптивный размер 
-                margin 0;
-                color #8B0000;
+                font-family: "TT Berlinerins Script", cursive;
+                font-size: clamp(48px, 6vw, 70px); /* адаптивный размер */
+                margin: 0;
+                color: #8B0000;
               }
             
               #block-hero p {
-                color #34495e;
-                font-size clamp(18px, 4vw, 48px);
-                margin 0;
+                color: #34495e;
+                font-size: clamp(18px, 4vw, 48px);
+                margin: 0;
               }
             
               #block-hero .date {
-                font-size 18px;
-                letter-spacing 4px;
+                font-size: 18px;
+                letter-spacing: 4px;
               }
             
               #block-hero .countdown {
-                display flex;
-                gap 15px;
-                justify-content center;
-                flex-wrap wrap;
+                display: flex;
+                gap: 15px;
+                justify-content: center;
+                flex-wrap: wrap;
               }
             
     #block-hero .countdown-title {
-      font-size 18px;
-      letter-spacing 2px;
-      text-transform uppercase;
+      font-size: 18px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
     
     #block-hero .countdown div {
-      position relative;
+      position: relative;
     
-      width 130px;
-      height 130px;
+      width: 130px;
+      height: 130px;
     
-      display flex;
-      flex-direction column;
-      align-items center;
-      justify-content center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     
-      border-radius 50%;
+      border-radius: 50%;
     
-       Толщина рамки 
-      border 5px solid transparent;
+      /* Толщина рамки */
+      border: 5px solid transparent;
     
-       Градиентная рамка 
-      background transparent;  центр полностью прозрачный 
-      color #2c3e50;
-      font-size 14px;
-      text-transform uppercase;
-      letter-spacing 1px;
+      /* Градиентная рамка */
+      background: transparent; /* центр полностью прозрачный */
+      color: #2c3e50;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     
-      transition transform 0.3s ease;
+      transition: transform 0.3s ease;
     }
-    #block-hero .countdown divbefore {
-      content ;
-      position absolute;
-      inset 0;
-      border-radius 50%;
-      padding 4px;  толщина рамки 
+    #block-hero .countdown div::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      padding: 4px; /* толщина рамки */
     
-      background linear-gradient(135deg, #335724, #9bbf9b);
+      background: linear-gradient(135deg, #335724, #9bbf9b);
     
-      -webkit-mask
+      -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
-      -webkit-mask-composite xor;
-      mask-composite exclude;
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
     
-      pointer-events none;
+      pointer-events: none;
     }
             
     #block-hero .countdown span {
-      font-weight 400;
-      font-size 32px;
-      margin-bottom 6px;
+      font-weight: 400;
+      font-size: 32px;
+      margin-bottom: 6px;
     }
     #block-hero .countdown small {
-      display block;
-      font-size 12px;
-      margin-top 6px;
-      text-transform uppercase;
-      letter-spacing 1px;
+      display: block;
+      font-size: 12px;
+      margin-top: 6px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
             
-               ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= 
+              /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
             
-              @media (max-width 768px) {
+              @media (max-width: 768px) {
             
                 #block-hero {
-                  padding 30px 15px;
-                  padding-top -40px;        поднимаем вверх 
-                  padding-bottom 60px;
+                  padding: 30px 15px;
+                  padding-top: -40px;       /* поднимаем вверх */
+                  padding-bottom: 60px;
                 }
             
                 #block-hero .content {
-                  gap 25px;
-                  margin-top -25px;
+                  gap: 25px;
+                  margin-top: -25px;
                 }
             
                 #block-hero .date {
-                  font-size 16px;
-                  letter-spacing 3px;
+                  font-size: 16px;
+                  letter-spacing: 3px;
                 }
             
                 #block-hero .countdown {
-                  gap 10px;
+                  gap: 10px;
                 }
             
       #block-hero .countdown div {
-        width 90px;
-        height 90px;
-        font-size 12px;
-        border 3px solid transparent;
+        width: 90px;
+        height: 90px;
+        font-size: 12px;
+        border: 3px solid transparent;
       }
     
       #block-hero .countdown span {
-        font-size 22px;
+        font-size: 22px;
       }
               }
             
-             ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= 
+            /* ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= */
             
-        @media (max-width 420px) {
-           делаем три блока в ряд 
+        @media (max-width: 420px) {
+          /* делаем три блока в ряд */
           #block-hero .countdown {
-            justify-content center;
-            gap 6px;
+            justify-content: center;
+            gap: 6px;
           }
           #block-hero .countdown-title {
-            font-size 14px;
-            letter-spacing 1px;
+            font-size: 14px;
+            letter-spacing: 1px;
           }
-           блок таймера 
+          /* блок таймера */
           #block-hero .countdown div {
-            display flex;
-            flex-direction column;  переносим в две строки 
-            align-items center;
-            justify-content center;
-            min-width 20%;
-            font-size 14px;
-            line-height 1.2;
-            width 70px;
-            height 70px;
+            display: flex;
+            flex-direction: column; /* переносим в две строки */
+            align-items: center;
+            justify-content: center;
+            min-width: 20%;
+            font-size: 14px;
+            line-height: 1.2;
+            width: 70px;
+            height: 70px;
           }
-          #block-hero .countdown divbefore {
-            padding 3px;  толщина рамки 
+          #block-hero .countdown div::before {
+            padding: 3px; /* толщина рамки */
             
           }
           #block-hero .countdown span {
-            font-size 16px;
+            font-size: 16px;
           }
         }
-    style
+    </style>
 
-    script
-        const cdDate = new Date(2026-07-14T123000).getTime();
+    <script>
+        const cdDate = new Date("2026-07-14T12:30:00").getTime();
         
         function getDeclension(number, words) {
           number = Math.abs(number) % 100;
           const n1 = number % 10;
         
-          if (number  10 && number  20) return words[2];
-          if (n1  1 && n1  5) return words[1];
+          if (number > 10 && number < 20) return words[2];
+          if (n1 > 1 && n1 < 5) return words[1];
           if (n1 === 1) return words[0];
           return words[2];
         }
@@ -298,1195 +298,1195 @@ body
           const now = new Date().getTime();
           const diff = cdDate - now;
         
-          if (diff = 0) return;
+          if (diff <= 0) return;
         
-          const days = Math.floor(diff  (1000  60  60  24));
-          const hours = Math.floor((diff % (1000  60  60  24))  (1000  60  60));
-          const minutes = Math.floor((diff % (1000  60  60))  (1000  60));
-          const seconds = Math.floor((diff % (1000  60))  1000);
+          const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((diff % (1000 * 60)) / 1000);
         
-          document.getElementById(days).innerHTML =
-            days + small + getDeclension(days, [дней, дней, дней]) + small;
+          document.getElementById("days").innerHTML =
+            days + "<small>" + getDeclension(days, ["дней", "дней", "дней"]) + "</small>";
         
-          document.getElementById(hours).innerHTML =
-            hours + small + getDeclension(hours, [часов, часов, часов]) + small;
+          document.getElementById("hours").innerHTML =
+            hours + "<small>" + getDeclension(hours, ["часов", "часов", "часов"]) + "</small>";
         
-          document.getElementById(minutes).innerHTML =
-            minutes + small + getDeclension(minutes, [минут, минут, минут]) + small;
+          document.getElementById("minutes").innerHTML =
+            minutes + "<small>" + getDeclension(minutes, ["минут", "минут", "минут"]) + "</small>";
         
-          document.getElementById(seconds).innerHTML =
-            seconds + small + getDeclension(seconds, [секунд, секунд, секунд]) + small;
+          document.getElementById("seconds").innerHTML =
+            seconds + "<small>" + getDeclension(seconds, ["секунд", "секунд", "секунд"]) + "</small>";
         }
         
         setInterval(updateCD, 1000);
         updateCD();
-    script
+    </script>
 
-    !-- ================= QUOTE BLOCK ================= --
-    section id=block-quote
-        div class=quote-wrap data-aos=fade-up
-            p class=quote-text
+    <!-- ================= QUOTE BLOCK ================= -->
+    <section id="block-quote">
+        <div class="quote-wrap" data-aos="fade-up">
+            <p class="quote-text">
                 «Любовь выскочила перед нами, как из-под земли выскакивает убийца в переулке, и поразила нас сразу обоих! Так поражает молния, так поражает финский нож!»
-            p
-            p class=quote-author— М.А. Булгаковp
-        div
-    section
+            </p>
+            <p class="quote-author">— М.А. Булгаков</p>
+        </div>
+    </section>
 
-    style
+    <style>
         #block-quote{
-          padding80px 20px;
-          background#fdf6f0;
+          padding:80px 20px;
+          background:#fdf6f0;
         }
         #block-quote .quote-wrap{
-          max-width800px;
-          margin0 auto;
+          max-width:800px;
+          margin:0 auto;
         }
         #block-quote .quote-text{
-          font-size clamp(17px, 2.2vw, 18px);
-          line-height1.6;
-          color #2c3e50;
+          font-size: clamp(17px, 2.2vw, 18px);
+          line-height:1.6;
+          color: #2c3e50;
         }
         #block-quote .quote-author{
-          font-size clamp(15px, 2.2vw, 18px);
-          color #7f8c8d;
-          font-style italic;
-          text-align right;
+          font-size: clamp(15px, 2.2vw, 18px);
+          color: #7f8c8d;
+          font-style: italic;
+          text-align: right;
         }
   
-   ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= 
+  /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
   
-  @media (max-width 768px) {
+  @media (max-width: 768px) {
     #block-quote {
-      padding 70px 20px;
+      padding: 70px 20px;
     }
 
     #block-quote .quote-text {
-      line-height 1.6;
-      font-size 18px;
+      line-height: 1.6;
+      font-size: 18px;
     }
   }
 
-   ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= 
+  /* ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= */
   
-  @media (max-width 480px) {
+  @media (max-width: 480px) {
 
     #block-quote {
-      padding 50px 18px;
+      padding: 50px 18px;
     }
 
     #block-quote .quote-text {
-      line-height 1.6;
+      line-height: 1.6;
     }
 
     #block-quote .quote-author {
-      margin-top 10px;
+      margin-top: 10px;
     }
   }
-    style
+    </style>
 
-    !-- ================= PHOTO BLOCK ================= --
+    <!-- ================= PHOTO BLOCK ================= -->
 
-    section id=block-photo
-        div class=content data-aos=fade-up
-            img src=hero.jpg class=hero-img
-        div
-    section
+    <section id="block-photo">
+        <div class="content" data-aos="fade-up">
+            <img src="hero.jpg" class="hero-img">
+        </div>
+    </section>
 
-    style
+    <style>
         #block-photo{
-              padding40px 20px;
-              background#fdf6f0;
-              display flex;
-              justify-content center;
+              padding:40px 20px;
+              background:#fdf6f0;
+              display: flex;
+              justify-content: center;
             }
     
        #block-photo .hero-img {
-            width 300px;
-            height 300px;
-            border-radius 50%;
-            object-fit cover;
-            display block;
-            margin 0 auto;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
         }
-    style
+    </style>
 
-    !-- ================= CALENDAR BLOCK ================= --
-    section id=block-calendar
-        div class=calendar-wrap data-aos=fade-up
-            h2Дорогие гости!h2
-            p
+    <!-- ================= CALENDAR BLOCK ================= -->
+    <section id="block-calendar">
+        <div class="calendar-wrap" data-aos="fade-up">
+            <h2>Дорогие гости!</h2>
+            <p>
                 С радостью сообщаем, что 14.07.2026 состоится наша свадьба
-                br
-                br Будем рады видеть вас на первом празднике нашей семьи
-            p
+                <br>
+                <br> Будем рады видеть вас на первом празднике нашей семьи
+            </p>
 
-            h3Июль 2026h3
-            table
-                tr
-                    thПнth
-                    thВтth
-                    thСрth
-                    thЧтth
-                    thПтth
-                    thСбth
-                    thВсth
-                tr
-                tr
-                    tdtd
-                    tdtd
-                    td1td
-                    td2td
-                    td3td
-                    td4td
-                    td5td
-                tr
-                tr
-                    td6td
-                    td7td
-                    td8td
-                    td9td
-                    td10td
-                    td11td
-                    td12td
-                tr
-                tr
-                    td13td
-                    td class=wed14td
-                    td15td
-                    td16td
-                    td17td
-                    td18td
-                    td19td
-                tr
-                tr
-                    td20td
-                    td21td
-                    td22td
-                    td23td
-                    td24td
-                    td25td
-                    td26td
-                tr
-                tr
-                    td27td
-                    td28td
-                    td29td
-                    td30td
-                    td31td
-                    tdtd
-                    tdtd
-                tr
-            table
-        div
-    section
+            <h3>Июль 2026</h3>
+            <table>
+                <tr>
+                    <th>Пн</th>
+                    <th>Вт</th>
+                    <th>Ср</th>
+                    <th>Чт</th>
+                    <th>Пт</th>
+                    <th>Сб</th>
+                    <th>Вс</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td class="wed">14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                    <td>31</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </section>
 
-    style
+    <style>
         #block-calendar{
-          padding80px 20px;
-          background#fdf6f0;
-          text-aligncenter;
+          padding:80px 20px;
+          background:#fdf6f0;
+          text-align:center;
         }
-        #block-calendar .calendar-wrap{max-width800px;margin0 auto;}
+        #block-calendar .calendar-wrap{max-width:800px;margin:0 auto;}
         #block-calendar h2{
-          font-familyGreat Vibes,cursive;
-          font-size48px;
-          color #2c3e50;
+          font-family:"Great Vibes",cursive;
+          font-size:48px;
+          color: #2c3e50;
         }
         #block-calendar h3{
-        font-family Great Vibes, cursive;
-        font-size 48px;
-        margin-bottom 20px;
-        color #2c3e50;
+        font-family: "Great Vibes", cursive;
+        font-size: 48px;
+        margin-bottom: 20px;
+        color: #2c3e50;
         }
         #block-calendar p{
-        color #2c3e50;
-        font-size 18px;
+        color: #2c3e50;
+        font-size: 18px;
         }
         #block-calendar table{
-          margin40px auto;
-          font-size 18px;
-          border-collapsecollapse;
+          margin:40px auto;
+          font-size: 18px;
+          border-collapse:collapse;
         }
         #block-calendar td,#block-calendar th{
-          padding10px 14px;
+          padding:10px 14px;
         }
-        #block-calendar trfirst-child th {
-          border-bottom 2px solid #335724;
-          padding-bottom 12px;
+        #block-calendar tr:first-child th {
+          border-bottom: 2px solid #335724;
+          padding-bottom: 12px;
         }
-        #block-calendar tbody trlast-child td {
-          border-bottom 2px solid #335724;
-          padding-bottom 12px;
+        #block-calendar tbody tr:last-child td {
+          border-bottom: 2px solid #335724;
+          padding-bottom: 12px;
         }
  #block-calendar .wed {
-  position relative;
-  font-weight bold;
-  color #fff;
-  z-index 1;
+  position: relative;
+  font-weight: bold;
+  color: #fff;
+  z-index: 1;
 }
 
-#block-calendar .wedbefore {
-  content ;
-  position absolute;
-  inset 0px;
-  background-color #8B0000;
-  mask url(heart-white-01.svg) center  contain no-repeat;
-  -webkit-mask url(heart-white-01.svg) center  contain no-repeat;
-  z-index -1;
+#block-calendar .wed::before {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  background-color: #8B0000;
+  mask: url("heart-white-01.svg") center / contain no-repeat;
+  -webkit-mask: url("heart-white-01.svg") center / contain no-repeat;
+  z-index: -1;
 }
 
-   ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= 
+  /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
   
-  @media (max-width 768px) {
+  @media (max-width: 768px) {
   #block-calendar {
-    padding 60px 15px;
+    padding: 60px 15px;
   }
 
   #block-calendar h2,
   #block-calendar h3 {
-    font-size clamp(34px, 6vw, 48px);
+    font-size: clamp(34px, 6vw, 48px);
   }
 
   #block-calendar p {
-    font-size 17px;
+    font-size: 17px;
   }
 
   #block-calendar table {
-    font-size 17px;
-    margin 30px auto;
+    font-size: 17px;
+    margin: 30px auto;
   }
 
   #block-calendar td,
   #block-calendar th {
-    padding 8px 10px;
+    padding: 8px 10px;
   }
 }
 
-   ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= 
+  /* ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= */
   
-  @media (max-width 480px) {
+  @media (max-width: 480px) {
 
   #block-calendar {
-    padding 50px 12px;
+    padding: 50px 12px;
   }
 
   #block-calendar .calendar-wrap {
-    width 100%;
+    width: 100%;
   }
 
   #block-calendar h2,
   #block-calendar h3 {
-    font-size 34px;
+    font-size: 34px;
   }
 
   #block-calendar p {
-    font-size 17px;
-    line-height 1.6;
+    font-size: 17px;
+    line-height: 1.6;
   }
 
-   делаем таблицу полностью адаптивной 
+  /* делаем таблицу полностью адаптивной */
   #block-calendar table {
-    width 100%;
-    font-size 18px;
+    width: 100%;
+    font-size: 18px;
   }
 
   #block-calendar td,
   #block-calendar th {
-    padding 6px 4px;
+    padding: 6px 4px;
   }
 
-   уменьшаем сердце 
-  #block-calendar .wedbefore {
-    inset 2px;
+  /* уменьшаем сердце */
+  #block-calendar .wed::before {
+    inset: 2px;
   }
 }
-    style
+    </style>
 
-    !-- ================= LOCATION ================= --
-    section id=block-location
-        div class=location-wrap data-aos=fade-up
-            h2Локацияh2
+    <!-- ================= LOCATION ================= -->
+    <section id="block-location">
+        <div class="location-wrap" data-aos="fade-up">
+            <h2>Локация</h2>
 
-            div class=event
-                h3Торжественная регистрация бракаh3
-                pШипиловский дворец бракосочетания
-                    br Шипиловский пр-д, 27p
-                pНачало в 1230p
-                p
-                    iframe src=httpsyandex.rumap-widgetv1indoorLevel=1&ll=37.699632%2C55.615535&mode=poi&poi%5Bpoint%5D=37.695177%2C55.616951&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1678230485&z=17.16iframe
-                p
-                a href=httpsyandex.rumapsfrom=mapframe&ll=37.696018%2C55.617052&mode=routes&rtext=~55.616961%2C37.695169&rtt=auto&ruri=~&source=mapframe&utm_source=mapframe&z=17.8 target=_blankОткрыть картуa
-            div
-        div
-        div class=location-wrap data-aos=fade-up
-            div class=event
-                h3Праздничный банкетh3
-                pБанкетный зал Пантеон
-                    br парк Царицыно, ул. Тюрина, 1p
-                pНачало в 1530p
-                p
-                    iframe src=httpsyandex.rumap-widgetv1ll=37.673307%2C55.617837&mode=poi&poi%5Bpoint%5D=37.673119%2C55.617870&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D160707256462&z=17.16iframe
-                p
-                a href=httpsyandex.rumapsfrom=mapframe&ll=37.673275%2C55.618137&mode=routes&rtext=~55.617869%2C37.673119&rtt=auto&ruri=~&source=mapframe&utm_source=mapframe&z=17 target=_blankОткрыть картуa
-            div
-        div
-    section
+            <div class="event">
+                <h3>Торжественная регистрация брака</h3>
+                <p>Шипиловский дворец бракосочетания
+                    <br> Шипиловский пр-д, 27</p>
+                <p>Начало в 12:30</p>
+                <p>
+                    <iframe src="https://yandex.ru/map-widget/v1/?indoorLevel=1&ll=37.699632%2C55.615535&mode=poi&poi%5Bpoint%5D=37.695177%2C55.616951&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1678230485&z=17.16"></iframe>
+                </p>
+                <a href="https://yandex.ru/maps/?from=mapframe&ll=37.696018%2C55.617052&mode=routes&rtext=~55.616961%2C37.695169&rtt=auto&ruri=~&source=mapframe&utm_source=mapframe&z=17.8" target="_blank">Открыть карту</a>
+            </div>
+        </div>
+        <div class="location-wrap" data-aos="fade-up">
+            <div class="event">
+                <h3>Праздничный банкет</h3>
+                <p>Банкетный зал Пантеон
+                    <br> парк Царицыно, ул. Тюрина, 1</p>
+                <p>Начало в 15:30</p>
+                <p>
+                    <iframe src="https://yandex.ru/map-widget/v1/?ll=37.673307%2C55.617837&mode=poi&poi%5Bpoint%5D=37.673119%2C55.617870&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D160707256462&z=17.16"></iframe>
+                </p>
+                <a href="https://yandex.ru/maps/?from=mapframe&ll=37.673275%2C55.618137&mode=routes&rtext=~55.617869%2C37.673119&rtt=auto&ruri=~&source=mapframe&utm_source=mapframe&z=17" target="_blank">Открыть карту</a>
+            </div>
+        </div>
+    </section>
 
-    style
+    <style>
         #block-location{
-          padding80px 20px;
-          background#fdf6f0;
-          text-aligncenter;
+          padding:80px 20px;
+          background:#fdf6f0;
+          text-align:center;
         }
         #block-location .location-wrap{
-          max-width800px;
-          margin0 auto;
+          max-width:800px;
+          margin:0 auto;
         }
         #block-location .location-wrap + .location-wrap {
-          margin-top 60px;
+          margin-top: 60px;
         }
         #block-location h2{
-          font-familyGreat Vibes,cursive;
-          font-size48px;
-          color #2c3e50;
+          font-family:"Great Vibes",cursive;
+          font-size:48px;
+          color: #2c3e50;
         }
         #block-location h3{
-          color #2c3e50;
-          font-size 18px;
+          color: #2c3e50;
+          font-size: 18px;
         }
         #block-location p{
-          color #2c3e50;
-          font-size 18px;
+          color: #2c3e50;
+          font-size: 18px;
         }
         #block-location iframe{
-          width100%;
-          max-width600px;
-          height350px;
-          bordernone;
-          border-radius10px;
+          width:100%;
+          max-width:600px;
+          height:350px;
+          border:none;
+          border-radius:10px;
         }
        #block-location a{
-          displayinline-block;
-          padding14px 46px;
-          background#335724;
-          color#fff;
-          border-radius25px;
-          text-decorationnone;
-          font-size 18px;
+          display:inline-block;
+          padding:14px 46px;
+          background:#335724;
+          color:#fff;
+          border-radius:25px;
+          text-decoration:none;
+          font-size: 18px;
         }
-   ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= 
+  /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
   
-  @media (max-width 768px) {
+  @media (max-width: 768px) {
   #block-location {
-    padding 60px 15px;
+    padding: 60px 15px;
   }
 
   #block-location h2 {
-    font-size clamp(34px, 6vw, 40px);
+    font-size: clamp(34px, 6vw, 40px);
   }
 
   #block-location h3 {
-    font-size 18px;
+    font-size: 18px;
   }
 
   #block-location p {
-    font-size 17px;
+    font-size: 17px;
   }
 
   #block-location iframe {
-    height 300px;
+    height: 300px;
   }
   #block-location a {
-      padding 12px 40px;
-      font-size 16px;
+      padding: 12px 40px;
+      font-size: 16px;
     }
 }
 
-   ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= 
+  /* ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= */
   
-  @media (max-width 480px) {
+  @media (max-width: 480px) {
   #block-location {
-    padding 50px 12px;
+    padding: 50px 12px;
   }
 
   #block-location h2 {
-    font-size 34px;
+    font-size: 34px;
   }
 
   #block-location h3 {
-    font-size 18px;
+    font-size: 18px;
   }
 
   #block-location p {
-    font-size 17px;
-    line-height 1.6;
+    font-size: 17px;
+    line-height: 1.6;
   }
   #block-location a {
-      width 100%;
-      max-width 280px;
-      padding 14px 0;
-      font-size 16px;
+      width: 100%;
+      max-width: 280px;
+      padding: 14px 0;
+      font-size: 16px;
     }
 
-   уменьшаем карту 
+  /* уменьшаем карту */
   #block-location iframe {
-    height 240px;
-    border-radius 14px;
+    height: 240px;
+    border-radius: 14px;
   }
 
   #block-location .location-wrap + .location-wrap {
-    margin-top 40px;
+    margin-top: 40px;
   }
   }
-    style
+    </style>
 
-    !-- ================= PROGRAM ================= --
-   section id=block-desktop-program
-    div class=timeline-container
-        h2Программа дняh2
-        div class=timeline-vibe
-            !-- Пункты программы --
-            div class=item
-                div class=time1215div
-                div class = programm-heart  img src = heart-white-02.png alt = Сердечко  div 
-                div class=info
-                    h3Сбор гостейh3
-                    pЖдем всех к началу торжестваp
-                div
-            div
-            div class=item
-                div class=time1230div
-                div class = programm-heart  img src = heart-white-02.png alt = Сердечко  div
-                div class=info
-                    h3Торжественная церемонияh3
-                    pШипиловский Дворец бракосочетанияp
-                div
-            div
-            div class=item
-                div class=time1330div
-                div class = programm-heart  img src = heart-white-02.png alt = Сердечко  div
-                div class=info
-                    h3Прогулка и фотосессияh3
-                    pМузей-заповедник Царицыноp
-                div
-            div
-            div class=item
-                div class=time1330div
-                div class = programm-heart  img src = heart-white-02.png alt = Сердечко  div
-                div class=info
-                    h3Фуршетh3
-                    pБанкетный зал Пантеонp
-                div
-            div
-            div class=item
-                div class=time1530div
-                div class = programm-heart  img src = heart-white-02.png alt = Сердечко  div
-                div class=info
-                    h3Праздничный банкетh3
-                    pБанкетный зал Пантеонp
-                div
-            div
-            div class=item
-                div class=time2200div
-            div class = programm-heart  img src = heart-white-02.png alt = Сердечко  div
-                div class=info
-                    h3Завершение вечераh3
-                div
-            div
-        div
-    div
-section
+    <!-- ================= PROGRAM ================= -->
+   <section id="block-desktop-program">
+    <div class="timeline-container">
+        <h2>Программа дня</h2>
+        <div class="timeline-vibe">
+            <!-- Пункты программы -->
+            <div class="item">
+                <div class="time">12:15</div>
+                <div class = "programm-heart" > <img src = "heart-white-02.png" alt = "Сердечко" > </div> 
+                <div class="info">
+                    <h3>Сбор гостей</h3>
+                    <p>Ждем всех к началу торжества</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="time">12:30</div>
+                <div class = "programm-heart" > <img src = "heart-white-02.png" alt = "Сердечко" > </div>
+                <div class="info">
+                    <h3>Торжественная церемония</h3>
+                    <p>Шипиловский Дворец бракосочетания</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="time">13:30</div>
+                <div class = "programm-heart" > <img src = "heart-white-02.png" alt = "Сердечко" > </div>
+                <div class="info">
+                    <h3>Прогулка и фотосессия</h3>
+                    <p>Музей-заповедник Царицыно</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="time">13:30</div>
+                <div class = "programm-heart" > <img src = "heart-white-02.png" alt = "Сердечко" > </div>
+                <div class="info">
+                    <h3>Фуршет</h3>
+                    <p>Банкетный зал Пантеон</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="time">15:30</div>
+                <div class = "programm-heart" > <img src = "heart-white-02.png" alt = "Сердечко" > </div>
+                <div class="info">
+                    <h3>Праздничный банкет</h3>
+                    <p>Банкетный зал Пантеон</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="time">22:00</div>
+            <div class = "programm-heart" > <img src = "heart-white-02.png" alt = "Сердечко" > </div>
+                <div class="info">
+                    <h3>Завершение вечера</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
-    style
+    <style>
 #block-desktop-program {
-    background #fdf6f0;
-    padding 80px 20px;
-    font-family 'Inter', sans-serif;  или ваш основной шрифт 
+    background: #fdf6f0;
+    padding: 80px 20px;
+    font-family: 'Inter', sans-serif; /* или ваш основной шрифт */
 }
 
 #block-desktop-program h2 {
-    font-family Great Vibes, cursive;
-    font-size clamp(40px, 5vw, 60px);
-    text-align center;
-    margin-bottom 60px;
-    color #2c3e50;
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(40px, 5vw, 60px);
+    text-align: center;
+    margin-bottom: 60px;
+    color: #2c3e50;
 }
 
 #block-desktop-program .timeline-vibe {
-    position relative;
-    max-width 800px;
-    margin 0 auto;
-    padding 40px 0;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0;
 }
 
- Пунктирная линия-змейка 
-#block-desktop-program .timeline-vibebefore {
-    content '';
-    position absolute;
-    top 0;
-    bottom 0;
-    left 50%;
-    width 2px;
-    border-left 2px dashed #335724;
-    transform translateX(-50%);
-     Эффект изгиба (опционально через маску или просто ровно) 
-    opacity 0.5;
+/* Пунктирная линия-змейка */
+#block-desktop-program .timeline-vibe::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    border-left: 2px dashed #335724;
+    transform: translateX(-50%);
+    /* Эффект изгиба (опционально через маску или просто ровно) */
+    opacity: 0.5;
 }
 
 #block-desktop-program .timeline-vibe .item {
-    display flex;
-    align-items center;
-    justify-content center;
-    width 100%;
-    margin-bottom 50px;
-    position relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 50px;
+    position: relative;
 }
 
- Расположение контента в шахматном порядке 
-#block-desktop-program .timeline-vibe .itemnth-child(even) { flex-direction row-reverse; }
+/* Расположение контента в шахматном порядке */
+#block-desktop-program .timeline-vibe .item:nth-child(even) { flex-direction: row-reverse; }
 
 #block-desktop-program .time {
-    width 40%;
-    font-size 28px;
-    font-weight 300;
-    text-align right;
-    padding 0 30px;
-    color #333;
+    width: 40%;
+    font-size: 28px;
+    font-weight: 300;
+    text-align: right;
+    padding: 0 30px;
+    color: #333;
 }
-#block-desktop-program .itemnth-child(even) .time { text-align left; }
+#block-desktop-program .item:nth-child(even) .time { text-align: left; }
 
 #block-desktop-program .info {
-    width 40%;
-    padding 0 30px;
-    text-align left;
+    width: 40%;
+    padding: 0 30px;
+    text-align: left;
 }
-#block-desktop-program .itemnth-child(even) .info { text-align right; }
+#block-desktop-program .item:nth-child(even) .info { text-align: right; }
 
-#block-desktop-program .info h3 { margin 0; font-size 18px; color #335724; }
-#block-desktop-program .info p { margin 5px 0 0; font-size 14px; color #666; }
+#block-desktop-program .info h3 { margin: 0; font-size: 18px; color: #335724; }
+#block-desktop-program .info p { margin: 5px 0 0; font-size: 14px; color: #666; }
 
- Сердечко на линии 
+/* Сердечко на линии */
 
 #block-desktop-program .programm-heart {
-    width 36px;
-    height 36px;
-    flex-shrink 0;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
 }
 
 #block-desktop-program .programm-heart img {
-    width 100%;
-    height 100%;
-    object-fit contain;
-    display block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
-   ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= 
+  /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
   
-@media (max-width 768px) {
+@media (max-width: 768px) {
 
   #block-program {
-    padding 60px 15px;
+    padding: 60px 15px;
   }
 
   #block-program h2 {
-    font-size clamp(34px, 6vw, 40px);
+    font-size: clamp(34px, 6vw, 40px);
   }
 
   #block-program .item {
-    font-size 17px;
+    font-size: 17px;
   }
 
 }
 
-   ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= 
+  /* ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= */
   
- @media (max-width 480px) {
+ @media (max-width: 480px) {
 
   #block-program {
-    padding 50px 15px;
-    background#335724;
+    padding: 50px 15px;
+    background:#335724;
   }
 
   #block-program h2 {
-    font-size 34px;
-    color #fdf6f0;
+    font-size: 34px;
+    color: #fdf6f0;
   }
 
   #block-program .timeline {
-    display flex;
-    flex-direction column;
-    margin-top 25px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
   }
 
   #block-program .item {
-    font-size 17px;
-    background #fdf6f0;
-    padding 12px 14px;
-    border-radius 12px;
-    display flex;
-    flex-direction column;  перенос времени на отдельную строку 
-    align-items center;
-    gap 6px;
-    margin3px 0;
+    font-size: 17px;
+    background: #fdf6f0;
+    padding: 12px 14px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column; /* перенос времени на отдельную строку */
+    align-items: center;
+    gap: 6px;
+    margin:3px 0;
   }
 
   #block-program span {
-    margin-right 0;
-    font-size 16px;
+    margin-right: 0;
+    font-size: 16px;
   }
 #block-desktop-program .programm-heart {
-    width 18px;
-    height 18px;
-    flex-shrink 0;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
 }
 
 #block-desktop-program .programm-heart img {
-    width 100%;
-    height 100%;
-    object-fit contain;
-    display block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 }
-    style
-    style
+    </style>
+    </style>
 
-    !-- ================= DETAILS ================= --
-    section id=block-details
-        div class=details-wrap data-aos=fade-up
-            h2Деталиh2
-            pПросим не дарить нам цветы, поскольку мы уедем в путешествие и не сможем насладиться их красотойp
-            table class=details-heart cellspacing=0 cellpadding=0
-                tr
-                    td
-                        img src=heart-white-02.png alt=Сердечко
-                    td
-                tr
-            table
-            pЕсли желание прийти с букетом непреодолимо, мы с большим энтузиазмом позаботимся о комнатном растении в горшкеp
-            table class=details-heart cellspacing=0 cellpadding=0
-                tr
-                    td
-                        img src=heart-white-02.png alt=Сердечко
-                    td
-                tr
-            table
-            pОбращаем внимание, что формат мероприятия не предполагает присутствие детей. Просим оставить малышей дома, чтобы все смогли в полной мере насладиться праздникомp
-            table class=details-heart cellspacing=0 cellpadding=0
-                tr
-                    td
-                        img src=heart-white-02.png alt=Сердечко
-                    td
-                tr
-            table
-            pНаше мероприятие не предполагает специальный дресс код для гостей. Ждем всех в хорошем настроении!p
-        div
-    section
+    <!-- ================= DETAILS ================= -->
+    <section id="block-details">
+        <div class="details-wrap" data-aos="fade-up">
+            <h2>Детали</h2>
+            <p>Просим не дарить нам цветы, поскольку мы уедем в путешествие и не сможем насладиться их красотой</p>
+            <table class="details-heart" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <img src="heart-white-02.png" alt="Сердечко">
+                    </td>
+                </tr>
+            </table>
+            <p>Если желание прийти с букетом непреодолимо, мы с большим энтузиазмом позаботимся о комнатном растении в горшке</p>
+            <table class="details-heart" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <img src="heart-white-02.png" alt="Сердечко">
+                    </td>
+                </tr>
+            </table>
+            <p>Обращаем внимание, что формат мероприятия не предполагает присутствие детей. Просим оставить малышей дома, чтобы все смогли в полной мере насладиться праздником</p>
+            <table class="details-heart" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <img src="heart-white-02.png" alt="Сердечко">
+                    </td>
+                </tr>
+            </table>
+            <p>Наше мероприятие не предполагает специальный дресс код для гостей. Ждем всех в хорошем настроении!</p>
+        </div>
+    </section>
 
-    style
+    <style>
         #block-details{
-              padding80px 20px;
-              background#fdf6f0;
-              text-aligncenter;
+              padding:80px 20px;
+              background:#fdf6f0;
+              text-align:center;
             }
-            #block-details .details-wrap{max-width800px;margin0 auto;}
+            #block-details .details-wrap{max-width:800px;margin:0 auto;}
             #block-details h2{
-              font-familyGreat Vibes,cursive;
-              font-size48px;
-              color #2c3e50;
+              font-family:"Great Vibes",cursive;
+              font-size:48px;
+              color: #2c3e50;
             }
             #block-details p{
-              color #2c3e50;
-              font-size 18px;
+              color: #2c3e50;
+              font-size: 18px;
             }
     .details-heart {
-      width 36px;        ширина, как в календаре 
-      height 36px;       высота, как в календаре 
-      margin 12px auto;  вертикальный отступ и центрирование 
-      border-collapse collapse;
+      width: 36px;       /* ширина, как в календаре */
+      height: 36px;      /* высота, как в календаре */
+      margin: 12px auto; /* вертикальный отступ и центрирование */
+      border-collapse: collapse;
     }
     
     .details-heart td {
-      width 36px;
-      height 36px;
-      padding 0;        убираем отступы внутри ячейки 
+      width: 36px;
+      height: 36px;
+      padding: 0;       /* убираем отступы внутри ячейки */
     }
     
     .details-heart img {
-      width 100%;
-      height 100%;
-      object-fit contain;  сохраняем пропорции 
-      display block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* сохраняем пропорции */
+      display: block;
     }
           
            #block-details .details-img {
-                width 28px;
-                height 20px;
+                width: 28px;
+                height: 20px;
             }
-         ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= 
+        /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
       
-      @media (max-width 768px) {
+      @media (max-width: 768px) {
     
         #block-details {
-          padding 60px 20px;
+          padding: 60px 20px;
         }
     
         #block-details .details-wrap {
-          gap 22px;
+          gap: 22px;
         }
       #block-details h2 {
-        font-size clamp(34px, 6vw, 40px);
+        font-size: clamp(34px, 6vw, 40px);
       }
         #block-details p {
-          font-size 17px;
-          line-height 1.6;
+          font-size: 17px;
+          line-height: 1.6;
         }
           #block-details .details-img {
-        width 70px;
-        height 70px;
+        width: 70px;
+        height: 70px;
       }
       }
     
-       ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= 
-        @media (max-width 480px) {
+      /* ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= */
+        @media (max-width: 480px) {
     
         #block-details {
-          padding 50px 18px;
+          padding: 50px 18px;
         }
     
         #block-details .details-wrap {
-          gap 18px;
+          gap: 18px;
         }
     
         #block-details h2  {
-        font-size 34px;
+        font-size: 34px;
         }
     
         #block-details p {
-          font-size 17px;
-          line-height 1.6;
+          font-size: 17px;
+          line-height: 1.6;
         }
         
           .details-heart,
       .details-heart td {
-        width 18px;
-        height 18px;
+        width: 18px;
+        height: 18px;
       }
       }
-    style
+    </style>
 
-    !-- ================= TELEGRAM ================= --
-    section id=block-telegram
-        div class=telegram-wrap data-aos=fade-up
-            h2Телеграмм-чатh2
-            pПрисоединяйтесь к нашему телеграмм-чату, в котором можно будет узнать дополнительную информацию. Будем очень рады видеть в нем ваши фото и видео с торжества!p
-            a href=httpst.me+AqSEOJ7AYOQyZTYy target=_blankПерейти в чатa
-        div
-    section
+    <!-- ================= TELEGRAM ================= -->
+    <section id="block-telegram">
+        <div class="telegram-wrap" data-aos="fade-up">
+            <h2>Телеграмм-чат</h2>
+            <p>Присоединяйтесь к нашему телеграмм-чату, в котором можно будет узнать дополнительную информацию. Будем очень рады видеть в нем ваши фото и видео с торжества!</p>
+            <a href="https://t.me/+AqSEOJ7AYOQyZTYy" target="_blank">Перейти в чат</a>
+        </div>
+    </section>
 
-    style
+    <style>
         #block-telegram{
-          padding80px 20px;
-          background#fdf6f0;
-          text-aligncenter;
+          padding:80px 20px;
+          background:#fdf6f0;
+          text-align:center;
         }
         #block-telegram .telegram-wrap{
-          max-width800px;
-          margin0 auto;
+          max-width:800px;
+          margin:0 auto;
         }
         #block-telegram h2{
-          font-familyGreat Vibes,cursive;
-          font-size48px;
-          color #2c3e50;
+          font-family:"Great Vibes",cursive;
+          font-size:48px;
+          color: #2c3e50;
         }
         #block-telegram p{
-          color #2c3e50;
-          font-size 18px;
+          color: #2c3e50;
+          font-size: 18px;
         }
         #block-telegram a{
-          displayinline-block;
-          padding14px 46px;
-          background#335724;
-          color#fff;
-          border-radius25px;
-          text-decorationnone;
-          font-size 18px;
+          display:inline-block;
+          padding:14px 46px;
+          background:#335724;
+          color:#fff;
+          border-radius:25px;
+          text-decoration:none;
+          font-size: 18px;
         }
-       ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= 
+      /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
   
-  @media (max-width 768px) {
+  @media (max-width: 768px) {
 
     #block-telegram {
-      padding 60px 20px;
+      padding: 60px 20px;
     }
   #block-telegram h2 {
-    font-size clamp(34px, 6vw, 40px);
+    font-size: clamp(34px, 6vw, 40px);
   }
     #block-telegram p {
-      font-size 17px;
-      line-height 1.6;
+      font-size: 17px;
+      line-height: 1.6;
     }
 
     #block-telegram a {
-      padding 12px 40px;
-      font-size 16px;
+      padding: 12px 40px;
+      font-size: 16px;
     }
   }
 
-   ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= 
-  @media (max-width 420px) {
+  /* ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= */
+  @media (max-width: 420px) {
 
     #block-telegram {
-      padding 50px 16px;
+      padding: 50px 16px;
     }
 
     #block-telegram .telegram-wrap {
-      max-width 100%;
+      max-width: 100%;
     }
    #block-telegram h2  {
-    font-size 34px;
+    font-size: 34px;
     }
     #block-telegram p {
-      font-size 17px;
+      font-size: 17px;
     }
 
     #block-telegram a {
-      width 100%;
-      max-width 280px;
-      padding 14px 0;
-      font-size 16px;
+      width: 100%;
+      max-width: 280px;
+      padding: 14px 0;
+      font-size: 16px;
     }
   }
-    style
+    </style>
 
-    !-- ================= RSVP ================= --
-    section id=block-rsvp
-        div class=rsvp-wrap data-aos=fade-up
-            h2Анкетаh2
-            pПожалуйста, заполните анкету и подтвердите свое присутствие до b01&nbsp;июня&nbsp;2026b, чтобы мы могли спланировать торжество наилучшим образомp
-            i class=rsvp-i Заполните форму для каждого гостя отдельноi
+    <!-- ================= RSVP ================= -->
+    <section id="block-rsvp">
+        <div class="rsvp-wrap" data-aos="fade-up">
+            <h2>Анкета</h2>
+            <p>Пожалуйста, заполните анкету и подтвердите свое присутствие до <b>01&nbsp;июня&nbsp;2026</b>, чтобы мы могли спланировать торжество наилучшим образом</p>
+            <i class="rsvp-i">* Заполните форму для каждого гостя отдельно</i>
 
-            form id=rsvp-form action=httpsformsubmit.cogeorg_rykunov@mail.ru method=POST data-aos=fade-up data-aos-delay=400 data-aos-once=true
-                input type=hidden name=_subject value=RSVP Опрос — свадьба Георг и Маргарита
-                input type=hidden name=_captcha value=false
-                input type=hidden name=_template value=table
+            <form id="rsvp-form" action="https://formsubmit.co/georg_rykunov@mail.ru" method="POST" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
+                <input type="hidden" name="_subject" value="RSVP Опрос — свадьба Георг и Маргарита">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
 
-                input type=text name=Имя placeholder=Имя и фамилия required
+                <input type="text" name="Имя" placeholder="Имя и фамилия" required>
 
-                !-- Присутствие --
-                div class=rsvp-group
-                    pСможете ли Вы присутствовать на свадьбеp
-                    label
-                        input type=radio name=Присутствие value=Да, буду в загсе и на банкете required Да, буду в загсе и на банкетеlabel
-                    label
-                        input type=radio name=Присутствие value=Да, буду только на банкете Да, буду только на банкетеlabel
-                    label
-                        input type=radio name=Присутствие value=Не смогу присутствовать Не смогу присутствоватьlabel
-                div
+                <!-- Присутствие -->
+                <div class="rsvp-group">
+                    <p>Сможете ли Вы присутствовать на свадьбе?</p>
+                    <label>
+                        <input type="radio" name="Присутствие" value="Да, буду в загсе и на банкете" required> Да, буду в загсе и на банкете</label>
+                    <label>
+                        <input type="radio" name="Присутствие" value="Да, буду только на банкете"> Да, буду только на банкете</label>
+                    <label>
+                        <input type="radio" name="Присутствие" value="Не смогу присутствовать"> Не смогу присутствовать</label>
+                </div>
 
-                !-- Алкоголь --
-                div class=rsvp-group
-                    pПредпочтения по алкоголюp
-                    label
-                        input type=checkbox class=alcohol-checkbox value=Красное вино Красное виноlabel
-                    label
-                        input type=checkbox class=alcohol-checkbox value=Белое вино Белое виноlabel
-                    label
-                        input type=checkbox class=alcohol-checkbox value=Шампанское Шампанскоеlabel
-                    label
-                        input type=checkbox class=alcohol-checkbox value=Вискиконьяк Вискиконьякlabel
-                    label
-                        input type=checkbox class=alcohol-checkbox value=Водка Водкаlabel
-                    label
-                        input type=checkbox class=alcohol-checkbox value=Не буду пить Не буду питьlabel
-                    label
-                        input type=checkbox id=alcohol-other-checkbox Свой вариант
-                        input type=text id=alcohol-other-text name=Алкоголь_свой placeholder=Укажите свой вариант
-                    label
-                    input type=hidden name=Алкоголь id=alcohol-hidden
-                div
+                <!-- Алкоголь -->
+                <div class="rsvp-group">
+                    <p>Предпочтения по алкоголю</p>
+                    <label>
+                        <input type="checkbox" class="alcohol-checkbox" value="Красное вино"> Красное вино</label>
+                    <label>
+                        <input type="checkbox" class="alcohol-checkbox" value="Белое вино"> Белое вино</label>
+                    <label>
+                        <input type="checkbox" class="alcohol-checkbox" value="Шампанское"> Шампанское</label>
+                    <label>
+                        <input type="checkbox" class="alcohol-checkbox" value="Виски/коньяк"> Виски/коньяк</label>
+                    <label>
+                        <input type="checkbox" class="alcohol-checkbox" value="Водка"> Водка</label>
+                    <label>
+                        <input type="checkbox" class="alcohol-checkbox" value="Не буду пить"> Не буду пить</label>
+                    <label>
+                        <input type="checkbox" id="alcohol-other-checkbox"> Свой вариант
+                        <input type="text" id="alcohol-other-text" name="Алкоголь_свой" placeholder="Укажите свой вариант">
+                    </label>
+                    <input type="hidden" name="Алкоголь" id="alcohol-hidden">
+                </div>
 
-                button type=submitОтправитьbutton
-            form
-        div
-    section
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </section>
 
-    style
+    <style>
         #block-rsvp {
-          padding 80px 20px;
-          background #fdf6f0;
-          text-align center;
+          padding: 80px 20px;
+          background: #fdf6f0;
+          text-align: center;
         }
         #block-rsvp .rsvp-wrap { 
-          max-width 800px; 
-          margin 0 auto; 
+          max-width: 800px; 
+          margin: 0 auto; 
         }
         #block-rsvp h2 {
-          font-family Great Vibes, cursive;
-          font-size 48px;
-          color #2c3e50;
+          font-family: "Great Vibes", cursive;
+          font-size: 48px;
+          color: #2c3e50;
         }
         #block-rsvp p {
-            color #2c3e50;
-            font-size 18px;
-            line-height 1.6; 
+            color: #2c3e50;
+            font-size: 18px;
+            line-height: 1.6; 
         }
         #block-rsvp .rsvp-i { 
-          font-size 18px; 
-          display block; 
-          color #7f8c8d; 
-          font-style italic; 
-          margin-top 4px; 
-          text-align right;
+          font-size: 18px; 
+          display: block; 
+          color: #7f8c8d; 
+          font-style: italic; 
+          margin-top: 4px; 
+          text-align: right;
         }
         
         #block-rsvp form {
-          max-width 500px;
-          margin 40px auto 0;
-          display flex;
-          flex-direction column;
-          gap 16px;
+          max-width: 500px;
+          margin: 40px auto 0;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
         }
         
-        #block-rsvp input[type=text] {
-          padding 14px;
-          font-size 14px;
-          border-radius 10px;
-          border 1px solid #e0d6d1;
-          background #fff;
+        #block-rsvp input[type="text"] {
+          padding: 14px;
+          font-size: 14px;
+          border-radius: 10px;
+          border: 1px solid #e0d6d1;
+          background: #fff;
         }
         
         #block-rsvp button {
-          displayinline-block;
-          padding14px 46px;
-          background#335724;
-          color #fff;
-          border none;
-          border-radius 25px;
-          font-size 18px;
-          text-decoration none;
-          cursor pointer;
-          transition 0.3s;
-          margin 20px auto 0;  Центрируем, если форма flex 
-          font-family inherit;
-              -webkit-appearance none;        Отключает стандартные стили Safari 
-              appearance none;                Отключает стандартные стили системных кнопок 
-              -webkit-font-smoothing antialiased;  Убирает лишнюю жирность шрифта в Safari 
-              -moz-osx-font-smoothing grayscale;
-              font-weight 400;   
+          display:inline-block;
+          padding:14px 46px;
+          background:#335724;
+          color: #fff;
+          border: none;
+          border-radius: 25px;
+          font-size: 18px;
+          text-decoration: none;
+          cursor: pointer;
+          transition: 0.3s;
+          margin: 20px auto 0; /* Центрируем, если форма flex */
+          font-family: inherit;
+              -webkit-appearance: none;       /* Отключает стандартные стили Safari */
+              appearance: none;               /* Отключает стандартные стили системных кнопок */
+              -webkit-font-smoothing: antialiased; /* Убирает лишнюю жирность шрифта в Safari */
+              -moz-osx-font-smoothing: grayscale;
+              font-weight: 400;   
         }
-        #block-rsvp buttonhover { opacity 0.9; }
+        #block-rsvp button:hover { opacity: 0.9; }
         
         .rsvp-group {
-          text-align left;
-          margin-bottom 16px;
+          text-align: left;
+          margin-bottom: 16px;
         }
-        .rsvp-group p { font-weight 600; margin-bottom 8px; }
+        .rsvp-group p { font-weight: 600; margin-bottom: 8px; }
         .rsvp-group label {
-            display flex;
-            align-items center;
-            gap 8px;
-            margin-bottom 6px;
-            cursor pointer;
-            font-size 18px;
-            flex-wrap wrap;
-            color #2c3e50;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+            cursor: pointer;
+            font-size: 18px;
+            flex-wrap: wrap;
+            color: #2c3e50;
         }
         
         #alcohol-other-text {
-            display none; 
-            padding 10px; 
-            border 1px solid #e0d6d1;
-            border-radius 10px; 
-            width 100%; 
-            box-sizing border-box;
+            display: none; 
+            padding: 10px; 
+            border: 1px solid #e0d6d1;
+            border-radius: 10px; 
+            width: 100%; 
+            box-sizing: border-box;
         }
         
-       ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= 
+      /* ================= МОБИЛЬНАЯ АДАПТАЦИЯ ================= */
   
-@media (max-width 768px) {
+@media (max-width: 768px) {
 
   #block-rsvp {
-    padding 60px 16px;
+    padding: 60px 16px;
   }
 
   #block-rsvp .rsvp-wrap {
-    max-width 100%;
+    max-width: 100%;
   }
 
   #block-rsvp h2 {
-    font-size 34px;
+    font-size: 34px;
   }
 
   #block-rsvp p {
-    font-size 17px;
+    font-size: 17px;
   }
 
   #block-rsvp .rsvp-i {
-    font-size 14px;
-    margin-top 8px;
+    font-size: 14px;
+    margin-top: 8px;
   }
 
   #block-rsvp form {
-    max-width 100%;
-    margin-top 30px;
-    gap 18px;
+    max-width: 100%;
+    margin-top: 30px;
+    gap: 18px;
   }
 
-  #block-rsvp input[type=text] {
-    font-size 16px;  чтобы iOS не зумил 
+  #block-rsvp input[type="text"] {
+    font-size: 16px; /* чтобы iOS не зумил */
   }
 
   #block-rsvp button {
-      padding 12px 40px;
-      font-size 16px;
+      padding: 12px 40px;
+      font-size: 16px;
   }
 
   .rsvp-group label {
-    align-items flex-start;
-    gap 10px;
-    font-size 17px;
-    line-height 1.4;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 17px;
+    line-height: 1.4;
   }
 
-  .rsvp-group input[type=radio],
-  .rsvp-group input[type=checkbox] {
-    margin-top 4px;
-    transform scale(1.2);
+  .rsvp-group input[type="radio"],
+  .rsvp-group input[type="checkbox"] {
+    margin-top: 4px;
+    transform: scale(1.2);
   }
 
   #alcohol-other-text {
-    margin-top 8px;
-    font-size 16px;
+    margin-top: 8px;
+    font-size: 16px;
   }
 }
 
-   ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= 
-@media (max-width 420px) {
+  /* ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= */
+@media (max-width: 420px) {
 
   #block-rsvp {
-    padding 50px 14px;
+    padding: 50px 14px;
   }
 
   #block-rsvp h2 {
-    font-size 34px;
+    font-size: 34px;
   }
 
   #block-rsvp p {
-    font-size 17px;
-    line-height 1.6;
+    font-size: 17px;
+    line-height: 1.6;
   }
 
   .rsvp-group p {
-    font-size 17px;
+    font-size: 17px;
   }
 
   .rsvp-group label {
-    font-size 17px;
+    font-size: 17px;
   }
 
   #block-rsvp button {
-      width 100%;
-      max-width 280px;
-      padding 14px 0;
-      font-size 16px;
+      width: 100%;
+      max-width: 280px;
+      padding: 14px 0;
+      font-size: 16px;
   }
 }
-    style
+    </style>
 
-    script
-        const otherCheckbox = document.getElementById(alcohol-other-checkbox);
-        const otherText = document.getElementById(alcohol-other-text);
-        const hiddenInput = document.getElementById(alcohol-hidden);
-        const alcoholCheckboxes = document.querySelectorAll(.alcohol-checkbox);
+    <script>
+        const otherCheckbox = document.getElementById("alcohol-other-checkbox");
+        const otherText = document.getElementById("alcohol-other-text");
+        const hiddenInput = document.getElementById("alcohol-hidden");
+        const alcoholCheckboxes = document.querySelectorAll(".alcohol-checkbox");
         
-        const updateAlcohol = () = {
+        const updateAlcohol = () => {
           let values = [];
-          alcoholCheckboxes.forEach(cb = { if(cb.checked) values.push(cb.value); });
+          alcoholCheckboxes.forEach(cb => { if(cb.checked) values.push(cb.value); });
           if(otherCheckbox.checked && otherText.value.trim() !== '') {
             values.push(otherText.value.trim());
           }
-          hiddenInput.value = values.join(, );
+          hiddenInput.value = values.join(", ");
         };
         
-        otherCheckbox.addEventListener(change, () = {
-          otherText.style.display = otherCheckbox.checked  block  none;
+        otherCheckbox.addEventListener("change", () => {
+          otherText.style.display = otherCheckbox.checked ? "block" : "none";
           updateAlcohol();
         });
         
-        otherText.addEventListener(input, updateAlcohol);
-        alcoholCheckboxes.forEach(cb = cb.addEventListener(change, updateAlcohol));
+        otherText.addEventListener("input", updateAlcohol);
+        alcoholCheckboxes.forEach(cb => cb.addEventListener("change", updateAlcohol));
         
-        document.getElementById(rsvp-form).addEventListener(submit, function() {
-          setTimeout(() = { alert(Ваши ответы отправляются... Пожалуйста, не закрывайте страницу до появления уведомления об успехе); }, 2000);
+        document.getElementById("rsvp-form").addEventListener("submit", function() {
+          setTimeout(() => { alert("Ваши ответы отправляются... Пожалуйста, не закрывайте страницу до появления уведомления об успехе"); }, 2000);
         });
-    script
+    </script>
 
-    script src=httpscdn.jsdelivr.netnpmaos@2.3.4distaos.jsscript
-    script
-        AOS.init({duration1000,oncetrue});
-    script
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({duration:1000,once:true});
+    </script>
 
-section id=block-signature data-aos=fade-up
-  div class=signature-wrap
-    p class=signature-text
-      С   любовью,br
+<section id="block-signature" data-aos="fade-up">
+  <div class="signature-wrap">
+    <p class="signature-text">
+      С   любовью,<br>
 
       Георг и Маргарита
-    p
+    </p>
 
-    div class=signature-linediv
+    <div class="signature-line"></div>
 
-    p class=signature-date
+    <p class="signature-date">
       14 июля 2026
-    p
-  div
-section
- style
+    </p>
+  </div>
+</section>
+ <style>
 #block-signature{
-  padding60px 20px;
-  text-aligncenter;
-  background#335724;
+  padding:60px 20px;
+  text-align:center;
+  background:#335724;
 }
 
 #block-signature .signature-wrap{
-  max-width600px;
-  margin0 auto;
+  max-width:600px;
+  margin:0 auto;
 }
 
 #block-signature .signature-text{
-  font-familyGreat Vibes, cursive;
-  font-size42px;
-  color#fdf6f0;
-  margin-bottom20px;
+  font-family:"Great Vibes", cursive;
+  font-size:42px;
+  color:#fdf6f0;
+  margin-bottom:20px;
 }
 
 #block-signature .signature-line{
-  width120px;
-  height2px;
-  backgroundlinear-gradient(90deg,#9bbf9b,#fdf6f0,#9bbf9b);
-  margin0 auto 20px;
-  border-radius2px;
+  width:120px;
+  height:2px;
+  background:linear-gradient(90deg,#9bbf9b,#fdf6f0,#9bbf9b);
+  margin:0 auto 20px;
+  border-radius:2px;
 }
 
 #block-signature .signature-date{
-  font-size14px;
-  letter-spacing3px;
-  color#fdf6f0;
+  font-size:14px;
+  letter-spacing:3px;
+  color:#fdf6f0;
 }
 #block-signature{
-  padding10px 20px;
-  text-aligncenter;
-  background#335724;
+  padding:10px 20px;
+  text-align:center;
+  background:#335724;
 
-  border-top-left-radius20px;
-  border-top-right-radius20px;
+  border-top-left-radius:20px;
+  border-top-right-radius:20px;
 }
 body {
-  background-color #fdf6f0;
-  margin 0;
+  background-color: #fdf6f0;
+  margin: 0;
 }
- style
-body
+ </style>
+</body>
 
-html
+</html>
