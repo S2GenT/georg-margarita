@@ -973,32 +973,33 @@
         margin-bottom:30px;
     }
 
-    /* ВАЖНО: возвращаем нормальное поведение таблицы */
+    /* ВАЖНО: фиксируем геометрию */
     .program-table{
-        table-layout:auto;
+        table-layout:fixed;
     }
 
     .program-table td{
         padding:14px 6px;
     }
 
-    /* убираем жесткие ширины */
+    /* равные колонки слева и справа */
     .program-time,
     .program-info{
-        width:auto;
+        width:45%;
+    }
+
+    /* центр фиксированный */
+    .program-heart{
+        width:50px;
     }
 
     .program-time{
-        padding-right:18px;
-        font-size:28px;
+        padding-right:12px;
+        font-size:26px;
     }
 
     .program-time-right{
-        padding-left:18px;
-    }
-
-    .program-heart{
-        width:50px;
+        padding-left:12px;
     }
 
     .program-heart img{
@@ -1006,12 +1007,12 @@
     }
 
     .program-info{
-        padding-left:18px;
+        padding-left:12px;
     }
 
     .program-info-left{
-        padding-right:18px;
-        word-break:break-word; /* фикс длинных строк */
+        padding-right:12px;
+        word-break:break-word;
     }
 
     .program-info h3{
