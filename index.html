@@ -965,18 +965,24 @@
         padding:40px 15px;
     }
     
-    #block-desktop-program h2  {
-        font-size: 34px;
-        }
+    #block-desktop-program h2{
+        font-size:34px;
+    }
 
     .timeline-container h2{
         margin-bottom:30px;
     }
 
+    /* ВАЖНО: возвращаем нормальное поведение таблицы */
+    .program-table{
+        table-layout:auto;
+    }
+
     .program-table td{
         padding:14px 6px;
     }
-    
+
+    /* убираем жесткие ширины */
     .program-time,
     .program-info{
         width:auto;
@@ -1004,7 +1010,8 @@
     }
 
     .program-info-left{
-    padding-right:18px;
+        padding-right:18px;
+        word-break:break-word; /* фикс длинных строк */
     }
 
     .program-info h3{
