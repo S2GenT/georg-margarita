@@ -741,86 +741,51 @@
     </style>
 
     <!-- ================= PROGRAM ================= -->
-<section id="block-desktop-program">
-    <div class="timeline-container">
-        <h2>Программа дня</h2>
+<section id="block-program">
+<div class="timeline-container">
+  <h2>Программа дня</h2>
+  <table class="program-table">
+    <tr>
+      <td class="time-l">12:15</td>
+      <td class="center"><img src="https://uploads.onecompiler.io/44a4ky9ak/44dhbp3tj/heart-white-03.png" alt="Сердечко"></td>
+      <td class="info-r"><h3>Сбор гостей</h3><p>Ждем всех к началу торжества</p></td>
+    </tr>
 
-        <table class="program-table">
+    <tr>
+      <td class="info-l"><h3>Торжественная церемония</h3><p>Шипиловский Дворец бракосочетания</p></td>
+      <td class="center"><img src="https://uploads.onecompiler.io/44a4ky9ak/44dhbp3tj/heart-white-03.png" alt="Сердечко"></td>
+      <td class="time-r">12:30</td>
+    </tr>
 
-            <tr>
-                <td class="program-time">12:15</td>
-                <td class="program-heart">
-                    <img src="heart-white-02.png" alt="Сердечко">
-                </td>
-                <td class="program-info">
-                    <h3>Сбор гостей</h3>
-                    <p>Ждем всех к началу торжества</p>
-                </td>
-            </tr>
+    <tr>
+      <td class="time-l">13:30</td>
+      <td class="center"><img src="https://uploads.onecompiler.io/44a4ky9ak/44dhbp3tj/heart-white-03.png" alt="Сердечко"></td>
+      <td class="info-r"><h3>Прогулка и фотосессия</h3><p>Музей-заповедник Царицыно</p></td>
+    </tr>
 
-            <tr>
-                <td class="program-info program-info-left">
-                    <h3>Торжественная церемония</h3>
-                    <p>Шипиловский Дворец бракосочетания</p>
-                </td>
-                <td class="program-heart">
-                    <img src="heart-white-02.png" alt="Сердечко">
-                </td>
-                <td class="program-time program-time-right">12:30</td>
-            </tr>
+    <tr>
+      <td class="info-l"><h3>Фуршет</h3><p>Банкетный зал Пантеон</p></td>
+      <td class="center"><img src="https://uploads.onecompiler.io/44a4ky9ak/44dhbp3tj/heart-white-03.png" alt="Сердечко"></td>
+      <td class="time-r">13:30</td>
+    </tr>
 
-            <tr>
-                <td class="program-time">13:30</td>
-                <td class="program-heart">
-                    <img src="heart-white-02.png" alt="Сердечко">
-                </td>
-                <td class="program-info">
-                    <h3>Прогулка и фотосессия</h3>
-                    <p>Музей-заповедник Царицыно</p>
-                </td>
-            </tr>
+    <tr>
+      <td class="time-l">15:30</td>
+      <td class="center"><img src="https://uploads.onecompiler.io/44a4ky9ak/44dhbp3tj/heart-white-03.png" alt="Сердечко"></td>
+      <td class="info-r"><h3>Праздничный банкет</h3><p>Банкетный зал Пантеон</p></td>
+    </tr>
 
-            <tr>
-                <td class="program-info program-info-left">
-                    <h3>Фуршет</h3>
-                    <p>Банкетный зал Пантеон</p>
-                </td>
-                <td class="program-heart">
-                    <img src="heart-white-02.png" alt="Сердечко">
-                </td>
-                <td class="program-time program-time-right">13:30</td>
-            </tr>
-
-            <tr>
-                <td class="program-time">15:30</td>
-                <td class="program-heart">
-                    <img src="heart-white-02.png" alt="Сердечко">
-                </td>
-                <td class="program-info">
-                    <h3>Праздничный банкет</h3>
-                    <p>Банкетный зал Пантеон</p>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="program-info program-info-left">
-                    <h3>Завершение вечера</h3>
-                </td>
-                <td class="program-heart">
-                    <img src="heart-white-02.png" alt="Сердечко">
-                </td>
-                <td class="program-time program-time-right">22:00</td>
-            </tr>
-
-        </table>
-    </div>
+    <tr>
+      <td class="info-l"><h3>Завершение вечера</h3><p></p></td>
+      <td class="center"><img src="https://uploads.onecompiler.io/44a4ky9ak/44dhbp3tj/heart-white-03.png" alt="Сердечко"></td>
+      <td class="time-r">22:00</td>
+    </tr>
+  </table>
+</div>
 </section>
 
-    <style>
-/* ================================= */
-/*            ПРОГРАММА ДНЯ           */
-/* ================================= */
 
+<style>
 #block-desktop-program{
     padding:60px 20px;
 }
@@ -839,11 +804,6 @@
     margin-bottom:60px;
 }
 
-
-/* ================================= */
-/*            ТАБЛИЦА                */
-/* ================================= */
-
 .program-table{
     width:100%;
     border-collapse:collapse;
@@ -851,164 +811,101 @@
     table-layout:fixed;
 }
 
-/* Центральная пунктирная линия */
+#block-program .center {
+  width: 40px; /* Задай нужную тебе узкую ширину здесь */
+  text-align: center;
+  padding: 0; /* Убираем лишние отступы, чтобы линия была точно по центру */
+  
+  /* Рисуем линию через градиент в фоне (вместо ::before) */
+  background-image: linear-gradient(to bottom, #5f7f4a 50%, rgba(255, 255, 255, 0) 0%);
+  background-position: center;
+  background-size: 2px 10px; /* 2px - ширина линии, 10px - шаг пунктира */
+  background-repeat: repeat-y;
+}
+        #block-program h3{
+          color: #2c3e50;
+          font-size: 18px;
+        }
+        #block-program p{
+          color: #2c3e50;
+          font-size: 18px;
+        }
 
-.program-table::before{
-    content:"";
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:50%;
-    transform:translateX(-50%);
-    border-left:2px dashed #5f7f4a;
+#block-program table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.program-table td{
-    border:none;
-    padding:18px 10px;
-    vertical-align:middle;
+#block-program td {
+  padding: 5px 10px;
+  vertical-align: middle;
+  font-size: 18px;
+  color: #2c3e50;
 }
 
-
-/* ================================= */
-/*              ВРЕМЯ                */
-/* ================================= */
-
-.program-time{
-    width:40%;
-    font-size: 28px;
-    text-align:right;
-    padding-right:40px;
-    font-weight:400;
-    color: #333;
-    white-space:nowrap;
+/* Левая колонка */
+#block-program .time-l {
+  text-align: right;
+  font-size: 28px;
+}
+#block-program .info-l {
+  text-align: right;
+}
+/* Правая колонка */
+#block-program .time-r {
+  text-align: left;
+  font-size: 28px;
+}
+#block-program .info-r {
+  text-align: left;
 }
 
-.program-time-right{
-    text-align:left;
-    padding-left:40px;
-    padding-right:0;
+/* Центральная колонка (сердце) */
+#block-program .center {
+  width:20%;
+  text-align:center;
 }
 
-
-/* ================================= */
-/*             СЕРДЕЧКО              */
-/* ================================= */
-
-.program-heart{
-    width:80px;
-    text-align:center;
-}
-
-.program-heart img{
+#block-program .center img {
     width:24px;
     position:relative;
     z-index:2;
 }
 
 
-/* ================================= */
-/*            ОПИСАНИЕ               */
-/* ================================= */
 
-.program-info{
-    width:50%;
-    padding-left:40px;
-}
-
-.program-info-left{
-    text-align:right;
-    padding-right:40px;
-    padding-left:0;
-}
-
-.program-info h3{
-    margin:0;
-    font-size:18px;
-    color:#335724;
-}
-
-.program-info p{
-    margin:5px 0 0 0;
-    opacity:0.85;
+/* Лёгкое расстояние между строками */
+#block-program tr:not(:last-child) td {
+  padding-bottom: 24px;
 }
 
 
-/* ================================= */
-/*        АДАПТАЦИЯ ПЛАНШЕТ          */
-/* ================================= */
-
-@media (max-width:768px){
+@media (max-width: 420px) {
   
-  #block-desktop-program h2 {
-    font-size: clamp(34px, 6vw, 40px);
+  /* Добавь вот это правило: */
+  #block-program .center {
+    width: 20px; /* Фиксируем узкую ширину для иконки */
   }
 
-    .program-table td{
-        padding:16px 8px;
-    }
+  /* И обнули ширину боковых колонок, чтобы они заняли всё остальное место */
+  #block-program .time-l, 
+  #block-program .info-l, 
+  #block-program .time-r, 
+  #block-program .info-r {
+    width: auto; 
+  }
 
-    .program-info h3{
-        font-size:17px;
-    }
-
+  #block-program td {
+    font-size: 14px;
+    padding: 12px 6px;
+  }
+  #block-program .center img {
+    width: 16px;
+  }
 }
 
-
-/* ================================= */
-/*        АДАПТАЦИЯ МОБИЛЬНАЯ        */
-/* ================================= */
-
-@media (max-width:480px){
-
-    #block-desktop-program{
-        padding:40px 15px;
-    }
-
-    .timeline-container h2{
-        margin-bottom:30px;
-    }
-
-    .program-table td{
-        padding:14px 6px;
-    }
-
-    .program-time{
-        padding-right:18px;
-        font-size:28px;
-    }
-
-    .program-time-right{
-        padding-left:18px;
-    }
-
-    .program-heart{
-        width:50px;
-    }
-
-    .program-heart img{
-        width:20px;
-    }
-
-    .program-info{
-        padding-left:18px;
-    }
-
-    .program-info-left{
-        padding-right:18px;
-    }
-
-    .program-info h3{
-        font-size:16px;
-    }
-
-    .program-info p{
-        font-size:14px;
-    }
-
-}
     </style>
-    </style>
+
 
     <!-- ================= DETAILS ================= -->
     <section id="block-details">
