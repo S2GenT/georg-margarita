@@ -811,15 +811,13 @@
     table-layout:fixed;
 }
 
-#block-program .center {
-  width: 40px; /* Задай нужную тебе узкую ширину здесь */
-  text-align: center;
-  padding: 0; /* Убираем лишние отступы, чтобы линия была точно по центру */
-  
-  /* Рисуем линию через градиент в фоне (вместо ::before) */
-  background-image: linear-gradient(to bottom, #5f7f4a 50%, rgba(255, 255, 255, 0) 0%);
-  background-position: center;
-  background-size: 2px 10px; /* 2px - ширина линии, 10px - шаг пунктира */
+.program-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  background-image: linear-gradient(to bottom, #9BA68D 50%, rgba(255, 255, 255, 0) 0%);
+  background-position: center top;
+  background-size: 2px 10px;
   background-repeat: repeat-y;
 }
         #block-program h3{
